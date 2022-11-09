@@ -1,0 +1,1224 @@
+@font-face
+{
+    font-family: 'MyriadProRegular';
+    src: url('../../difiz/fonts/MyriadProRegular/MyriadProRegular.eot');
+    src: local('Myriad Pro Regular'),
+		 url('../../difiz/fonts/MyriadProRegular/MyriadProRegular.eot?#iefix') format('embedded-opentype'),
+         url('../../difiz/fonts/MyriadProRegular/MyriadProRegular.woff') format('woff'),
+         url('../../difiz/fonts/MyriadProRegular/MyriadProRegular.ttf') format('truetype'),
+         url('../../difiz/fonts/MyriadProRegular/MyriadProRegular.svg#MyriadProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'FuturaNewHeavy';
+    src: url('../../difiz/fonts/FuturaNewHeavy/FuturaNewHeavy.eot');
+    src: local('Futura New Heavy'),
+		 url('../../difiz/fonts/FuturaNewHeavy/FuturaNewHeavy.eot?#iefix') format('embedded-opentype'),
+         url('../../difiz/fonts/FuturaNewHeavy/FuturaNewHeavy.woff') format('woff'),
+         url('../../difiz/fonts/FuturaNewHeavy/FuturaNewHeavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.payeer-card {
+   position: relative;
+   width: 100%;
+   min-width: 942px;
+   background-color: #f0f0f0;
+   margin-top: 50px;
+   border-radius: 11px;
+   padding-bottom: 1px;
+   overflow-x: hidden;
+}
+.black .payeer-card {
+   background-color: #171717;
+}
+.payeer-card .pc-banner {
+   position: absolute;
+   right: 0;
+   top: -100px;
+}
+.payeer-card .pc-h2 {
+   display: inline-block;
+   padding: 14px 30px 15px;
+   font-family: "FuturaNewDemi";
+   font-size: 20px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+}
+.black .payeer-card .pc-h2 {
+   color: #ddd;
+}
+.payeer-card .payeer-card-list {
+   text-transform: uppercase;
+}
+.black .payeer-card .payeer-card-list {
+   background-color: #171717;
+}
+.payeer-card .payeer-card-list .pcl-li {
+   background-color: #fafafa;
+   /*min-height: 244px;*/
+   margin: 0 4px 4px;
+   padding: 21px 21px 23px;
+   text-align: justify;
+}
+.black .payeer-card .payeer-card-list .pcl-li {
+   background-color: #000;
+}
+.payeer-card .payeer-card-list .pcl-li .payeer-card-list .pcl-li {
+   padding: 0;
+   margin: 0;
+}
+#tab-psdm-info > div:last-child {
+   border-radius: 0 0 8px 8px;
+}
+#tab-psdm-info .pcl-actions.pcl-text-block {
+   margin: 32px 0;
+   padding-left: 37px;
+   width: 190px;
+   height: auto;
+   border-left: 1px solid #95a9b5;
+}
+#tab-psdm-info .pcl-actions.pcl-text-block div {
+   font-family: "FuturaNewHeavy";
+   font-size: 20px;
+   color: #334149;
+   margin-top: -5px;
+   margin-bottom: 13px;
+}
+#tab-psdm-info .pcl-actions.pcl-text-block p {
+   font-family: "FuturaNewBook";
+   font-size: 16px;
+   color: #282e32;
+   line-height: initial;
+}
+.black #tab-psdm-info .pcl-actions.pcl-text-block p {
+    color: #ddd;
+}
+#tab-psdm-info .pcl-actions.pcl-text-block a {
+   font-family: "GothamProBold";
+   font-size: 16px;
+   font-weight: 900;
+   color: #e52302;
+   border-radius: 32px;
+   border: 2px solid #e52302;
+   text-align: center;
+   margin: 0;
+   padding: 12px 20px;
+   width: initial;
+   height: initial;
+   text-decoration: none;
+   background-color: initial;
+   text-transform: uppercase;
+}
+.payeer-card-change {
+   position: absolute;
+   right: 30px;
+   top: 10px;
+   font-family: "FuturaNewMedium";
+   font-size: 13px;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   color: #698698;
+}
+.payeer-card-change > span {
+   overflow: hidden;
+   float: left;
+   padding: 12px 0;
+}
+.payeer-card-change .pcc-change {
+   margin-left: 15px;
+   width: 210px;
+   border-radius: 20px;
+   background-color: #fff;
+   display: inline-block;
+}
+.black .payeer-card-change .pcc-change {
+    background-color: #F0F0F0;
+}
+.payeer-card-change .pcc-change > div {
+   display: inline-block;
+   width: 50%;
+   padding: 9px 0;
+   cursor: pointer;
+   position: relative;
+}
+.payeer-card-change .pcc-change .active {
+   cursor: inherit;
+}
+.payeer-card-change .pcc-change .active,
+.payeer-card-change .pcc-change > div:hover {
+   background-color: #698698;
+   color: #fff;
+}
+.payeer-card-change .pcc-change > div:hover:after,
+.payeer-card-change .pcc-change .active:after {
+   content: "";
+   display: block;
+   height: 10px;
+   width: 10px;
+   background-color: #698698;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   bottom: -4px;
+   transform: rotate(45deg);
+}
+
+.payeer-card-change .pcc-change .pcc-card {
+   border-radius: 20px 0 0 20px;
+   text-align: right;
+   float: left;
+}
+.payeer-card-change .pcc-change .pcc-card:before,
+.payeer-card-change .pcc-change .pcc-list:before,
+.payeer-card-change .pcc-change .active:before {
+   content: "";
+   display: block;
+   height: 30px;
+   width: 40px;
+}
+.payeer-card-change .pcc-change .pcc-card:before {
+   background: url('../images/2016/card-list.png') 0 0 no-repeat;
+   position: absolute;
+   top: 3px;
+   left: 10px;
+}
+.payeer-card-change .pcc-change .pcc-list:before {
+   background: url('../images/2016/card-list.png') -37px 0 no-repeat;
+   position: absolute;
+   top: 2px;
+   right: 16px;
+}
+.payeer-card-change .pcc-change .pcc-card:hover:before,
+.payeer-card-change .pcc-change .pcc-card.active:before {
+   background: url('../images/2016/card-list.png') 0 -31px no-repeat;
+}
+.payeer-card-change .pcc-change .pcc-list:hover:before,
+.payeer-card-change .pcc-change .pcc-list.active:before {
+   background: url('../images/2016/card-list.png') -37px -31px no-repeat;
+}
+.payeer-card-change .pcc-change .pcc-list {
+   border-radius: 0 20px 20px 0;
+   text-align: left;
+   float: right;
+}
+.payeer-card-change .pcc-change > div > span {
+   margin: 0 9px;
+}
+.payeer-card-change .pcc-change .pcc-list > span {
+   margin: 0 9px 0 14px;
+}
+.payeer-card-newcard {
+   font-family: "FuturaNewHeavy";
+}
+.payeer-card-error {
+    color: #F0937D;
+    margin: 10px 20px 0;
+}
+
+.pcl-li .pcl-type-form,
+.payeer-card-newcard .pcn-left {
+   width: 385px;
+   display: inline-block;
+   vertical-align: top;
+   border-radius: 10px 10px 7px 7px;
+   text-decoration: initial;
+}
+.payeer-card-newcard .pcn-left {
+    background-color: #121b26;
+    height: 245px;
+}
+
+.payeer-card-newcard .pcn-left {
+   background-color: #f0f0f0;
+}
+
+.black .payeer-card-newcard .pcn-left {
+    background-color: #e0e0e0;
+}
+.balck .pcl-li .pcl-type-form.virtual {
+   background-color: #e0e0e0;
+}
+.payeer-card-newcard {
+   border-radius: 0 0 8px 8px;
+}
+.payeer-card-newcard .pcn-left {
+   text-align: center;
+   display: inline-block;
+   position: relative;
+   cursor: pointer;
+}
+.payeer-card-newcard .pcn-left .pcn-create {
+
+   font-size: 16px;
+   color: #698698;
+   letter-spacing: 2.5px;
+   line-height: 2.2;
+   height: 90px;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   top: 0;
+   bottom: 0;
+   margin-top: auto;
+   margin-bottom: auto;
+}
+.payeer-card-newcard .pcn-right {
+   width: 490px;
+   height: 220px;
+   padding: 36px 0;
+   display: inline-block;
+   text-transform: initial;
+   text-align: initial;
+}
+.payeer-card-newcard .pcn-right img {
+   float: left;
+   padding: 10px 80px 10px 0;
+}
+.payeer-card-newcard .pcn-right > div {
+   font-size: 20px;
+   color: #3e98d9;
+   letter-spacing: 1.5px;
+}
+.payeer-card-newcard .pcn-right > div span {
+   font-family: "FuturaNewBook";
+   font-size: 16px;
+   color: #282e32;
+   letter-spacing: 0;
+   display: block;
+   margin: 17px 0 0;
+}
+.black .payeer-card-newcard .pcn-right > div span {
+    color: #ddd;
+}
+.pcl-type-form .pcl-type-form-top {
+   font-family: "GothamProMedium";
+   font-size: 27px;
+   letter-spacing: -2px;
+   color: #fff;
+   background-color: #3294d0;
+   padding: 12px 17px 6px;
+   border-radius: 7px 7px 0 0;
+   text-shadow: #246788 -1px 0 1px;
+}
+.pcl-type-form.virtual .pcl-type-form-top {
+   color: #121b26;
+   background-color: #fff;
+   text-shadow: initial;
+}
+.black .pcl-type-form.virtual .pcl-type-form-top {
+   background-color: #f0f0f0;
+}
+.pcl-type-form .pcl-type-form-top i {
+   font-style: initial;
+}
+.pcl-type-form.virtual .pcl-type-form-top i {
+   color: #1a87d7;
+}
+.pcl-type-form .pcl-type-form-top small {
+   font-size: 12px;
+}
+.pcl-type-form .pcl-type-form-top span {
+   font-size: 16px;
+   float: right;
+   padding: 6px 9px;
+   letter-spacing: 0.5px;
+}
+.pcl-type-form .pcl-type-form-body {
+   background-color: #121b26;
+   position: relative;
+   height: 197px;
+   border-radius: 0 0 7px 7px;
+}
+.pcl-type-form.virtual .pcl-type-form-body {
+   background-color: #f0f0f0;
+}
+.black .pcl-type-form.virtual .pcl-type-form-body {
+   background-color: #e0e0e0;
+}
+.pcl-type-form-body img {
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+}
+.pcl-type-form-body .pcl-tfb-info {
+   height: 142px;
+   padding: 24px 33px 31px;
+   color: #fff;
+   font-family: "FuturaNewHeavy";
+}
+.virtual .pcl-type-form-body .pcl-tfb-info {
+   color: #121b26;
+}
+.pcl-tfb-info .pcl-tfb-info-balance {
+   min-width: 100px;
+   float: left;
+   font-size: 16px;
+   /*font-family: "FuturaNewHeavy";*/
+   letter-spacing: 2.5px;
+   color: #73c670;
+}
+.pcl-tfb-info-balance .pcl-tfb-info-balance-amount{
+   width: 168px;
+   margin-top: 10px;
+   padding: 9px 0;
+   background-color: #73c670;
+   border-radius: 7px;
+   text-align: center;
+   font-size: 28px;
+   font-family: "FuturaNewMedium";
+   letter-spacing: 0;
+   color: #fff;
+}
+.pcl-tfb-info-balance .pcl-tfb-info-balance-amount .curr {
+   color: #4ea14b;
+   font-size: 24px;
+}
+.pcl-tfb-info-balance .pcl-tfb-info-balance-amount .pr {
+   color: #4ea14b;
+   font-size: 16px;
+   position: relative;
+   top: -9px;
+   left: -5px;
+}
+.pcl-tfb-info .pcl-tfb-info-date {
+   width: 115px;
+   float: left;
+   margin: 32px 0 0 23px;
+   color: #fff;
+   font-size: 13px;
+   padding: 6px 0;
+   letter-spacing: 1.2px;
+   line-height: 1.6;
+}
+.virtual .pcl-tfb-info .pcl-tfb-info-date {
+   color: #121b26;
+}
+.pcl-tfb-info .pcl-tfb-info-date span {
+   display: block;
+   font-family: "FuturaNewMedium";
+}
+.pcl-tfb-info .pcl-tfb-info-holder {
+   margin-top: 21px;
+   min-width: 300px;
+   height: 60px;
+   float: left;
+   /*font-family: "FuturaNewHeavy";*/
+   font-size: 16px;
+   letter-spacing: 2.5px;
+   line-height: 1.6;
+}
+
+.pcl-li .pcl-type-status {
+   width: 166px;
+   height: 245px;
+   display: inline-block;
+   vertical-align: top;
+}
+.pcl-type-status > div {
+    position: relative;
+   font-size: 13px;
+   font-family: "GothamProMedium";
+   color: #698698;
+   line-height: 1.8;
+   margin: 5px 0 13px;
+}
+.pcl-type-status > div .button_green2 {
+    height: 30px;
+    font-size: 13px;
+    padding: 0 13px;
+    line-height: 32px;
+    position: absolute;
+    left: 72px;
+    bottom: 0;
+}
+.pc-status {
+   padding-top: 28px;
+}
+.pcl-type-status > div b,
+.pc-status b {
+   color: #444;
+   font-size: 16px;
+   text-transform: initial;
+   font-weight: 500;
+   font-family: "FuturaNewHeavy";
+   letter-spacing: 2px;
+   position: relative;
+   padding-left: 29px;
+}
+.pc-status b {
+   font-size: 13px;
+   padding: 0;
+}
+.pcl-type-status .pclts-email b {
+   font-family: inherit;
+   letter-spacing: 0;
+   padding: 0;
+}
+.black .pcl-type-status .pclts-email b {
+   color: #ddd;
+}
+.pcl-type-status > div b.pcl-yes,
+.pc-status b.pcl-yes {
+   color: #a3ddab;
+}
+.pcl-type-status > div b.pcl-no,
+.pc-status b.pcl-no {
+   color: #f2a89b;
+}
+.pcl-type-status > div b.pcl-process,
+.pc-status b.pcl-process {
+   color: #a5b8c7;
+}
+
+.pcl-li .pcl-actions {
+   width: 300px;
+   height: 245px;
+   display: inline-block;
+   vertical-align: top;
+   text-transform: initial;
+   font-family: "FuturaNewDemi";
+   font-size: 18px;
+   color: #698698;
+}
+.pcl-actions > a {
+   background-color: #f0f0f0;
+   height: 40px;
+   margin-bottom: 12px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+.pcl-actions > a {
+   width: 100%;
+   display: inline-block;
+}
+.pcl-actions > a:hover {
+   background-color: #698698;
+   color: #fff;
+}
+.black .pcl-actions > a {
+    background: #171717;
+    color: #DDDDDD;
+}
+.black .pcl-actions > a:hover {
+    background: #688699;
+    color: #fff;
+}
+.pcl-actions .pcla-withdraw {
+   margin-bottom: 13px;
+}
+
+.pcl-actions > a .pcla-h {
+   float: left;
+   border-left: 1px solid #d8d8d8;
+   padding: 7px 0 7px 20px;
+   margin: 0 0 9px;
+}
+.black .pcl-actions > a:hover .pcla-h {
+    border-color: #869dac;
+}
+
+.pcl-actions > a .pcla-img,
+.payeer-card-list-compact .pcs-img {
+   margin: 0 10px;
+   width: 51px;
+   height: 100%;
+   float: left;
+   background: url('../images/2016/card-menu-zn.png') 2px -2px no-repeat;
+}
+.payeer-card-list-compact .pc-action {
+   text-decoration: initial;
+   color: #868686;
+}
+.payeer-card-list-compact .pcs-img {
+   margin: 0 auto;
+   height: 45px;
+   float: initial;
+}
+.black .pcl-actions > a .pcla-img {
+    background-position: 2px -2px;
+}
+.black .pcl-actions .pcla-info:hover .pcla-img {
+    background-position: -46px -2px;
+}
+.pcl-actions > a:hover .pcla-img {
+    background-position: -46px -2px;
+}
+.black .pcl-actions .pcla-add:hover .pcla-img {
+    background-position: -47px -43px;
+}
+.black .pcl-actions .pcla-add .pcla-img {
+    background-position: 1px -43px;
+}
+.pcl-actions .pcla-add .pcla-img,
+.payeer-card-list-compact .pc-action.pcadd .pcs-img {
+   background-position: 1px -43px;
+}
+.pcl-actions .pcla-add:hover .pcla-img {
+   background-position: -47px -43px;
+}
+.black .pcl-actions .pcla-withdraw:hover .pcla-img {
+    background-position: -47px -89px;
+}
+.black .pcl-actions .pcla-withdraw .pcla-img {
+    background-position: 0 -89px;
+}
+.pcl-actions .pcla-withdraw .pcla-img,
+.payeer-card-list-compact .pc-action.pcwithdraw .pcs-img {
+   background-position: 0 -89px;
+}
+.pcl-actions .pcla-withdraw:hover .pcla-img {
+   background-position: -45px -89px;
+}
+.black .pcl-actions .pcla-history:hover .pcla-img {
+    background-position: -48px -136px;
+}
+.black .pcl-actions .pcla-history .pcla-img {
+    background-position: 0 -136px;
+}
+.pcl-actions .pcla-history .pcla-img,
+.payeer-card-list-compact .pc-action.pchistory .pcs-img {
+   background-position: 0 -136px;
+}
+.pcl-actions .pcla-history:hover .pcla-img {
+   background-position: -48px -136px;
+}
+
+.pcl-actions .pcla-transfer .pcla-img,
+.payeer-card-list-compact .pc-action.transfer .pcs-img {
+    background-position: 1px -218px;
+}
+.pcl-actions .pcla-transfer:hover .pcla-img {
+   background-position: -50px -218px;
+}
+.black .pcl-actions .pcla-transfer .pcla-img {
+    background-position: 0 -218px;
+}
+.black .pcl-actions .pcla-transfer:hover .pcla-img {
+    background-position: -48px -218px;
+}
+
+.black .pcl-actions .pcla-delete:hover .pcla-img {
+    background-position: -50px -177px;
+}
+.black .pcl-actions .pcla-delete .pcla-img {
+    background-position: 0 -177px;
+}
+.pcl-actions .pcla-delete .pcla-img,
+.payeer-card-list-compact .pc-action.pcdelete .pcs-img {
+   background-position: 0 -177px;
+}
+.pcl-actions .pcla-delete:hover .pcla-img {
+   background-position: -50px -177px;
+}
+
+.pcl-li:after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+}
+
+.pcl-yes:after,
+.pcl-no:after,
+.pcl-process:after {
+   content: " ";
+   width: 20px;
+   height: 20px;
+   display: block;
+   background: url(../icons/icon40_execute.png) center center no-repeat;
+   background-size: cover;
+   position: absolute;
+   top: 1px;
+   left: 0;
+}
+.pc-status .pcl-yes:after,
+.pc-status .pcl-no:after,
+.pc-status .pcl-process:after {
+   top: -23px;
+   left: 2px;
+}
+.pcl-no:after {
+   background-image: url(../icons/icon40_cancel.png);
+}
+.pcl-process:after {
+   background-image: url(../icons/icon40_process.png);
+}
+
+.pc-status.pcs-menu {
+   cursor: pointer;
+   margin: 0 auto;
+   padding: 0;
+   width: 23px;
+   height: 22px;
+   background: url('../images/2016/mixer.png') 0 0 no-repeat;
+}
+
+.balance_card_update {
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   margin: 0 auto -4px;
+}
+.balance_card_update .iconBalance {
+   background: url('/bitrix/templates/difiz_account/images/menu2.png') -45px -65px no-repeat;
+   background-size: 330%;
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+.pcl-type-form.virtual .balance_card_update .iconBalance {
+    background-position: -1px -65px;
+}
+.balance_card_update .iconBalance.noActive {
+   cursor: default;
+   background-position: -1px -52px;
+}
+
+.payeer-card .p_card {
+   background-color: #f0f0f0;
+}
+.black .payeer-card .p_card {
+   background-color: #171717;
+}
+.payeer-card div.table {
+   margin: 0 4px;
+   background-color: #fafafa;
+}
+.black .payeer-card div.table {
+   background-color: #000;
+}
+.payeer-card-list-compact table.table {
+   margin: 0 auto;
+   padding: 16px;
+}
+.payeer-card-list-compact table.table thead tr th {
+   text-align: left;
+}
+.payeer-card-list-compact table.table thead tr th:first-child {
+   color: #688699;
+}
+
+.payeer-card-list-compact table.table thead tr th.pclc-th {
+   text-align: center;
+}
+.payeer-card-list-compact table.table tbody tr td {
+   height: 100px;
+   padding: 0;
+   font-weight: 900;
+}
+.black .payeer-card-list-compact table.table tbody tr td {
+   color: #fff;
+}
+.payeer-card .cp-img-type {
+   margin: 0 auto;
+   width: 60px;
+   height: 38px;
+   background-color: #121b26;
+   position: relative;
+}
+.payeer-card .cp-img-type.virtual {
+   background-color: #f0f0f0;
+}
+.black .payeer-card .cp-img-type.virtual{
+   background-color: #cecaca;
+}
+.payeer-card .cp-img-type img {
+   width: 7px;
+   position: absolute;
+   right: 3px;
+   bottom: 3px;
+}
+.payeer-card .cp-img-type:after {
+   display: block;
+   content: "PLASTIC";
+   color: #fff;
+   text-align: center;
+   position: relative;
+   top: 6px;
+   font-family: "FuturaNewHeavy";
+   font-size: 10px;
+   letter-spacing: 1px;
+}
+.payeer-card .cp-img-type.virtual:after {
+   content: "VIRTUAL";
+   color: #000;
+}
+.payeer-card .cp-img-type:before {
+   display: block;
+   content: "PAYEER®";
+   color: #fff;
+   height: 6px;
+   background-color: #3294d0;
+   font-size: 7px;
+   padding: 3px 3px 1px;
+}
+.payeer-card .cp-img-type.virtual:before {
+   background-color: #fff;
+   color: #094ca0;
+}
+.black .payeer-card .cp-img-type.virtual:before {
+   background-color: #171717;
+   color: #ddd;
+}
+
+.payeer-card-detail .pcd-top {
+   height: 54px;
+   color: #698698;
+}
+.payeer-card-detail .pcd-top .pcd-h2 {
+   padding: 20px 30px 20px 65px;
+   font-family: "GothamProReg";
+   color: #999;
+   font-size: 16px;
+   position: relative;
+   text-decoration: initial;
+   float: left;
+}
+.black .payeer-card-detail .pcd-top .pcd-h2 {
+   color: #ddd;
+}
+.payeer-card-detail .pcd-h2:after {
+   display: block;
+   content: "";
+   height: 30px;
+   width: 40px;
+   background: url('../images/2016/card-list.png') 0 0 no-repeat;
+   position: absolute;
+   top: 11px;
+   left: 17px;
+}
+.black .payeer-card-detail .pcd-h2:after {
+   background-position: 0 -30px;
+}
+.payeer-card-detail .pcd-top .psd-next {
+   font-size: 40px;
+   margin: 25px 0;
+   line-height: 0;
+   float: left;
+   color: #999;
+}
+.black .payeer-card-detail .pcd-top .psd-next {
+   color: #ddd;
+}
+.payeer-card-detail .psd-pan {
+   line-height: 56px;
+   font-size: 16px;
+   font-family: "GothamProMedium";
+   /*color: #698698;*/
+   float: left;
+   margin-left: 24px;
+}
+.payeer-card-detail .psd-menu {
+   float: right;
+}
+.payeer-card-detail .psd-menu li {
+   float: left;
+   list-style-type: none;
+   padding: 15px 26px 16px 50px;
+   margin-top: 5px;
+   margin-right: 4px;
+   position: relative;
+   font-family: "FuturaNewBook";
+   font-size: 15px;
+   border-radius: 10px 10px 0 0;
+   cursor: pointer;
+}
+.black .payeer-card-detail .psd-menu li {
+   color: #ddd;
+}
+.payeer-card-detail .psd-menu li:after {
+   display: block;
+   content: "";
+   height: 36px;
+   width: 40px;
+   background: url('../images/2016/card-menu-zn.png') 0 0 no-repeat;
+   position: absolute;
+   top: 7px;
+   left: 10px;
+   background-size: 300%;
+}
+.black .payeer-card-detail .psd-menu li:after {
+   background-position: -38px 0;
+}
+.payeer-card-detail .psd-menu li:hover,
+.payeer-card-detail .psd-menu li.active {
+   background-color: #fafafa;
+   color: #3e98d9;
+}
+.black .payeer-card-detail .psd-menu li:hover,
+.black .payeer-card-detail .psd-menu li.active {
+   background-color: #000;
+   color: #fff;
+}
+.payeer-card-detail .psd-menu li:hover:after,
+.payeer-card-detail .psd-menu li.active:after {
+   background-position: -77px 0;
+}
+.payeer-card-detail .psd-menu li.psdm-add:after {
+   background-position: 0 -34px;
+}
+.black .payeer-card-detail .psd-menu li.psdm-add:after {
+   background-position: -38px -34px;
+}
+.payeer-card-detail .psd-menu li.psdm-add:hover:after,
+.payeer-card-detail .psd-menu li.psdm-add.active:after {
+   background-position: -77px -34px;
+}
+.payeer-card-detail .psd-menu li.psdm-withdraw:after {
+   background-position: 0 -70px;
+}
+.black .payeer-card-detail .psd-menu li.psdm-withdraw:after {
+   background-position: -38px -70px;
+}
+.payeer-card-detail .psd-menu li.psdm-withdraw:hover:after,
+.payeer-card-detail .psd-menu li.psdm-withdraw.active:after {
+   background-position: -76px -70px;
+}
+.payeer-card-detail .psd-menu li.psdm-history:after {
+   background-position: 0 -107px;
+}
+.black .payeer-card-detail .psd-menu li.psdm-history:after {
+   background-position: -38px -107px;
+}
+.payeer-card-detail .psd-menu li.psdm-history:hover:after,
+.payeer-card-detail .psd-menu li.psdm-history.active:after {
+   background-position: -77px -107px;
+}
+
+#tab-myoperations-card table.table thead tr th {
+   text-align: left;
+}
+#tab-myoperations-card table.table thead tr th {
+   padding-right: 0;
+}
+#tab-myoperations-card table.table tbody tr td {
+   font-family: "FuturaNewMedium";
+   font-size: 14px;
+   text-align: left;
+   border-bottom: none;
+}
+.black #tab-myoperations-card table.table tbody tr td {
+   color: #ddd;
+}
+#tab-myoperations-card table.table tbody tr.history-id-1 td {
+   border-top: 1px solid #e5e6e7;
+}
+#tab-myoperations-card table.table tbody tr.history-id-1:first-child td {
+   border-top: none;
+}
+.black #tab-myoperations-card table.table.table_txt thead tr th:first-child {
+   color: #fff;
+}
+#tab-myoperations-card table.table td {
+   letter-spacing: 1px;
+}
+#tab-myoperations-card table.table td.rashod {
+   color: #e52302;
+}
+#tab-myoperations-card table.table td.dohod {
+   color: #73c670;
+}
+#tab-myoperations-card table.table td.pc-history-id {
+   vertical-align: top;
+   padding: 30px 26px;
+   color: #6d6d6d;
+}
+#tab-myoperations-card table.table td.pc-history-id span {
+   border-bottom: 1px dashed #6d6d6d;
+   padding: 3px 0;
+}
+#tab-myoperations-card table.table td.pc-history-date {
+   text-transform: initial;
+}
+#tab-myoperations-card table.table td.pc-history-date > div {
+   color: #ccc;
+}
+#tab-myoperations-card table.table td.pc-history-comment {
+   text-transform: initial;
+}
+#tab-myoperations-card table.table td.pc-history-description {
+   padding-top: 0;
+   padding-right: 0;
+}
+#tab-myoperations-card table.table td.pc-history-description > div {
+   position: relative;
+   font-family: "FuturaNewBook";
+   color: #999;
+   font-size: 15px;
+   background-color: #f3f4f6;
+   padding: 15px 20px;
+   border-radius: 5px;
+   letter-spacing: 0;
+}
+.black #tab-myoperations-card table.table td.pc-history-description > div {
+   background-color: #171717;
+   color: #fff;
+}
+#tab-myoperations-card table.table td.pc-history-description > div:before {
+   content: "";
+   display: block;
+   height: 20px;
+   width: 20px;
+   background-color: #f3f4f6;
+   position: absolute;
+   left: 20px;
+   top: -6px;
+   transform: rotate(45deg);
+}
+.black #tab-myoperations-card table.table td.pc-history-description > div:before {
+   background-color: #171717;
+}
+.empty-pc-trans {
+   text-align: center;
+   font-family: "FuturaNewMedium";
+   font-size: 16px;
+   text-transform: initial;
+   color: #6d6d6d;
+}
+
+.payeer-card .payeer-card-list .payeer-card-money {
+   text-transform: initial;
+}
+.payeer-card-money {
+   margin: 0 20px;
+}
+.payeer-card-money h2 {
+   font-family: "FuturaNewBook";
+   font-size: 24px;
+   color: #333;
+}
+.black .payeer-card-money h2 {
+   color: #ddd;
+}
+.payeer-card-money form {
+   margin-top: 8px;
+}
+.payeer-card-money .pcm-add-withdr {
+   background: url('../images/2016/add-withdr.png') 0 0 no-repeat;
+   width: 100px;
+   height: 27px;
+   margin: 20px 0 30px;
+}
+.black .payeer-card-money .pcm-add-withdr {
+   background-position: 0px -27px;
+}
+.payeer-card-money.pcm-add .pcm-add-withdr {
+   background-position: 0px -55px;
+}
+.black .payeer-card-money.pcm-add .pcm-add-withdr {
+   background-position: 0px -82px;
+}
+.payeer-card-money .pcm-refunds .field-row {
+   width: initial;
+   float: left;
+}
+.payeer-card-money .field-row-half-big {
+   line-height: 96px;
+   margin: 0 35px 20px 30px;
+}
+
+
+.pcl-file-upload label:after {
+   display: block;
+   content: "";
+   height: 24px;
+   width: 24px;
+   background: url('../images/2016/screpka.png') 0 0 no-repeat;
+   position: absolute;
+   top: -4px;
+   left: 7px;
+}
+.pcl-file-upload:hover label:after {
+     background-position: -56px 0;
+}
+
+.pcl-card-limits {
+   text-transform: initial;
+}
+.pcl-card-limits .pcl-h2 {
+   font-family: "FuturaNewBook";
+   font-size: 24px;
+   margin: 10px 0 20px;
+}
+.pcl-card-limits .pcl-limits {
+   width: 100%;
+   margin-bottom: 30px;
+}
+.pcl-card-limits .pcl-limits > div {
+   font-family: "FuturaNewMedium";
+   font-size: 13px;
+   color: #698698;
+   margin-right: 50px;
+   text-transform: uppercase;
+}
+.pcl-card-limits form label.cp_file_h {
+   font-family: "FuturaNewMedium";
+   font-size: 13px;
+   color: #333;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+}
+.black .pcl-card-limits form label.cp_file_h {
+    color: #698698;
+}
+.pcl-line-bar {
+   width: 133px;
+   height: 7px;
+   border-radius: 30px;
+   background-color: #d9e1e5;
+   overflow: hidden;
+   margin-top: 7px;
+}
+.pcl-limits-sum {
+   color: #444;
+   margin-top: 8px;
+}
+.black .pcl-limits-sum {
+    color: #ddd;
+}
+.pcl-line-bar > div {
+   background-color: #73c670;
+   height: inherit;
+}
+.pcl-text {
+   font-family: "GothamProReg";
+   font-size: 14px;
+   color: #333;
+   width: 80%;
+   line-height: 1.4;
+}
+.black .pcl-text {
+    color: #ddd;
+}
+.cp_file_line {
+   margin-top: 40px;
+}
+.pcl-card-limits .cp_file_line > form {
+   float: left;
+   margin-right: 85px;
+   font-family: "GothamProReg";
+}
+.pcl-file-upload {
+   overflow: hidden;
+   height: 17px;
+   border: 1px solid #698698;
+   border-radius: 35px;
+   padding: 8px 4px;
+   color: #698698;
+   text-align: center;
+   float: left;
+   margin: 15px 0 25px 0;
+}
+.pcl-file-upload:hover span {
+     color: #3e98d9
+}
+.pcl-file-upload input[type="file"]{
+    display: none;
+}
+.pcl-file-upload label {
+   position: relative;
+   display: block;
+   cursor: pointer;
+}
+.pcl-file-upload span {
+   padding: 0 32px 0 40px;
+   line-height: 20px;
+}
+.pcl-name-file {
+   float: left;
+   line-height: 68px;
+   margin-left: 15px;
+   color: #333;
+   font-size: 14px;
+}
+.black .pcl-name-file {
+    color: #ddd;
+}
+
+
+.user-pay-template {
+    font-family: 'GothamProReg';
+    font-size: 16px;
+    color: #7F7F7F;
+}
+.user-pay-template h2.bar {
+    margin-bottom: 5px;
+}
+.user-pay-template .jq-selectbox__trigger-arrow {
+    top: 26px;
+}
+.line-pay-templates {
+    position: relative;
+    border-bottom: 1px solid #e5e6e7;
+}
+.black .line-pay-templates {
+    border-bottom: 1px solid #1b1b1b;
+}
+.lpt-top {
+    padding: 20px 10px;
+}
+.lpt-top:not(.lpt-selected) {
+    cursor: pointer;
+}
+.lpt-top:not(.lpt-selected):hover {
+    background: #f7f7f7;
+}
+.black .lpt-top:not(.lpt-selected):hover {
+    background: #171717;
+}
+.line-pay-templates .lpt-name {
+    position: relative;
+    padding: 0 25px 0 55px;
+}
+.line-pay-templates .lpt-name span.icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -13px;
+    left: 0;
+}
+.lpt-block {
+    padding: 15px 40px 0;
+    font-size: 14px;
+}
+.lpt-block .lpt-num {
+    padding-right: 40px;
+    float: left;
+    margin: 20px 0 0 20px;
+    position: relative;
+}
+.lpt-block .lpt-num b {
+    letter-spacing: 1px;
+}
+.lpt-block-tm {
+    position: relative;
+    margin: 0 25px 15px 0;
+    border: 1px solid #e5e6e7;
+    border-radius: 12px;
+    padding-bottom: 18px;
+    display: inline-block;
+    vertical-align: top;
+}
+.black .lpt-block-tm {
+    border: 1px solid #1b1b1b;
+}
+.lpt-delete {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 18px;
+    height: 18px;
+    font: normal normal 18px FontAwesome;
+    cursor: pointer;
+}
+.lpt-delete:before {
+    content: "\f00d";
+}

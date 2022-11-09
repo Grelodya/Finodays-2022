@@ -1,0 +1,170 @@
+.menu ul {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-top: 19px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f5f5f5;
+  list-style: none;
+}
+.menu ul:first-child {
+  margin-top: 0;
+}
+.menu ul:last-of-type {
+  border-bottom: none;
+}
+.menu li {
+  margin-top: 10px;
+}
+.menu li:first-child {
+  margin-top: 0;
+}
+.menu a {
+  position: relative;
+  display: block;
+  padding-left: 28px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.menu a span {
+  color: #2b393f;
+}
+.menu a i {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  left: 0;
+  margin-right: 18px;
+  color: #000;
+  text-align: center;
+  transition: 0.3s;
+}
+.menu a .icon-dashboard {
+  top: 2px;
+  left: 1px;
+  font-size: 15px;
+}
+.menu a .icon-card {
+  top: 1px;
+  font-size: 13px;
+}
+.menu a .icon-add {
+  top: 2px;
+  font-size: 16px;
+}
+.menu a .icon-transfer {
+  top: 2px;
+  font-size: 15px;
+}
+.menu a .icon-exchange {
+  top: 4px;
+  font-size: 17px;
+}
+.menu a .icon-trade {
+  top: 2px;
+  left: 1px;
+  font-size: 16px;
+}
+.menu a .icon-support {
+  top: 2px;
+  left: 1px;
+  font-size: 16px;
+}
+.menu a .icon-time {
+  top: 3px;
+  left: 1px;
+  font-size: 16px;
+}
+.menu a .icon-msettings {
+  top: 2px;
+  font-size: 16px;
+}
+.menu a .icon-payouts {
+  top: 3px;
+  left: 1px;
+  font-size: 16px;
+}
+.menu a .icon-referals {
+  top: 2px;
+  left: 1px;
+  font-size: 16px;
+}
+.menu a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #3398d9;
+  opacity: 0;
+  /*transition: 0.3s;*/
+}
+.menu a:hover,
+.menu a.current {
+  background-color: rgba(51,152,217,0.03);
+}
+.menu a:hover span,
+.menu a.current span {
+  color: #3398d9;
+}
+.menu a:hover i,
+.menu a.current i {
+  color: #3398d9;
+}
+.menu a:hover::after,
+.menu a.current::after {
+  opacity: 1;
+}
+.menu a span small {
+   font-size: 10px;
+}
+@media (max-height: 740px) {
+  .menu a {
+    line-height: 44px;
+  }
+  .menu li {
+    margin-top: 5px;
+  }
+  .menu ul {
+    padding-top: 13px;
+    padding-bottom: 18px;
+  }
+}
+
+.menu a sup
+{
+    position: relative;
+    left: 5px;
+    font-size: 7px;
+    top: -7px;
+    color: #3398d9;
+}
+.black .menu a sup
+{
+    color: #3398d9;
+}
+/*
+.black .menu a:hover sup,
+.black .menu a.current sup
+{
+    color: #fff;
+}
+*/
+.windowPr .WPr-tabs .WPr-tab sup
+{
+    position: relative;
+    left: 5px;
+    font-size: 10px;
+    top: -7px;
+    color: #3398d9;
+}
+.black .windowPr .WPr-tabs .WPr-tab sup
+{
+    color: #3398d9;
+}

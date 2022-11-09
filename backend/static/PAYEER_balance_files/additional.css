@@ -1,0 +1,664 @@
+/*
+#payeer-modal .phone-code strong
+{
+    font-size: 19px;
+}
+#payeer-modal .bind-subheading span
+{
+    font-size: 16px;
+}
+#payeer-modal .phone-bind__resend
+{
+    bottom: 100px;
+}
+/**/
+
+/**/
+#payeer-modal .phone-code strong
+{
+    font-size: 18px;
+}
+#payeer-modal .phone-code svg
+{
+    display: none;
+}
+#payeer-modal .bind-subheading span
+{
+    display: block;
+    font-size: 14px;
+    padding: 15px 0 0 0;
+}
+#payeer-modal .phone-bind__resend
+{
+    position: inherit;
+}
+/**/
+
+.black #payeer-modal .verification-sidebar__content
+{
+    background: #000;
+}
+.black #payeer-modal .payeer_button.blue
+{
+    background: #000;
+}
+
+.ui-dialog.dialog-2022
+{
+    background: #FFFFFF;
+    border-radius: 41px;
+    border: 0;
+    transition: opacity .3s ease-in-out;
+}
+.dialog-2022 .ui-dialog-titlebar
+{
+    background: none;
+    width: 100%;
+    text-align: center;
+    font-family: proxima nova,Arial,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 5px;
+    color: #042433;
+    box-sizing: border-box;
+    padding: 25px 0 20px;
+}
+.ui-dialog.dialog-2022 .ui-dialog-content
+{
+    padding: 0 30px 30px;
+}
+.ui-dialog.dialog-2022 .ui-dialog-title
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.ui-dialog.dialog-2022 .ui-dialog-titlebar-close
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #CED4DB;
+    background: none;
+    transition: all .3s ease;
+    top: 33px;
+    right: 24px;
+}
+.ui-dialog.dialog-2022 .ui-dialog-titlebar-close:hover
+{
+    background: #35c0ff;
+    border-color: #35c0ff;
+}
+.ui-dialog.dialog-2022 .ui-dialog-titlebar-close .ui-icon-closethick
+{
+    background: none;
+}
+.dialog-2022 .dialog_row_title_border
+{
+    border-top: 2px solid #33CC00;
+    width: 84px;
+    height: 0;
+    margin: 0 auto;
+    /*position: relative;
+    top: -10px;*/
+}
+.dialog-2022 .dialog_row
+{
+    display: table;
+    font-family: proxima nova,Arial,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 21px;
+    color: #042433;
+    margin: 18px 0 19px;
+    width: 100%;
+}
+.dialog-2022 .dialog_row_label
+{
+    display: table-cell;
+    width: 50%;
+    text-align: left;
+    padding: 0;
+}
+.dialog-2022 .dialog_row_value
+{
+    display: table-cell;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: right;
+    width: 50%;
+    padding: 0;
+}
+.dialog-2022 .dialog_row_value.capitalize
+{
+    text-transform: capitalize;
+}
+.dialog-2022 .dialog_row_totalvalue
+{
+    font-size: 22px;
+}
+.dialog-2022 .dialog_row_ps img
+{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+}
+.dialog-2022 .dialog_row_border
+{
+    opacity: 0.5;
+    border-top: 1px solid #B5B5B5;
+    height: 0;
+    margin: 27px 0 27px;
+    box-sizing: border-box;
+}
+.dialog-2022 .dialog_row_buttons
+{
+    margin: 27px 0 0 0;
+}
+.dialog-2022 .dialog_row_buttons input[type=button]
+{
+    font-family: proxima nova,Arial,sans-serif;
+    border-radius: 50px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 11px 20px;
+    border: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    min-width: 155px;
+    transition: all .2s ease;
+}
+.dialog-2022 .dialog_row_buttons input[type=button].button_balance
+{
+    float: left;
+    color: #042433;
+    border: 2px solid #CED4DB;
+    box-sizing: border-box;
+    background: none;
+}
+.dialog-2022 .dialog_row_buttons input[type=button].button_balance:hover
+{
+    background: #CED4DB;
+    /*box-shadow: inset 0px 4px 2px rgba(0, 0, 0, 0.06);*/
+}
+.dialog-2022 .dialog_row_buttons input[type=button].button_balance:active
+{
+    box-shadow: inset 0px 4px 2px rgba(0, 0, 0, 0.06);
+}
+.dialog-2022 .dialog_row_buttons input[type=button].button_repeat
+{
+    background: linear-gradient(138.77deg, #49D60A 3.5%, #09CB01 97.72%);
+    box-shadow: 0px 6px 10px rgba(14, 61, 9, 0.0953068);
+    float: right;
+}
+
+
+.black .ui-dialog.dialog-popup + .ui-widget-overlay
+{
+    background: hsla(0,0%,47.5%,0.54);
+}
+.ui-dialog.dialog-popup
+{
+    background: #FFFFFF;
+    border-radius: 41px;
+    border: 0;
+    transition: opacity .3s ease-in-out;
+}
+.black .ui-dialog.dialog-popup
+{
+    background: #171717;
+    border-radius: 41px;
+    border: 0;
+}
+.ui-dialog.dialog-popup .ui-widget-header
+{
+    background: none;
+}
+.black .ui-dialog.dialog-popup .ui-dialog-content
+{
+    background: none;
+}
+.dialog-popup
+{
+    position: fixed;
+    text-align: center;
+}
+.dialog-popup .ui-dialog-title
+{
+    display: none;
+}
+.dialog-popup .ui-dialog-titlebar
+{
+    display: none;
+}
+.dialog-popup .ui-dialog-titlebar-close
+{
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #CED4DB;
+    background: none;
+    transition: all .3s ease;
+    top: 43px;
+    right: 34px;
+    z-index: 99;
+}
+.dialog-popup .ui-dialog-titlebar-close:hover
+{
+    background: #35c0ff;
+    border-color: #35c0ff;
+}
+.dialog-popup .ui-dialog-titlebar-close .ui-icon-closethick
+{
+    background: none;
+}
+.ui-dialog.dialog-popup .inner-content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    height: 410px;
+    padding: 40px 0 0 0;
+}
+.dialog-popup h1
+{
+    font-family: proxima nova,Arial,sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin: 18px auto 15px;
+    font-weight: 700;
+    text-transform: unset;
+    letter-spacing: unset;
+    line-height: unset;
+    color: #042433;
+}
+.black .dialog-popup h1,
+.black .dialog-popup h2
+{
+    color: unset;
+}
+.dialog-popup h2
+{
+    font-family: proxima nova,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto 30px;
+    white-space: pre-line;
+    text-transform: unset;
+    letter-spacing: unset;
+    line-height: unset;
+    color: #042433;
+}
+.dialog-popup .popup_input
+{
+    font-family: proxima nova,Arial,sans-serif;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 55px;
+    color: #03a9f4;
+    padding: 10px 15px;
+    transition: border .2s ease;
+    background: #fff;
+    border: 2px solid #ced4db;
+}
+.dialog-popup .popup_input.error
+{
+   border-color: #fa4d4d;
+   color: #fa4d4d;
+}
+.black .dialog-popup .popup_input
+{
+    background: transparent;
+    border: 2px solid #4e4e4e;
+}
+.black .dialog-popup .popup_input.error
+{
+    border-color: #fa4d4d !important;
+    color: #fa4d4d;
+}
+.dialog-popup .popup_input:focus
+{
+    border: 2px solid #03a9f4;
+}
+.dialog-popup .popup_input::placeholder
+{
+    color: #bfc8d2;
+}
+.black .dialog-popup .popup_input::placeholder
+{
+    color: #4e4e4e;
+}
+.dialog-popup .popup_button
+{
+    font-family: proxima nova,Arial,sans-serif;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: unset;
+    font-weight: 600;
+    padding: 14px 28px;
+    font-size: 22px;
+    line-height: 150%;
+    border: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .2s ease;
+    background: linear-gradient(138.77deg,#49d60a 3.5%,#09cb01 97.72%);
+}
+.dialog-popup .popup_button:disabled
+{
+    pointer-events: none;
+    background: hsla(0,0%,71%,.5);
+}
+.dialog-popup .popup-back
+{
+    transition: fill .3s ease;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    cursor: pointer;
+}
+.dialog-popup .popup-back .popup-back-bg
+{
+    fill: #fff;
+    stroke: #ced4db;
+    transition: fill .3s ease;
+}
+.black .dialog-popup .popup-back .popup-back-bg
+{
+    fill: transparent;
+    stroke: #4e4e4e;
+}
+.dialog-popup .popup-back:hover .popup-back-bg
+{
+    fill: #35c0ff;
+    stroke: #35c0ff;
+}
+.black .dialog-popup .popup-back:hover .popup-back-bg
+{
+    fill: #fff;
+    stroke: #171717;
+}
+.dialog-popup .popup-back .popup-back-symbol
+{
+    stroke: #ced4db;
+    transition: stroke .3s ease;
+}
+.black .dialog-popup .popup-back .popup-back-symbol
+{
+    stroke: #4e4e4e;
+}
+.dialog-popup .popup-back:hover .popup-back-symbol
+{
+    stroke: #fff;
+}
+.black .dialog-popup .popup-back:hover .popup-back-symbol
+{
+    stroke: #171717;
+}
+.dialog-popup .popup-close
+{
+    transition: fill .3s ease;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+}
+.dialog-popup .popup-close .popup-close-bg
+{
+    fill: #fff;
+    stroke: #ced4db;
+    transition: fill .3s ease;
+}
+.black .dialog-popup .popup-close .popup-close-bg
+{
+    fill: transparent;
+    stroke: #4e4e4e;
+}
+.dialog-popup .popup-close .popup-close-symbol
+{
+    stroke: #ced4db;
+    transition: fill .3s ease;
+}
+.black .dialog-popup .popup-close .popup-close-symbol
+{
+    stroke: #4e4e4e;
+}
+.dialog-popup .popup-close:hover .popup-close-bg
+{
+    fill: #35c0ff;
+    stroke: #35c0ff;
+}
+.black .dialog-popup .popup-close:hover .popup-close-bg
+{
+    fill: #fff;
+    stroke: #171717;
+}
+.dialog-popup .popup-close:hover .popup-close-symbol
+{
+    stroke: #fff;
+}
+.black .dialog-popup .popup-close:hover .popup-close-symbol
+{
+    stroke: #171717;
+}
+.dialog-popup div.error_block
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f46565;
+    border-radius: 41px;
+    z-index: 10000;
+    border: 0;
+    padding: 40px 40px 66px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    min-height: 140px;
+    font-family: proxima nova,Arial,sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    color: #fff;
+    cursor: default;
+}
+.dialog-popup div.error_block::after
+{
+    content: "";
+    width: 40%;
+    border: 1px solid #ffd0d0;
+    display: block;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dialog-popup div.error_block .error_title
+{
+    font-size: 23px;
+}
+.dialog-popup div.error_block.hide
+{
+    display: none;
+}
+.dialog-popup div.error_block div.note_txt
+{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 17px;
+}
+.dialog-popup .phone-for-call,
+.dialog-popup .pfc
+{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    color: #042433;
+    font-family: 'GothamProReg';
+    font-size: 14px;
+    line-height: 25px;
+}
+.black .dialog-popup .phone-for-call,
+.black .dialog-popup .pfc
+{
+    color: unset;
+}
+.dialog-popup .phone-for-call strong,
+.dialog-popup .pfc strong
+{
+    font-size: 19px;
+}
+.dialog-popup .popup_bottom
+{
+    position: absolute;
+    background: #ffefef;
+    padding: 27px;
+    display: flex;
+    height: 95px;
+    width: 100%;
+    font-size: 12px;
+    bottom: 0;
+    box-sizing: border-box;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.dialog-popup .popup_masterkey_wrapper
+{
+    position: relative;
+}
+.dialog-popup .popup_masterkey_toggle
+{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    outline: none;
+}
+.dialog-popup .popup_masterkey_keyboard
+{
+    position: absolute;
+    top: -149px;
+    right: 0;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 8px;
+    grid-template-rows: repeat(3,1fr);
+    width: 236px;
+    height: 144px;
+    border-radius: 10px;
+    background: rgba(107,127,151,.97);
+    box-sizing: border-box;
+    outline: none!important;
+    box-shadow: none!important;
+}
+.dialog-popup .popup_masterkey_keyboard-key
+{
+    cursor: pointer;
+    background: hsla(0,0%,100%,.1);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.dialog-popup .popup_masterkey_keyboard-back
+{
+    cursor: pointer;
+}
+.dialog-popup .popup-call-title
+{
+    margin: 0 auto;
+    top: 42px;
+    position: absolute;
+}
+.dialog-popup .popup_resend
+{
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 33px;
+    font-weight: 700;
+    font-family: proxima nova,Arial,sans-serif;
+    color: #042433;
+}
+.black .dialog-popup .popup_resend
+{
+    color: #4e4e4e;
+}
+.dialog-popup .popup_resend a:link,
+.dialog-popup .popup_resend a:hover,
+.dialog-popup .popup_resend a:active,
+.dialog-popup .popup_resend a:visited
+{
+    color: #03a9f4;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.dialog-popup .phone-for-call .phone-for-call-code,
+.dialog-popup .pfc .pfc-code
+{
+    display: inline-flex;
+}
+.dialog-popup .phone-for-call .phone-for-call-code input,
+.dialog-popup .pfc .pfc-code input
+{
+    margin: 0 3px 0 !important;
+    padding: 5px !important;
+    width: 100%;
+    border: 2px solid #ced4db;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 55px;
+    color: #03a9f4;
+    transition: border .2s ease;
+    background: #fff;
+    max-width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none !important;
+    box-shadow: none !important;
+    font-family: proxima nova,Arial,sans-serif;
+}
+.black .dialog-popup .phone-for-call .phone-for-call-code input,
+.black .dialog-popup .pfc .pfc-code input
+{
+    background: transparent;
+    border: 2px solid #4e4e4e;
+    color: #03a9f4;
+}
+.dialog-popup .phone-for-call .phone-for-call-code input:focus,
+.dialog-popup .pfc .pfc-code input:focus
+{
+    border: 2px solid #03a9f4;
+}
+.dialog-popup .phone-for-call .phone-for-call-code input.notempty:not(:focus),
+.dialog-popup .pfc .pfc-code input.notempty:not(:focus)
+{
+    border-color: #000;
+    color: #000;
+}
+.black .dialog-popup .phone-for-call .phone-for-call-code input.notempty:not(:focus),
+.black .dialog-popup .pfc .pfc-code input.notempty:not(:focus)
+{
+    border-color: #4e4e4e;
+    color: unset;
+}

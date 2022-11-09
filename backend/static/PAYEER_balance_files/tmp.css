@@ -1,0 +1,15 @@
+.wleft
+{
+	/*background:#f0f0f0;*/
+	background:#f0f0f0;
+}
+.wmenuleft ul li a
+{
+	color:#000000;
+}
+.wmenuleft ul li a:hover,
+.wmenuleft ul li a.act
+{
+    /*background:#FFFFFF;*/
+	background:#ffffff;
+}

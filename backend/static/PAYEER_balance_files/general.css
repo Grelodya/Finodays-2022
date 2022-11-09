@@ -1,0 +1,775 @@
+/*
+.main_columns .main_column .main_column_body
+{
+   border-color: #fff;
+}
+.main_columns .main_column .main_column_title
+{
+   background: #fff;
+}
+.main_columns .main_column_content > label
+{
+   background: #fff;
+}
+ul.main_menu li a
+{
+   background: #fff;
+}
+*/
+
+/*
+.main_columns .main_column .main_column_body
+{
+   border-color: #f9fcfe;
+   background: #fff;
+}
+.main_columns .main_column .main_column_title
+{
+   background: #fff;
+}
+.balance_chat .payeer_chat .chat_form
+{
+   background-color: #fff;
+}
+.main_columns .main_column_content > label
+{
+   background: #fff;
+}
+
+.black .main_columns .main_column .main_column_body
+{
+   background: transparent;
+}
+
+
+body
+{
+   background: #f0f0f0;
+}
+*/
+button,
+button:active,
+button:focus
+{
+    outline: none;
+}
+
+.col--sidebar
+{
+   background-color: #f0f0f0;
+}
+
+.content
+{
+   background-color: #fafafa;
+   padding: 20px 20px 20px 48px;
+}
+
+.menu ul
+{
+   border-bottom-color: #f0f0f0;
+}
+
+.header
+{
+   border-bottom: none;
+}
+
+.menu a:hover,
+.menu a.current
+{
+   background-color: #fff;
+}
+
+.black .menu a:hover,
+.black .menu a.current
+{
+   background-color: rgba(51,152,217,0.03);
+}
+
+.header-panel
+{
+   background-color: #fafafa;
+}
+
+.sidebar
+{
+   box-shadow: none;
+   height: calc(100% - 67px);
+}
+
+h1
+{
+    font-family: 'FuturaNewMedium';
+    font-size: 28px;
+    letter-spacing: 5pt;
+    line-height: 66px;
+    color: rgb(68,68,68);
+    text-transform: uppercase;
+    /*margin: 23px 0 0 48px;*/
+    margin: 0;
+}
+h1 .line
+{
+    display: block;
+    width: 146px;
+    border-top: 2px solid rgb(68,68,68);
+    margin: 0 0 0 2px;
+}
+
+.black h1
+{
+   color: #DDDDDD;
+}
+.black h1 .line
+{
+   border-top-color: #171717;
+}
+
+.switcher .switcher-box.on::before
+{
+  left: 1px;
+  border-radius: 2px 0 0 2px;
+}
+.switcher .switcher-box.on .switcher-off
+{
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.switcher .switcher-box.on .switcher-on
+{
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.logo-img
+{
+    width: 127px;
+    height: 26px;
+}
+.logo img
+{
+   margin-left: -63px;
+}
+
+.actions-notification > button i,
+.actions-theme > button i,
+.actions-settings > button i
+{
+   font-size: 23px;
+}
+
+.actions-account > button .icon-user
+{
+   top: 23px;
+   font-size: 22px;
+}
+
+.actions-logout > button i
+{
+   font-size: 21px;
+}
+
+.content input
+{
+   box-sizing: content-box;
+}
+
+.table table tr
+{
+   cursor: default;
+}
+
+.col-container
+{
+   background: #f0f0f0;
+}
+
+.table-footer b
+{
+   color: #688699;
+   font-weight: normal;
+}
+
+.order-balance b
+{
+   color: #688699;
+   font-weight: normal;
+}
+
+.night .order-balance b
+{
+   /*color: rgba(255,255,255,0.3);*/
+}
+
+.row--trade
+{
+   margin: 20px 0 0 0;
+}
+
+.table-container
+{
+   min-height: 390px;
+}
+
+.chart-direction .SumoSelect
+{
+   min-width: 190px;
+}
+
+.chart-rzd
+{
+   font-size: 26px;
+   position: relative;
+   left: 14px;
+   top: 7px;
+}
+
+.chart-price i
+{
+   position: relative;
+   top: 2px;
+   left: -1px;
+}
+
+.icon-daa::before
+{
+    content: "\e93d";
+}
+.icon-ust::before
+{
+    content: "\e939";
+}
+.icon-xrp::before
+{
+    content: "\e93b";
+}
+.icon-dog::before
+{
+    content: "\e93c";
+}
+.icon-dog::before
+{
+    content: "\e93c";
+}
+.icon-trx::before
+{
+    content: "\e93e";
+}
+
+.fa-btb::before,
+.fa-bta::before,
+.fa-bte::before
+{
+    content: "\f15a";
+}
+
+.balance-item--daa
+{
+    color: #008ce7;
+    border-color: rgba(0,138,230,0.2);
+}
+.balance-item--daa i
+{
+   background-color: #008ce7;
+}
+.balance-item--daa i.icon-daa::before
+{
+   /*font-size: 18px;*/
+   font-size: 15px;
+   position: relative;
+   top: -2px;
+}
+.balance-item--dog
+{
+    color: #ECB61C;
+    border-color: rgba(236,182,28,0.2);
+}
+.balance-item--dog i
+{
+   background-color: #ECB61C;
+}
+.balance-item--dog i.icon-dog::before
+{
+   position: relative;
+}
+.balance-item--trx
+{
+    color: #D36464;
+    border-color: rgba(211,100,100,0.2);
+}
+.balance-item--trx i
+{
+   background-color: #D36464;
+}
+.balance-item--trx i.icon-trx::before
+{
+   position: relative;
+   top: 1px;
+}
+
+.balance-item--ust
+{
+    color: #45b193;
+    border-color: rgba(69, 177, 147, 0.2);
+}
+.balance-item--ust i
+{
+   background-color: #45b193;
+}
+.balance-item--ust i.icon-ust::before
+{
+   font-size: 20px;
+   position: relative;
+   /*left: 1px;*/
+}
+.balance-item--xrp
+{
+    color: #3e8bc4;
+    border-color: rgba(62, 139, 196, 0.2);
+}
+.balance-item--xrp i
+{
+   background-color: #3e8bc4;
+}
+.balance-item--xrp i.icon-xrp::before
+{
+   font-size: 22px;
+   position: relative;
+   left: -1px;
+}
+
+.header-total .btn--amount s,
+.wallet .wallet-total s,
+.balance-item s
+{
+   text-decoration: none;
+}
+
+.icon-curr.icon-usd
+{
+   color: #3c0;
+}
+.icon-curr.icon-rub
+{
+   color: #f0937c;
+}
+.icon-curr.icon-eur
+{
+   color: #33bdf1;
+}
+.icon-curr.icon-btc
+{
+   color: #f48b40;
+}
+.icon-curr.icon-eth
+{
+   color: #6287a5;
+}
+.icon-curr.icon-bch
+{
+   color: #4bcf51;
+}
+.icon-curr.icon-ltc
+{
+   color: #bebebe;
+}
+
+.header-overlay
+{
+   /* background: #fff; */
+}
+
+.chart .SumoSelect > .optWrapper > .options li.opt.disabled
+{
+   display: none;
+}
+
+.ui-datepicker
+{
+   z-index: 1000 !important;
+}
+
+
+.chat-wrapper ul
+{
+   max-height: none;
+   height: 361px;
+}
+
+.fa-kzt:before
+{
+  content: "₸";
+}
+
+.fa-amd:before
+{
+  content: "֏";
+}
+
+.fa-sync:before
+{
+  content: "\f021";
+}
+
+
+
+.account_balance_new li:hover .val a.hide_wallet
+{
+   display: none;
+}
+
+.account_balance_new li .val:hover a.hide_wallet
+{
+   display: block;
+}
+
+.account_balance li .val a.hide_wallet
+{
+   top: 14px;
+}
+
+.account_balance li .val span.curr,
+.account_balance li .val span.pr
+{
+   opacity: 0.5 !important;
+}
+
+
+.account_balance li.USD .val span.curr,
+.account_balance li.USD .val span.int,
+.account_balance li.USD .val span.pr,
+.account_balance li.USD .val a.hide_wallet
+{
+   color: #74c56b;
+}
+
+.account_balance li.usd .val:hover,
+.account_balance li.USD .val:hover
+{
+   background: #74c56b;
+}
+
+.black .w .account_balance li.USD .val span.curr,
+.black .w .account_balance li.USD .val span.int,
+.black .w .account_balance li.USD .val span.pr,
+.black .w .account_balance li.USD .val a.hide_wallet
+{
+   color: #429339;
+}
+
+.black .w .account_balance li.usd .val:hover,
+.black .w .account_balance li.USD .val:hover
+{
+   background: #429339;
+}
+
+
+.account_balance li.RUB .val span.curr,
+.account_balance li.RUB .val span.int,
+.account_balance li.RUB .val span.pr,
+.account_balance li.RUB .val a.hide_wallet
+{
+   color: #f0937d;
+}
+
+.account_balance li.rub .val:hover,
+.account_balance li.RUB .val:hover
+{
+   background: #f0937d;
+}
+
+.black .w .account_balance li.RUB .val span.curr,
+.black .w .account_balance li.RUB .val span.int,
+.black .w .account_balance li.RUB .val span.pr,
+.black .w .account_balance li.RUB .val a.hide_wallet
+{
+   color: #f07b60;
+}
+
+.black .w .account_balance li.rub .val:hover,
+.black .w .account_balance li.RUB .val:hover
+{
+   background: #f07b60;
+}
+
+
+.account_balance li.EUR .val span.curr,
+.account_balance li.EUR .val span.int,
+.account_balance li.EUR .val span.pr,
+.account_balance li.EUR .val a.hide_wallet
+{
+   color: #32bdf1;
+}
+
+.account_balance li.eur .val:hover,
+.account_balance li.EUR .val:hover
+{
+   background: #32bdf1;
+}
+
+.black .w .account_balance li.EUR .val span.curr,
+.black .w .account_balance li.EUR .val span.int,
+.black .w .account_balance li.EUR .val span.pr,
+.black .w .account_balance li.EUR .val a.hide_wallet
+{
+   color: #008BBF;
+}
+
+.black .w .account_balance li.eur .val:hover,
+.black .w .account_balance li.EUR .val:hover
+{
+   background: #008BBF;
+}
+
+
+.account_balance li.BTC .val span.curr,
+.account_balance li.BTC .val span.int,
+.account_balance li.BTC .val span.pr,
+.account_balance li.BTC .val a.hide_wallet
+{
+   color: #F48B40;
+}
+
+.account_balance li.btc .val:hover,
+.account_balance li.BTC .val:hover
+{
+   background: #F48B40;
+}
+
+.black .w .account_balance li.BTC .val span.curr,
+.black .w .account_balance li.BTC .val span.int,
+.black .w .account_balance li.BTC .val span.pr,
+.black .w .account_balance li.BTC .val a.hide_wallet
+{
+   color: #d55e09;
+}
+
+.black .w .account_balance li.btc .val:hover,
+.black .w .account_balance li.BTC .val:hover
+{
+   background: #d55e09;
+}
+
+
+.account_balance li.ETH .val span.curr,
+.account_balance li.ETH .val span.int,
+.account_balance li.ETH .val span.pr,
+.account_balance li.ETH .val a.hide_wallet
+{
+   color: #6288a5;
+}
+
+.account_balance li.eth .val:hover,
+.account_balance li.ETH .val:hover
+{
+   background: #6288a5;
+}
+
+.black .w .account_balance li.ETH .val span.curr,
+.black .w .account_balance li.ETH .val span.int,
+.black .w .account_balance li.ETH .val span.pr,
+.black .w .account_balance li.ETH .val a.hide_wallet
+{
+   color: #6288a5;
+}
+
+.black .w .account_balance li.eth .val:hover,
+.black .w .account_balance li.ETH .val:hover
+{
+   background: #6288a5;
+}
+
+
+.account_balance li.BCH .val span.curr,
+.account_balance li.BCH .val span.int,
+.account_balance li.BCH .val span.pr,
+.account_balance li.BCH .val a.hide_wallet
+{
+   color: #6cc64a;
+}
+
+.account_balance li.bch .val:hover,
+.account_balance li.BCH .val:hover
+{
+   background: #6cc64a;
+}
+
+.black .w .account_balance li.BCH .val span.curr,
+.black .w .account_balance li.BCH .val span.int,
+.black .w .account_balance li.BCH .val span.pr,
+.black .w .account_balance li.BCH .val a.hide_wallet
+{
+   color: #6cc64a;
+}
+
+.black .w .account_balance li.bch .val:hover,
+.black .w .account_balance li.BCH .val:hover
+{
+   background: #6cc64a;
+}
+
+
+.account_balance li.LTC .val span.curr,
+.account_balance li.LTC .val span.int,
+.account_balance li.LTC .val span.pr,
+.account_balance li.LTC .val a.hide_wallet
+{
+   color: #8c8c8c;
+}
+
+.account_balance li.ltc .val:hover,
+.account_balance li.LTC .val:hover
+{
+   background: #8c8c8c;
+}
+
+.black .w .account_balance li.LTC .val span.curr,
+.black .w .account_balance li.LTC .val span.int,
+.black .w .account_balance li.LTC .val span.pr,
+.black .w .account_balance li.LTC .val a.hide_wallet
+{
+   color: #8c8c8c;
+}
+
+.black .w .account_balance li.ltc .val:hover,
+.black .w .account_balance li.LTC .val:hover
+{
+   background: #8c8c8c;
+}
+
+
+.account_balance li.DAA .val span.curr,
+.account_balance li.DAA .val span.int,
+.account_balance li.DAA .val span.pr,
+.account_balance li.DAA .val a.hide_wallet
+{
+   color: #3776bf;
+}
+
+.account_balance li.daa .val:hover,
+.account_balance li.DAA .val:hover
+{
+   background: #3776bf;
+}
+
+.black .w .account_balance li.DAA .val span.curr,
+.black .w .account_balance li.DAA .val span.int,
+.black .w .account_balance li.DAA .val span.pr,
+.black .w .account_balance li.DAA .val a.hide_wallet
+{
+   color: #3776bf;
+}
+
+.black .w .account_balance li.daa .val:hover,
+.black .w .account_balance li.DAA .val:hover
+{
+   background: #3776bf;
+}
+
+.account_balance li.UST .val span.curr,
+.account_balance li.UST .val span.int,
+.account_balance li.UST .val span.pr,
+.account_balance li.UST .val a.hide_wallet
+{
+   color: #45b193;
+}
+
+.account_balance li.ust .val:hover,
+.account_balance li.UST .val:hover
+{
+   background: #45b193;
+}
+
+.black .w .account_balance li.UST .val span.curr,
+.black .w .account_balance li.UST .val span.int,
+.black .w .account_balance li.UST .val span.pr,
+.black .w .account_balance li.UST .val a.hide_wallet
+{
+   color: #45b193;
+}
+
+.black .w .account_balance li.ust .val:hover,
+.black .w .account_balance li.UST .val:hover
+{
+   background: #45b193;
+}
+
+.account_balance li.XRP .val span.curr,
+.account_balance li.XRP .val span.int,
+.account_balance li.XRP .val span.pr,
+.account_balance li.XRP .val a.hide_wallet
+{
+   color: #45b193;
+}
+
+.account_balance li.xrp .val:hover,
+.account_balance li.XRP .val:hover
+{
+   background: #3e8bc4;
+}
+
+.black .w .account_balance li.XRP .val span.curr,
+.black .w .account_balance li.XRP .val span.int,
+.black .w .account_balance li.XRP .val span.pr,
+.black .w .account_balance li.XRP .val a.hide_wallet
+{
+   color: #45b193;
+}
+
+.black .w .account_balance li.xrp .val:hover,
+.black .w .account_balance li.XRP .val:hover
+{
+   background: #3e8bc4;
+}
+
+
+.main_abalance .account_balance li .val:hover span span,
+.main_abalance .account_balance li .val:hover a.hide_wallet,
+.black .w .main_abalance .account_balance li .val:hover span span,
+.black .w .main_abalance .account_balance li .val:hover a.hide_wallet
+{
+   color: #fff;
+}
+
+.account_balance li.itog .val .curr,
+.account_balance li.itog .val .pr,
+.black .w .account_balance li.itog .val .curr,
+.black .w .account_balance li.itog .val .pr
+{
+    color: #fff;
+}
+
+
+.SumoSelect > .optWrapper > .options
+{
+    max-height: 300px;
+}
+
+
+#btn-notification i
+{
+   display: none;
+}
+#btn-notification span
+{
+   top: 21px;
+   left: 19px;
+   width: 23px;
+   height: 23px;
+   font-size: 13px;
+   line-height: 25px;
+   border: none;
+}
+.black #btn-notification span
+{
+   background-color: #f07b60;
+}
+#btn-notification span.empty
+{
+   background-color: #b5b5b5;
+}
+.black #btn-notification span.empty
+{
+   background-color: #6288a5;
+}

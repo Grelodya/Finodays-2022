@@ -1,0 +1,1092 @@
+.list_more:hover
+{
+   background-color: #dfdfdf;
+   border-color: #dfdfdf;
+   /*border-color: #688699;*/
+}
+.black .w .list_more:hover
+{
+   background-color: #363535;
+   border-color: #363535;
+}
+
+.wtop .balance .RUB
+{
+    color: #f0937d;
+}
+.account_balance_new2
+{
+   margin-top: 0;
+}
+.account_balance_new
+{
+   margin-top: 23px;
+}
+.account_balance_new ol
+{
+   display: table-row;
+}
+.account_balance_new li,
+.account_balance_new li.itog
+{
+   padding: 0 10px 10px 0;
+}
+.account_balance_new li .val
+{
+   cursor: auto;
+   position: relative;
+}
+.account_balance_new li .val a.hide_wallet
+{
+   position: absolute;
+   top:11px;
+   right:9px;
+   color: #fff;
+   text-decoration: none;
+   display: none;
+}
+.account_balance_new li:hover .val a.hide_wallet
+{
+   display: block;
+}
+.account_balance_new li.show_hidden_wallets .val
+{
+    background: #f0f0f0;
+    color: #688699;
+    padding: 18px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+.main_abalance
+{
+   position: relative;
+}
+.main_abalance .main_banner
+{
+   position: absolute;
+   right: 10px;
+   top: -77px;
+}
+.account_balance li.usd .val,
+.account_balance li.USD .val
+{
+	background: none;
+   border: 3px solid #74c56b;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.USD .val
+{
+   border-color: #429339;
+   background: none;
+}
+.account_balance li.USD .val .curr,
+.account_balance li.USD .val .pr
+{
+    color: #bbceba;
+}
+.account_balance li.USD .val .int,
+.account_balance li.USD .val a.hide_wallet
+{
+    color: #74c56b;
+}
+.black .w .account_balance li.USD .val .int,
+.black .w .account_balance li.USD .val a.hide_wallet
+{
+    color: #429339;
+}
+.account_balance li.eur .val,
+.account_balance li.EUR .val
+{
+	background: none;
+   border: 3px solid #32bdf1;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.EUR .val
+{
+   border-color: #008BBF;
+   background: none;
+}
+.account_balance li.EUR .val .curr,
+.account_balance li.EUR .val .pr
+{
+    color: #a6c0ca;
+}
+.account_balance li.EUR .val .int,
+.account_balance li.EUR .val a.hide_wallet
+{
+    color: #32bdf1;
+}
+.black .w .account_balance li.EUR .val .int,
+.black .w .account_balance li.EUR .val a.hide_wallet
+{
+    color: #008BBF;
+}
+.account_balance li.rub .val,
+.account_balance li.RUB .val
+{
+	background: none;
+   /*border: 3px solid #f4af40;*/
+   border: 3px solid #f0937d;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.RUB .val
+{
+   border-color: #f07b60;
+   background: none;
+}
+.account_balance li.RUB .val .curr,
+.account_balance li.RUB .val .pr
+{
+    /*color: #f4c06b;*/
+    color: #f7cdc5;
+}
+.black .w .account_balance li.RUB .val .curr,
+.black .w .account_balance li.RUB .val .pr
+{
+    color: #f0ccc3;
+}
+.account_balance li.RUB .val .int,
+.account_balance li.RUB .val a.hide_wallet
+{
+    /*color: #f4af40;*/
+    color: #f07b60;
+}
+.black .w .account_balance li.RUB .val .int,
+.black .w .account_balance li.RUB .val a.hide_wallet
+{
+    color: #f0937d;
+}
+
+.account_balance li.btc .val,
+.account_balance li.BTC .val
+{
+	background: none;
+   border: 3px solid #F48B40;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.BTC .val
+{
+   border-color: #d55e09;
+   background: none;
+}
+.account_balance li.BTC .val .curr,
+.account_balance li.BTC .val .pr
+{
+    color: #f49c5d;
+}
+.account_balance li.BTC .val .int,
+.account_balance li.BTC .val a.hide_wallet
+{
+    color: #F48B40;
+}
+.black .w .account_balance li.BTC .val .int,
+.black .w .account_balance li.BTC .val a.hide_wallet
+{
+    color: #d55e09;
+}
+
+
+.account_balance li.eth .val,
+.account_balance li.ETH .val
+{
+	background: none;
+   border: 3px solid #6288a5;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.ETH .val
+{
+   border-color: #6288a5;
+   background: none;
+}
+.account_balance li.ETH .val .curr,
+.account_balance li.ETH .val .pr
+{
+    color: #9caecb;
+}
+.account_balance li.ETH .val .int,
+.account_balance li.ETH .val a.hide_wallet
+{
+    color: #6288a5;
+}
+.black .w .account_balance li.ETH .val .int,
+.black .w .account_balance li.ETH .val a.hide_wallet
+{
+    color: #6288a5;
+}
+
+.account_balance li.bch .val,
+.account_balance li.BCH .val
+{
+	background: none;
+   border: 3px solid #6cc64a;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.BCH .val
+{
+   border-color: #6cc64a;
+   background: none;
+}
+.account_balance li.BCH .val .curr,
+.account_balance li.BCH .val .pr
+{
+    color: #b3dca6;
+}
+.account_balance li.BCH .val .int,
+.account_balance li.BCH .val a.hide_wallet
+{
+    color: #6cc64a;
+}
+.black .w .account_balance li.BCH .val .int,
+.black .w .account_balance li.BCH .val a.hide_wallet
+{
+    color: #6cc64a;
+}
+
+.account_balance li.ltc .val,
+.account_balance li.LTC .val
+{
+	background: none;
+   border: 3px solid #8c8c8c;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.LTC .val
+{
+   border-color: #8c8c8c;
+   background: none;
+}
+.account_balance li.LTC .val .curr,
+.account_balance li.LTC .val .pr
+{
+    color: #b2b3b2;
+}
+.account_balance li.LTC .val .int,
+.account_balance li.LTC .val a.hide_wallet
+{
+    color: #8c8c8c;
+}
+.black .w .account_balance li.LTC .val .int,
+.black .w .account_balance li.LTC .val a.hide_wallet
+{
+    color: #8c8c8c;
+}
+
+.account_balance li.daa .val,
+.account_balance li.DAA .val
+{
+	background: none;
+   border: 3px solid #3776bf;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.DAA .val
+{
+   border-color: #3776bf;
+   background: none;
+}
+.account_balance li.DAA .val .curr,
+.account_balance li.DAA .val .pr
+{
+    color: #6391c7;
+}
+.account_balance li.DAA .val .int,
+.account_balance li.DAA .val a.hide_wallet
+{
+    color: #3776bf;
+}
+.black .w .account_balance li.DAA .val .int,
+.black .w .account_balance li.DAA .val a.hide_wallet
+{
+    color: #3776bf;
+}
+.account_balance li.ust .val,
+.account_balance li.UST .val
+{
+	background: none;
+   border: 3px solid #45b193;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.UST .val
+{
+   border-color: #45b193;
+   background: none;
+}
+.account_balance li.UST .val .curr,
+.account_balance li.UST .val .pr
+{
+    color: #6391c7;
+}
+.account_balance li.UST .val .int,
+.account_balance li.UST .val a.hide_wallet
+{
+    color: #45b193;
+}
+.black .w .account_balance li.UST .val .int,
+.black .w .account_balance li.UST .val a.hide_wallet
+{
+    color: #45b193;
+}
+
+
+.account_balance li.xrp .val,
+.account_balance li.XRP .val
+{
+	background: none;
+   border: 3px solid #3e8bc4;
+	padding: 12px 0 7px;
+}
+.black .w .account_balance li.XRP .val
+{
+   border-color: #3e8bc4;
+   background: none;
+}
+.account_balance li.XRP .val .curr,
+.account_balance li.XRP .val .pr
+{
+    color: #6391c7;
+}
+.account_balance li.XRP .val .int,
+.account_balance li.XRP .val a.hide_wallet
+{
+    color: #3e8bc4;
+}
+.black .w .account_balance li.XRP .val .int,
+.black .w .account_balance li.XRP .val a.hide_wallet
+{
+    color: #3e8bc4;
+}
+
+.account_balance li.itog-USD .val
+{
+	background: #74c56b;
+}
+.account_balance li.itog-USD .val .curr,
+.account_balance li.itog-USD .val .pr
+{
+    color: #54864f;
+}
+.black .w .account_balance li.itog-USD .val
+{
+	background: #429339;
+}
+.black .w .account_balance li.itog-USD .val .curr,
+.black .w .account_balance li.itog-USD .val .pr
+{
+    color: #375f32;
+}
+.account_balance li.itog-EUR .val
+{
+	background: #32bdf1;
+}
+.account_balance li.itog-EUR .val .curr,
+.account_balance li.itog-EUR .val .pr
+{
+    color: #3081a2;
+}
+.black .w .account_balance li.itog-EUR .val
+{
+	background: #008BBF;
+}
+.black .w .account_balance li.itog-EUR .val .curr,
+.black .w .account_balance li.itog-EUR .val .pr
+{
+    color: #a6c0ca;
+}
+
+.account_balance li.itog-BTC .val
+{
+	background: #F48B40;
+}
+.account_balance li.itog-BTC .val .curr,
+.account_balance li.itog-BTC .val .pr
+{
+    color: #b84922;
+}
+.black .w .account_balance li.itog-BTC .val
+{
+	background: #d55e09;
+}
+.black .w .account_balance li.itog-BTC .val .curr,
+.black .w .account_balance li.itog-BTC .val .pr
+{
+    color: #8e3604;
+}
+
+.account_balance li.itog-ETH .val
+{
+	background: #6288a5;
+}
+.account_balance li.itog-ETH .val .curr,
+.account_balance li.itog-ETH .val .pr
+{
+    color: #9caecb;
+}
+.black .w .account_balance li.itog-ETH .val
+{
+	background: #417494;
+}
+.black .w .account_balance li.itog-ETH .val .curr,
+.black .w .account_balance li.itog-ETH .val .pr
+{
+    color: #9caecb;
+}
+
+.account_balance li .val span.link
+{
+	cursor: pointer;
+}
+.account_balance li.itog a.list
+{
+   display: block;
+   right: -3px;
+}
+.account_balance li.itog a.list.listrotate
+{
+   transform: rotate(-93deg);
+}
+
+ul.total_curr
+{
+   margin: 0;
+   padding: 0;
+   position: absolute;
+   left: 67px;
+   top: 0;
+   display: none;
+}
+ul.total_curr li
+{
+   margin: 0;
+   padding: 0px 10px 0 0;
+}
+ul.total_curr li a:link,
+ul.total_curr li a:active,
+ul.total_curr li a:visited,
+ul.total_curr li a:hover
+{
+   text-decoration: none;
+   border-radius: 5px;
+   padding: 0px 2px;
+   color: #fff;
+}
+ul.total_curr li.USD a
+{
+   background: #74c56b;
+}
+.black ul.total_curr li.USD a
+{
+   background: #429339;
+}
+ul.total_curr li.EUR a
+{
+   background: #32bdf1;
+}
+.black ul.total_curr li.EUR a
+{
+   background: #008BBF;
+}
+ul.total_curr li.RUB a
+{
+   background: #f07b60;
+}
+.black ul.total_curr li.RUB a
+{
+   background: #741700;
+}
+ul.total_curr li.BTC a
+{
+   background: #F48B40;
+}
+.black ul.total_curr li.BTC a
+{
+   background: #d55e09;
+}
+ul.total_curr li.ETH a
+{
+   background: #6288a5;
+}
+.black ul.total_curr li.ETH a
+{
+   background: #427494;
+}
+ul.total_curr li.BCH a
+{
+   background: #6288a5;
+}
+.black ul.total_curr li.BCH a
+{
+   background: #427494;
+}
+ul.total_curr li.LTC a
+{
+   background: #6288a5;
+}
+.black ul.total_curr li.LTC a
+{
+   background: #427494;
+}
+ul.total_curr li.DAA a
+{
+   background: #6288a5;
+}
+.black ul.total_curr li.DAA a
+{
+   background: #427494;
+}
+ul.total_curr li.UST a
+{
+   background: #6288a5;
+}
+.black ul.total_curr li.UST a
+{
+   background: #427494;
+}
+ul.total_curr li.XRP a
+{
+   background: #6288a5;
+}
+.black ul.total_curr li.XRP a
+{
+   background: #427494;
+}
+.send_funds_list
+{
+   /*border-bottom: 1px solid #f3f4f5;*/
+   padding: 0 0 42px 0;
+   /*margin: 0 0 40px 0;*/
+}
+.send_funds_list .field-row-fees .fees
+{
+   float: left;
+   padding: 18px 0 0 0;
+}
+.send_funds_list .field-row-fees .fees .val
+{
+   font-family: 'FuturaNewMedium';
+   font-size: 16px;
+   color: #73c670;
+   display: block;
+}
+.send_funds_list .field-row-fees .fees .descr
+{
+   font-family: 'GothamProReg';
+   font-size: 14px;
+   color: #999999;
+   display: block;
+}
+.send_funds_list .field-row-fees .fees.gateway_fee
+{
+   margin: 0 0 0 30px;
+}
+.send_funds_list .field-row-half input.input3
+{
+   background: none;
+}
+.send_funds_list .amount_curr .jq-selectbox__select
+{
+   background: none;
+}
+.send_funds_list .select229 .jq-selectbox__select
+{
+   background: none;
+}
+.send_funds_list form a.button_green
+{
+   margin-top: 4px;
+}
+.send_funds_list .jq-selectbox.payout_method
+{
+   background-position: 7% 50%;
+   background-size: 10%;
+}
+.send_funds_list .jq-selectbox.payout_method .jq-selectbox__select-text
+{
+   margin: 0 0 0 30px;
+}
+.send_funds_list .jq-selectbox.payout_method li.option
+{
+   background-position: 10% 50%;
+   padding: 10px 60px;
+   background-size: 10%;
+}
+
+
+.choose_ps
+{
+	border-top: 1px solid #f3f4f5;
+	padding: 40px 0 0 0;
+}
+
+
+.main_columns
+{
+   padding: 20px 0 0;
+   display: table;
+   width: 100%;
+}
+.main_columns .main_column
+{
+   display: table-cell;
+}
+.main_columns .main_column .main_column_body
+{
+   border: 4px solid #f0f0f0;
+   border-radius: 5px;
+}
+.black .main_columns .main_column .main_column_body
+{
+	border-color: #171717;
+}
+.main_columns .main_column .main_column_title
+{
+   font-family: 'FuturaNewMedium';
+   background: #f0f0f0;
+   text-transform: uppercase;
+   font-size: 18px;
+   letter-spacing: 1pt;
+   color: #2b393f;
+   padding: 11px 17px;
+   margin: 0 0 25px;
+}
+.black .main_columns .main_column .main_column_title
+{
+	background: #171717;
+	color: #DDDDDD;
+}
+.main_columns .main_column_content
+{
+   font-family: 'GothamProMedium';
+   color: #444444;
+   font-size: 14px;
+   padding: 0 22px 20px;
+}
+.main_columns .main_column_content > label
+{
+    background: #f0f0f0;
+    border-radius: 5px;
+    display: block;
+    font-family: 'FuturaNewDemi';
+    font-size: 18px;
+    letter-spacing: 1pt;
+    color: #688699;
+    text-transform: uppercase;
+    padding: 11px 17px;
+    margin: 0 0 23px;
+    position: relative;
+}
+.black .main_columns .main_column_content > label
+{
+	background: #171717;
+	color: #DDDDDD;
+}
+.main_colums .main_column_left
+{
+   /*width: 59%;*/
+}
+.main_columns .main_column_center
+{
+   width: 3%;
+}
+.main_columns .main_column_right
+{
+   /*padding: 0 0 0 30px;*/
+   /*width: 38%;*/
+   width: 365px;
+}
+ul.list li.str ul.str
+{
+   width: 100%;
+}
+.tab-activities li.body
+{
+   box-shadow: 0 0 5px #f0f0f0;
+}
+.black .tab-activities li.body
+{
+	box-shadow: none;
+}
+.main_columns .main_column .main_column_body .hr
+{
+   background: #f0f0f0;
+   width: 80%;
+   margin: 9px 0 29px;
+   height: 3px;
+}
+.black .main_columns .main_column .main_column_body .hr
+{
+	background: #171717;
+}
+ul.main_menu
+{
+   list-style: none;
+}
+ul.main_menu li
+{
+   margin: 0 0 13px;
+   position: relative;
+}
+ul.main_menu li:last-child
+{
+   margin-bottom: 0;
+}
+ul.main_menu li a
+{
+   display:block;
+   background: #f0f0f0;
+   border-radius: 5px;
+   display: block;
+   font-family: 'FuturaNewMedium';
+   font-size: 18px;
+   color: #688699;
+   padding: 15px 17px 15px 90px;
+   position: relative;
+   text-decoration: none;
+}
+.black ul.main_menu li a
+{
+	background: #171717;
+	color: #DDDDDD;
+}
+ul.main_menu li a:hover,
+ul.main_menu li a.act
+{
+   background: #688699;
+   color: #fff;
+}
+ul.main_menu li a .icon
+{
+   position: absolute;
+   top: 9px;
+   left: 5px;
+   border-right: 1px solid #d8d8d8;
+   width: 66px;
+   height: 37px;
+   display: block;
+	background: url('/static/v1/img/icons/right_menu.png') 0 0 no-repeat;
+}
+.black ul.main_menu li a .icon
+{
+	border-right-color: #DDDDDD;
+}
+ul.main_menu li a:hover .icon,
+ul.main_menu li a.act .icon
+{
+	background-position: -73px 0;
+	border-color: #869dac;
+}
+ul.main_menu li.merchant a .icon
+{
+	background-position: 0 -65px;
+}
+ul.main_menu li.merchant a:hover .icon,
+ul.main_menu li.merchant a.act .icon
+{
+	background-position: -73px -65px;
+}
+ul.main_menu li.referrals a .icon
+{
+	background-position: 0 -130px;
+}
+ul.main_menu li.referrals a:hover .icon,
+ul.main_menu li.referrals a.act .icon
+{
+	background-position: -73px -130px;
+}
+ul.main_menu li.api a .icon
+{
+	background-position: 0 -194px;
+}
+ul.main_menu li.api a:hover .icon,
+ul.main_menu li.api a.act .icon
+{
+	background-position: -73px -194px;
+}
+ul.main_menu span.new
+{
+	background: #e52300;
+	text-transform: uppercase;
+	top: -4px;
+	left: 5px;
+	font-size: 11px;
+	border-radius: 3px;
+	padding: 0 3px;
+	font-family: 'FuturaNewDemi';
+}
+
+
+.main_chat
+{
+	/*margin: 0 0 25px;*/
+   margin: 25px 0 0 0;
+	position: relative;
+	/*top: -6px;*/
+}
+.main_columns .balance_chat
+{
+	margin: 0;
+}
+.main_columns .main_chat .main_column_content
+{
+	padding: 0;
+}
+.main_columns .balance_chat .ab_vertical_chat
+{
+	padding: 0;
+}
+.main_columns .main_column .main_chat .main_column_title
+{
+	margin: 0;
+}
+.balance_chat .payeer_chat .chat_acc .chat_log
+{
+	height: 235px;
+}
+.balance_chat .payeer_chat .chat_acc
+{
+   min-width: auto;
+}
+.balance_chat .payeer_chat .chat_acc .chat_log
+{
+   height: 471px;
+}
+.balance_chat .payeer_chat .chat_form .input3
+{
+   width: 100%;
+   box-sizing: border-box;
+}
+
+form span.error_bottom
+{
+   margin: 4px 0 0 0;
+}
+
+.send_funds_list .field-row-half
+{
+   float: none;
+   display: inline-block;
+   vertical-align: top;
+}
+.send_funds_list .r_fields
+{
+   display: inline;
+}
+.send_funds_list .but_left
+{
+   margin: 0;
+   padding: 0;
+}
+.send_funds_list .limits_info
+{
+   float: left;
+   margin: 0px 0px 0px 50px;
+}
+
+
+.shop_settings .tabs_left_list
+{
+   padding: 0;
+}
+.shop_settings .tabs_left_list .tabs_left
+{
+   padding: 0;
+}
+.shop_settings table.table1 td
+{
+   padding: 15px 15px 17px;
+}
+.shop_settings table.table1 td.name
+{
+   white-space:normal;
+}
+.shop_settings pre.code
+{
+   white-space: pre-wrap;
+}
+.column_tabs_left
+{
+   margin:0 0 25px;
+}
+.shop_settings ul.list-dropdown ul.currs
+{
+   left: 350px;
+}
+
+ul.api_paysystems > li .fields table tbody tr td
+{
+   padding: 0 5px 0 0;
+}
+ul.api_paysystems > li .fields table tbody tr td:nth-child(4)
+{
+   padding: 0;
+}
+
+@media only screen and (max-width: 1900px)
+{
+   .shop_list table.table tbody tr td.links a.link
+   {
+      float: left;
+      margin: 5px 15px 5px 0;
+   }
+}
+@media only screen and (max-width: 1600px)
+{
+   .shop_list table.table thead tr th
+   {
+      padding: 24px 10px 22px;
+   }
+}
+@media only screen and (max-width: 1500px)
+{
+   .shop_list table.table tbody tr td
+   {
+      padding: 5px 5px 9px 5px;
+   }
+   .shop_list table.table td.website,
+   .shop_list table.table td.user
+   {
+      background: none;
+      padding-left: 10px;
+   }
+}
+@media only screen and (max-width: 1400px)
+{
+   .shop_list table.table .column-shopid,
+   .shop_list table.table .column-apiid
+   {
+      display: none;
+   }
+}
+
+
+.shop_settings .tabs_left_list
+{
+   padding: 0;
+}
+.shop_settings .tabs_left_list .tabs_left
+{
+   padding: 0;
+}
+.shop_settings .column_tabs_left
+{
+   margin:0 0 25px;
+}
+/*
+.shop_settings .tabs_left_list form.form
+{
+   margin: 16px auto 0;
+}
+*/
+.shop_settings ul.list-dropdown ul.currs
+{
+   left: 350px;
+}
+.shop_settings table.table1 td
+{
+   padding: 15px 15px 17px;
+}
+.shop_settings table.table1 td.name
+{
+   white-space:normal;
+}
+.shop_settings pre.code
+{
+   white-space: pre-wrap;
+}
+@media only screen and (max-width: 1400px)
+{
+   .shop_settings .tabs_left_list .jq-selectbox
+   {
+      width: 100%;
+   }
+   .shop_settings .tabs_left_list form.form
+   {
+      width: auto;
+   }
+   .shop_settings .tabs_left_list .field-row-half,
+   .shop_settings .tabs_left_list .field-row
+   {
+      margin: 0 0 26px;
+      padding: 0 5px;
+      box-sizing: border-box;
+   }
+   .shop_settings .tabs_left_list .field-row-half input.input3
+   {
+      width: 100%;
+      box-sizing: border-box;
+   }
+   .shop_settings .tabs_left_list .field-row-half
+   {
+      width: 50%;
+      box-sizing: border-box;
+   }
+   .shop_settings .tabs_left_list .field-row input.input3,
+   .shop_settings .tabs_left_list .field-row textarea.input3
+   {
+      width: 100%;
+      box-sizing: border-box;
+   }
+   .shop_settings .tabs_left_list .select229 .jq-selectbox__select
+   {
+      width: 100%;
+      box-sizing: border-box;
+      height: 46px;
+   }
+   .shop_settings .tabs_left_list .select520 .jq-selectbox__select
+   {
+      width: 100%;
+      box-sizing: border-box;
+      height: 46px;
+   }
+   .shop_settings .tabs_left_list .field-row-half .amount_curr input.input3
+   {
+      width: 156px;
+   }
+   .shop_settings .tabs_left_list .amount_curr .jq-selectbox
+   {
+      width: auto;
+   }
+}
+
+
+ul.referrals
+{
+   display: block;
+   width: 100%;
+   list-style: none;
+}
+ul.referrals li
+{
+    display: block;
+    width: 100%;
+}
+ul.referrals li.current .dref
+{
+   margin: 0;
+}
+ul.referrals li.next .dref
+{
+   margin: 0;
+}
+
+
+ul.main_menu2 li a
+{
+   padding-left: 50px;
+}
+ul.main_menu2 li a .icon
+{
+   display: none;
+}
+
+.wtop .account .info .info_detail li.account_number
+{
+   padding-top: 19px;
+}
+
+.wtop .account .info .info_detail li.account_number.strlen9 .val
+{
+   font-size: 16px;
+}
+
+.wtop .account .info .info_detail li.account_number.strlen11 .val
+{
+   font-size: 13px;
+}
