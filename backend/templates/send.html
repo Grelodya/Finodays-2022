@@ -16,7 +16,7 @@
         </label>
         <label for="count">Введите валюту для перевода
             <div class="input-group">
-                <input style="border-bottom-left-radius: 12px;border-top-left-radius: 12px;" type="number" class="gora input-group-field" onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" required name="count" id="count" min="0.001" value="1" step='any' />
+                <input style="border-bottom-left-radius: 12px;border-top-left-radius: 12px;" type="number" class="gora input-group-field" oninput="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" required name="count" id="count" min="0.001" value="1" step='any' />
                 <select style="border-bottom-right-radius: 12px;border-top-right-radius: 12px;" class="gora_label input-group-label" name="type" id="type" required>
                     <option value="GGC">GGC</option>
                     <option value="Gold">Золотые Монеты</option>
@@ -29,7 +29,7 @@
 
         <label for="count">Введите коммисию
             <div class="input-group">
-                <input style="border-bottom-left-radius: 12px;border-top-left-radius: 12px;" type="number" class="gora input-group-field" required onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" name="commission" id="commission" step='any' min="1" max="100" value="5"/>
+                <input style="border-bottom-left-radius: 12px;border-top-left-radius: 12px;" type="number" class="gora input-group-field" required oninput="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" name="commission" id="commission" step='any' min="1" max="100" value="5"/>
                 <span style="border-bottom-right-radius: 12px;border-top-right-radius: 12px;" class="gora_label input-group-label">%</span>
             </div>
         </label>
