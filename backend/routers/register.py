@@ -21,11 +21,11 @@ async def post_register(request: Request, db_session: AsyncSession = Depends(get
     if result.scalar():
         return get_templates().TemplateResponse("register.html",
                                                 context={"request": request, "Error": "Имя пользователя занято"})
-    elif 4 > len(username) > 64:
+    elif 4 > len(username) or len(username) > 64:
         return get_templates().TemplateResponse("register.html",
                                                 context={"request": request,
                                                          "Error": "Логин должен быть от 8 до 256 символов"})
-    elif 8 > len(password) > 256:
+    elif 8 > len(password) or len(password) > 256:
         return get_templates().TemplateResponse("register.html",
                                                 context={"request": request,
                                                          "Error": "Пароль должен быть от 8 до 256 символов"})
