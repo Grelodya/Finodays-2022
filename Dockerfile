@@ -2,7 +2,7 @@ FROM python:3.11.0
 
 WORKDIR /home/api
 
-COPY server server
+COPY . .
 COPY requirements.txt requirements.txt
 COPY backendConfig.py backendConfig.py
 
