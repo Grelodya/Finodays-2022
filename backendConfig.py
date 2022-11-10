@@ -1,12 +1,13 @@
 from pyliteconf import Config as _Config
+from os import getenv
 
 
 class DatabaseConfig(_Config):
     _dialect = "mysql+asyncmy"
 
-    _user = "user"
-    _password = "user"
-    _db_url = "79.120.76.23:3306/Finodays_del_11.11"
+    _user = getenv("DB_USER")
+    _password = getenv("DB_PASSWORD")
+    _db_url = getenv("DB_URL")
 
     url = f"{_dialect}://{_user}:{_password}@{_db_url}"
 
