@@ -14,9 +14,10 @@ def get_send(request: Request, user=Depends(get_manager())):
 
 @router.post("/add")
 async def post_send(request: Request, db_session: AsyncSession = Depends(get_session), user=Depends(get_manager()), count: float = Form(), commission: float = Form()):
-    if count > 0 and commission > 1:
+    if count > 0 and commission >= 1:
         user.balance_rub += count * (1 - commission / 100) / 3194
 
         db_session.add(user)
         await db_session.commit()
-    return get_templates().TemplateResponse("balance.html", context={"request": request, "user": user, "Title": "Баланс", "page": 0})
+        return get_templates().TemplateResponse("balance.html", context={"request": request, "user": user, "Title": "Баланс", "page": 0})
+    return get_templates().TemplateResponse("add.html", context={"request": request, "user": user, "Error": True, "Title": "Баланс", "page": 1})
