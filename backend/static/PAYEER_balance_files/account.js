@@ -4,7 +4,7 @@ var tmDialogErrorAutoClose;
 var arCurrPr = {
 	'USD': 2,
 	'EUR': 2,
-	'RUB': 2,
+	'GGC': 2,
 	'BTC': 8,
 	'ETH': 8,
 	'BTE': 8,
@@ -208,7 +208,7 @@ function formatCurrency(sum, cur)
 			result = number_format(sum, 2, '.', ' ') + ' €';
 		break;
 
-		case 'RUB':
+		case 'GGC':
 			result = number_format(sum, 2, '.', ' ') + ' <span class="fa fa-rub"></span>';
 		break;
 
@@ -666,19 +666,6 @@ function myScrollTo(e, p)
 	if (p == undefined) p = -70;
 
 	$('html, body').animate({'scrollTop' : $(e).offset().top + p}, 'slow');
-}
-
-function setLang(lang)
-{
-	var loc = document.location.pathname + document.location.search;
-
-	loc = loc.replace(/\/[a-z]{2}\//, '\/');
-
-	//if (lang != 'ru') loc = '/' + lang + loc;
-	loc = '/' + lang + loc;
-
-	document.location = loc;
-	//pre(loc);
 }
 
 

@@ -10,7 +10,7 @@
    border-color: #363535;
 }
 
-.wtop .balance .RUB
+.wtop .balance .GGC
 {
     color: #f0937d;
 }
@@ -122,37 +122,37 @@
     color: #008BBF;
 }
 .account_balance li.rub .val,
-.account_balance li.RUB .val
+.account_balance li.GGC .val
 {
 	background: none;
    /*border: 3px solid #f4af40;*/
    border: 3px solid #f0937d;
 	padding: 12px 0 7px;
 }
-.black .w .account_balance li.RUB .val
+.black .w .account_balance li.GGC .val
 {
    border-color: #f07b60;
    background: none;
 }
-.account_balance li.RUB .val .curr,
-.account_balance li.RUB .val .pr
+.account_balance li.GGC .val .curr,
+.account_balance li.GGC .val .pr
 {
     /*color: #f4c06b;*/
     color: #f7cdc5;
 }
-.black .w .account_balance li.RUB .val .curr,
-.black .w .account_balance li.RUB .val .pr
+.black .w .account_balance li.GGC .val .curr,
+.black .w .account_balance li.GGC .val .pr
 {
     color: #f0ccc3;
 }
-.account_balance li.RUB .val .int,
-.account_balance li.RUB .val a.hide_wallet
+.account_balance li.GGC .val .int,
+.account_balance li.GGC .val a.hide_wallet
 {
     /*color: #f4af40;*/
     color: #f07b60;
 }
-.black .w .account_balance li.RUB .val .int,
-.black .w .account_balance li.RUB .val a.hide_wallet
+.black .w .account_balance li.GGC .val .int,
+.black .w .account_balance li.GGC .val a.hide_wallet
 {
     color: #f0937d;
 }
@@ -483,11 +483,11 @@ ul.total_curr li.EUR a
 {
    background: #008BBF;
 }
-ul.total_curr li.RUB a
+ul.total_curr li.GGC a
 {
    background: #f07b60;
 }
-.black ul.total_curr li.RUB a
+.black ul.total_curr li.GGC a
 {
    background: #741700;
 }

@@ -435,292 +435,32 @@ h1 .line
    opacity: 0.5 !important;
 }
 
-
-.account_balance li.USD .val span.curr,
-.account_balance li.USD .val span.int,
-.account_balance li.USD .val span.pr,
-.account_balance li.USD .val a.hide_wallet
-{
-   color: #74c56b;
-}
-
-.account_balance li.usd .val:hover,
-.account_balance li.USD .val:hover
-{
-   background: #74c56b;
-}
-
-.black .w .account_balance li.USD .val span.curr,
-.black .w .account_balance li.USD .val span.int,
-.black .w .account_balance li.USD .val span.pr,
-.black .w .account_balance li.USD .val a.hide_wallet
-{
-   color: #429339;
-}
-
-.black .w .account_balance li.usd .val:hover,
-.black .w .account_balance li.USD .val:hover
-{
-   background: #429339;
-}
-
-
-.account_balance li.RUB .val span.curr,
-.account_balance li.RUB .val span.int,
-.account_balance li.RUB .val span.pr,
-.account_balance li.RUB .val a.hide_wallet
+.account_balance li.GGC .val span.curr,
+.account_balance li.GGC .val span.int,
+.account_balance li.GGC .val span.pr,
+.account_balance li.GGC .val a.hide_wallet
 {
    color: #f0937d;
 }
 
 .account_balance li.rub .val:hover,
-.account_balance li.RUB .val:hover
+.account_balance li.GGC .val:hover
 {
    background: #f0937d;
 }
 
-.black .w .account_balance li.RUB .val span.curr,
-.black .w .account_balance li.RUB .val span.int,
-.black .w .account_balance li.RUB .val span.pr,
-.black .w .account_balance li.RUB .val a.hide_wallet
+.black .w .account_balance li.GGC .val span.curr,
+.black .w .account_balance li.GGC .val span.int,
+.black .w .account_balance li.GGC .val span.pr,
+.black .w .account_balance li.GGC .val a.hide_wallet
 {
    color: #f07b60;
 }
 
 .black .w .account_balance li.rub .val:hover,
-.black .w .account_balance li.RUB .val:hover
+.black .w .account_balance li.GGC .val:hover
 {
    background: #f07b60;
-}
-
-
-.account_balance li.EUR .val span.curr,
-.account_balance li.EUR .val span.int,
-.account_balance li.EUR .val span.pr,
-.account_balance li.EUR .val a.hide_wallet
-{
-   color: #32bdf1;
-}
-
-.account_balance li.eur .val:hover,
-.account_balance li.EUR .val:hover
-{
-   background: #32bdf1;
-}
-
-.black .w .account_balance li.EUR .val span.curr,
-.black .w .account_balance li.EUR .val span.int,
-.black .w .account_balance li.EUR .val span.pr,
-.black .w .account_balance li.EUR .val a.hide_wallet
-{
-   color: #008BBF;
-}
-
-.black .w .account_balance li.eur .val:hover,
-.black .w .account_balance li.EUR .val:hover
-{
-   background: #008BBF;
-}
-
-
-.account_balance li.BTC .val span.curr,
-.account_balance li.BTC .val span.int,
-.account_balance li.BTC .val span.pr,
-.account_balance li.BTC .val a.hide_wallet
-{
-   color: #F48B40;
-}
-
-.account_balance li.btc .val:hover,
-.account_balance li.BTC .val:hover
-{
-   background: #F48B40;
-}
-
-.black .w .account_balance li.BTC .val span.curr,
-.black .w .account_balance li.BTC .val span.int,
-.black .w .account_balance li.BTC .val span.pr,
-.black .w .account_balance li.BTC .val a.hide_wallet
-{
-   color: #d55e09;
-}
-
-.black .w .account_balance li.btc .val:hover,
-.black .w .account_balance li.BTC .val:hover
-{
-   background: #d55e09;
-}
-
-
-.account_balance li.ETH .val span.curr,
-.account_balance li.ETH .val span.int,
-.account_balance li.ETH .val span.pr,
-.account_balance li.ETH .val a.hide_wallet
-{
-   color: #6288a5;
-}
-
-.account_balance li.eth .val:hover,
-.account_balance li.ETH .val:hover
-{
-   background: #6288a5;
-}
-
-.black .w .account_balance li.ETH .val span.curr,
-.black .w .account_balance li.ETH .val span.int,
-.black .w .account_balance li.ETH .val span.pr,
-.black .w .account_balance li.ETH .val a.hide_wallet
-{
-   color: #6288a5;
-}
-
-.black .w .account_balance li.eth .val:hover,
-.black .w .account_balance li.ETH .val:hover
-{
-   background: #6288a5;
-}
-
-
-.account_balance li.BCH .val span.curr,
-.account_balance li.BCH .val span.int,
-.account_balance li.BCH .val span.pr,
-.account_balance li.BCH .val a.hide_wallet
-{
-   color: #6cc64a;
-}
-
-.account_balance li.bch .val:hover,
-.account_balance li.BCH .val:hover
-{
-   background: #6cc64a;
-}
-
-.black .w .account_balance li.BCH .val span.curr,
-.black .w .account_balance li.BCH .val span.int,
-.black .w .account_balance li.BCH .val span.pr,
-.black .w .account_balance li.BCH .val a.hide_wallet
-{
-   color: #6cc64a;
-}
-
-.black .w .account_balance li.bch .val:hover,
-.black .w .account_balance li.BCH .val:hover
-{
-   background: #6cc64a;
-}
-
-
-.account_balance li.LTC .val span.curr,
-.account_balance li.LTC .val span.int,
-.account_balance li.LTC .val span.pr,
-.account_balance li.LTC .val a.hide_wallet
-{
-   color: #8c8c8c;
-}
-
-.account_balance li.ltc .val:hover,
-.account_balance li.LTC .val:hover
-{
-   background: #8c8c8c;
-}
-
-.black .w .account_balance li.LTC .val span.curr,
-.black .w .account_balance li.LTC .val span.int,
-.black .w .account_balance li.LTC .val span.pr,
-.black .w .account_balance li.LTC .val a.hide_wallet
-{
-   color: #8c8c8c;
-}
-
-.black .w .account_balance li.ltc .val:hover,
-.black .w .account_balance li.LTC .val:hover
-{
-   background: #8c8c8c;
-}
-
-
-.account_balance li.DAA .val span.curr,
-.account_balance li.DAA .val span.int,
-.account_balance li.DAA .val span.pr,
-.account_balance li.DAA .val a.hide_wallet
-{
-   color: #3776bf;
-}
-
-.account_balance li.daa .val:hover,
-.account_balance li.DAA .val:hover
-{
-   background: #3776bf;
-}
-
-.black .w .account_balance li.DAA .val span.curr,
-.black .w .account_balance li.DAA .val span.int,
-.black .w .account_balance li.DAA .val span.pr,
-.black .w .account_balance li.DAA .val a.hide_wallet
-{
-   color: #3776bf;
-}
-
-.black .w .account_balance li.daa .val:hover,
-.black .w .account_balance li.DAA .val:hover
-{
-   background: #3776bf;
-}
-
-.account_balance li.UST .val span.curr,
-.account_balance li.UST .val span.int,
-.account_balance li.UST .val span.pr,
-.account_balance li.UST .val a.hide_wallet
-{
-   color: #45b193;
-}
-
-.account_balance li.ust .val:hover,
-.account_balance li.UST .val:hover
-{
-   background: #45b193;
-}
-
-.black .w .account_balance li.UST .val span.curr,
-.black .w .account_balance li.UST .val span.int,
-.black .w .account_balance li.UST .val span.pr,
-.black .w .account_balance li.UST .val a.hide_wallet
-{
-   color: #45b193;
-}
-
-.black .w .account_balance li.ust .val:hover,
-.black .w .account_balance li.UST .val:hover
-{
-   background: #45b193;
-}
-
-.account_balance li.XRP .val span.curr,
-.account_balance li.XRP .val span.int,
-.account_balance li.XRP .val span.pr,
-.account_balance li.XRP .val a.hide_wallet
-{
-   color: #45b193;
-}
-
-.account_balance li.xrp .val:hover,
-.account_balance li.XRP .val:hover
-{
-   background: #3e8bc4;
-}
-
-.black .w .account_balance li.XRP .val span.curr,
-.black .w .account_balance li.XRP .val span.int,
-.black .w .account_balance li.XRP .val span.pr,
-.black .w .account_balance li.XRP .val a.hide_wallet
-{
-   color: #45b193;
-}
-
-.black .w .account_balance li.xrp .val:hover,
-.black .w .account_balance li.XRP .val:hover
-{
-   background: #3e8bc4;
 }
 
 

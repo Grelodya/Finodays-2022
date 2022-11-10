@@ -14,12 +14,12 @@ def get_send(request: Request, user=Depends(get_manager())):
 
 @router.post("/exchange")
 async def post_send(request: Request, db_session: AsyncSession = Depends(get_session), user=Depends(get_manager()), typeA: str = Form(), typeB: str = Form(), count: float = Form(), commission: float = Form()):
-    list_metal = ("Rub", "Gold", "Silver", "Palladium", "Platinum")
+    list_metal = ("GGC", "Gold", "Silver", "Palladium", "Platinum")
     if typeA not in list_metal or typeB not in list_metal:
         return get_templates().TemplateResponse("exchange.html", context={"request": request, "user": user, "Error": True, "Title": "Обмен", "page": 3})
     else:
         value = count * (1 + commission / 100)
-        if typeA == "Rub" and user.balance_rub >= value:
+        if typeA == "GGC" and user.balance_rub >= value:
             user.balance_rub -= value
         elif typeA == "Gold" and user.balance_gold >= value:
             user.balance_gold -= value
@@ -32,7 +32,7 @@ async def post_send(request: Request, db_session: AsyncSession = Depends(get_ses
         else:
             return get_templates().TemplateResponse("exchange.html", context={"request": request, "user": user, "Error": True, "Title": "Обмен", "page": 3})
 
-        if typeB == "Rub":
+        if typeB == "GGC":
             user.balance_rub += count
         elif typeB == "Gold":
             user.balance_gold += count

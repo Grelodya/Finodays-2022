@@ -719,39 +719,6 @@ form .check-card span.error {
    color: #DDDDDD;
    text-shadow: 1px 1px #000;
 }
-/*
-#tiptip_content {
-   border: 1px solid #00AEEF;
-   background: #E4F2FB;
-}
-.black #tiptip_content {
-   border: 2px solid #00AEEF;
-}
-#tiptip_holder.tip_top #tiptip_arrow {
-   border-top-color: #00AEEF;
-}
-#tiptip_holder.tip_bottom #tiptip_arrow  {
-   border-bottom-color: #00AEEF;
-}
-#tiptip_holder.tip_left #tiptip_arrow {
-   border-left-color: #00AEEF;
-}
-#tiptip_holder.tip_right #tiptip_arrow {
-   border-right-color: #00AEEF;
-}
-#tiptip_holder.tip_top #tiptip_arrow_inner {
-   border-top-color: #00AEEF;
-}
-#tiptip_holder.tip_bottom #tiptip_arrow_inner {
-   border-bottom-color: #00AEEF;
-}
-#tiptip_holder.tip_right #tiptip_arrow_inner {
-   border-right-color: #00AEEF;
-}
-#tiptip_holder.tip_left #tiptip_arrow_inner {
-   border-left-color: #00AEEF;
-}
-*/
 
 .info-security {
   border-radius: 12px;
@@ -898,7 +865,7 @@ form .check-card span.error {
 	width: 350px;
 	margin: 10px;
 }
-.black .w .account_balance_new li.RUB .balance__body {
+.black .w .account_balance_new li.GGC .balance__body {
   background: rgba(8, 122, 22, 0.7);
 }
 .black .w .account_balance_new li.Gold .balance__body {
@@ -926,7 +893,7 @@ form .check-card span.error {
 	font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	line-height: 1.5;
 }
-.account_balance_new li.RUB .balance__body {
+.account_balance_new li.GGC .balance__body {
 	background-color: rgba(8, 122, 22, 0.7);
 }
 .account_balance_new li.Gold .balance__body {

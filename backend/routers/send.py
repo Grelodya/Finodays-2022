@@ -19,11 +19,11 @@ async def post_send(request: Request, db_session: AsyncSession = Depends(get_ses
     statement = select(User).where(User.token == token)
     result = await db_session.execute(statement)
     other_user = result.scalar()
-    if not other_user or type not in ("Rub", "Gold", "Silver", "Palladium", "Platinum") or 0 > commission > 100:
+    if not other_user or type not in ("GGC", "Gold", "Silver", "Palladium", "Platinum") or 0 > commission > 100:
         return get_templates().TemplateResponse("send.html", context={"request": request, "user": user, "Error": True, "Title": "Отправить", "page": 2})
     else:
         value = count * (1 + commission / 100)
-        if type == "Rub" and user.balance_rub >= value:
+        if type == "GGC" and user.balance_rub >= value:
             user.balance_rub -= value
             other_user.balance_rub += value
         elif type == "Gold" and user.balance_gold >= value:

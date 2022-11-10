@@ -2,7 +2,6 @@
 
 <html>
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/1fe858aabf.js" crossorigin="anonymous"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -96,53 +95,6 @@
 </head>
 <body class="">
 
-<script src="../static/PAYEER_balance_files/socket.io.js"></script>
-<script type="text/javascript">
-    try {
-        var socketNewTrade = io('https://wss.payeer.com?UserID=1128808&auth_hash=6q31a4hrcmleqgdarqbd27hdak5bjto95aner4rag8414fot2aujl80cmmss2tc1oj4cjq8j1ab13qmno5l5r8gf4p1t70ac39qjo41',
-            {
-                transports: ['websocket']
-            });
-        socketNewTrade.onceEvent = socketNewTrade.onceEvent2 = true;
-        socketNewTrade.inProgress = false;
-        socketNewTrade.countM = 0
-
-        socketNewTrade.on('tickets', function (data) {
-            $('#btn-support span').html(data.new);
-
-            if (data.new > 0) {
-                $('#btn-support span').removeClass('empty');
-            } else {
-                $('#btn-support span').addClass('empty');
-            }
-        });
-
-        socketNewTrade.on('ws', function (data) {
-            if (window[data.handler] != undefined) {
-                window[data.handler](data);
-            }
-        });
-
-        socketNewTrade.on('balance', function (data) {
-            console.log('ws balance', data);
-        });
-
-        socketNewTrade.on('toall', function (data) {
-            if (window[data.handler] != undefined) {
-                window[data.handler](data);
-            }
-        });
-
-        socketNewTrade.on('sendtoall', function (data) {
-            if (window[data.handler] != undefined) {
-                window[data.handler](data);
-            }
-        });
-    } catch (e) {
-        pre(e.message);
-    }
-</script>
-<script src="../static/PAYEER_balance_files/socket.io(1).js"></script>
 <div class="page w wleftmini1">
     <header class="header">
         <div class="row row--page">
@@ -302,14 +254,12 @@
                                     <div class="actions-opt">
                                         <ul>
                                             <li>
-                                                <a class="" href="/user"
-                                                   onclick="setLang('en'); return false;">
+                                                <a class="" href="/user">
                                                     <img src="../static/PAYEER_balance_files/lang-english.svg"
                                                          alt="english"> english </a>
                                             </li>
                                             <li>
-                                                <a class="selected" href="/user"
-                                                   onclick="setLang('ru'); return false;">
+                                                <a class="selected" href="/user">
                                                     <img src="../static/PAYEER_balance_files/lang-russian.svg"
                                                          alt="russian"> russian </a>
                                             </li>
@@ -340,7 +290,7 @@
                                     <span class="empty">0</span>
                                 </button>
                                 <div class="actions-hint" style="display: none;">Поддержка</div>
-                                <a id="btn-support-href" href="/support"
+                                <a id="btn-support-href" href="/user"
                                    class="pjax hide"></a>
                             </li>
 

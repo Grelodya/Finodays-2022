@@ -558,31 +558,11 @@ button {
 	top:2px;
 	right:-14px;
 }
-.wtop .balance .USD
-{
-	color:#72c56b;
-}
-.wtop .balance .USD .icon
-{
-	background-position:0 0;
-	border-color:#72c56b;
-}
-.wtop .balance .EUR
-{
-	color:#32bdf1;
-}
-.wtop .balance .EUR .icon
-{
-	background-position:-24px 0;
-	border-color:#32bdf1;
-	text-align:left;
-	padding-right:2px;
-}
-.wtop .balance .RUB
+.wtop .balance .GGC
 {
 	color:#f2ad3f;
 }
-.wtop .balance .RUB .icon
+.wtop .balance .GGC .icon
 {
 	background-position:-48px 0;
 	border-color:#f2ad3f;
@@ -1138,22 +1118,16 @@ a.list
 {
 	background:#32bdf1;
 }
-.account_balance li.eur .val .curr,
-.account_balance li.eur .val .pr,
-.account_balance li.EUR .val .curr,
-.account_balance li.EUR .val .pr
-{
-	color:#3081a2;
-}
+
 .account_balance li.rub .val,
-.account_balance li.RUB .val
+.account_balance li.GGC .val
 {
 	background:#f4af40;
 }
 .account_balance li.rub .val .curr,
 .account_balance li.rub .val .pr,
-.account_balance li.RUB .val .curr,
-.account_balance li.RUB .val .pr
+.account_balance li.GGC .val .curr,
+.account_balance li.GGC .val .pr
 {
 	color:#a47836;
 }
@@ -1162,13 +1136,7 @@ a.list
 {
 	background:#74DE6B;
 }
-.account_balance li.uah .val .curr,
-.account_balance li.uah .val .pr,
-.account_balance li.UAH .val .curr,
-.account_balance li.UAH .val .pr
-{
-	color:#54864F;
-}
+
 .account_balance li.itog .val
 {
 	background:#f0937d;
@@ -4328,7 +4296,7 @@ h3
 {
 	color: #72c56b;
 }
-.summ .RUB
+.summ .GGC
 {
 	color: #f2ad3f;
 }

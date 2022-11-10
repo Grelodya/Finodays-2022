@@ -135,39 +135,15 @@ body.black,
 {
 	color:#DDDDDD;
 }
-.black .w .account_balance li.usd .val,
-.black .w .account_balance li.USD .val
-{
-	background:#429339;
-}
-.black .w .account_balance li.usd .val .curr,
-.black .w .account_balance li.usd .val .pr,
-.black .w .account_balance li.USD .val .curr,
-.black .w .account_balance li.USD .val .pr
-{
-    color:#375f32;
-}
-.black .w .account_balance li.eur .val,
-.black .w .account_balance li.EUR .val
-{
-	background:#008BBF;
-}
-.black .w .account_balance li.eur .val .curr,
-.black .w .account_balance li.eur .val .pr,
-.black .w .account_balance li.EUR .val .curr,
-.black .w .account_balance li.EUR .val .pr
-{
-    color:#175c76;
-}
 .black .w .account_balance li.rub .val,
-.black .w .account_balance li.RUB .val
+.black .w .account_balance li.GGC .val
 {
 	background:#C27D0E;
 }
 .black .w .account_balance li.rub .val .curr,
 .black .w .account_balance li.rub .val .pr,
-.black .w .account_balance li.RUB .val .curr,
-.black .w .account_balance li.RUB .val .pr
+.black .w .account_balance li.GGC .val .curr,
+.black .w .account_balance li.GGC .val .pr
 {
     color:#77551e;
 }
