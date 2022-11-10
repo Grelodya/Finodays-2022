@@ -15,7 +15,7 @@ def get_send(request: Request, user=Depends(get_manager())):
 @router.post("/exchange")
 async def post_send(request: Request, db_session: AsyncSession = Depends(get_session), user=Depends(get_manager()), typeA: str = Form(), typeB: str = Form(), count: float = Form(), commission: float = Form()):
     list_metal = ("GGC", "Gold", "Silver", "Palladium", "Platinum")
-    if typeA not in list_metal or typeB not in list_metal:
+    if typeA not in list_metal or typeB not in list_metal or count < 0 or 1 > commission > 100:
         return get_templates().TemplateResponse("exchange.html", context={"request": request, "user": user, "Error": True, "Title": "Обмен", "page": 3})
     else:
         if typeA == "GGC" and user.balance_rub >= count:
