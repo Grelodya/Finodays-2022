@@ -101,7 +101,7 @@
   right: 0;
   width: 3px;
   height: 100%;
-  background-color: #3398d9;
+  background-color: #015240;
   opacity: 0;
   /*transition: 0.3s;*/
 }
@@ -111,11 +111,11 @@
 }
 .menu a:hover span,
 .menu a.current span {
-  color: #3398d9;
+  color: #015240;
 }
 .menu a:hover i,
 .menu a.current i {
-  color: #3398d9;
+  color: #015240;
 }
 .menu a:hover::after,
 .menu a.current::after {

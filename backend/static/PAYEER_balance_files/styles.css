@@ -3376,11 +3376,11 @@ template {
 }
 .night .menu a:hover span,
 .night .menu a.current span {
-  color: #3398d9;
+  color: #dedede;
 }
 .night .menu a:hover i,
 .night .menu a.current i {
-  color: #3398d9;
+  color: #dedede;
 }
 .night .menu a i {
   color: #b5b5b5;

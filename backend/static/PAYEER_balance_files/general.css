@@ -84,7 +84,7 @@ button:focus
 .black .menu a:hover,
 .black .menu a.current
 {
-   background-color: rgba(51,152,217,0.03);
+   background-color: rgba(60, 94, 86, 0.61);
 }
 
 .header-panel
