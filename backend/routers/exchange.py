@@ -31,7 +31,7 @@ async def post_send(request: Request, db_session: AsyncSession = Depends(get_ses
         else:
             return get_templates().TemplateResponse("exchange.html", context={"request": request, "user": user, "Error": True, "Title": "Обмен", "page": 3})
 
-        value = count * (1 - commission / 100)
+        value = count * (1 - commission / 100) * (7.78 if typeA == "Gold" else 1) / (7.78 if typeB == "Gold" else 1)
         if typeB == "GGC":
             user.balance_rub += value
         elif typeB == "Gold":

@@ -19,7 +19,16 @@ async def post_register(request: Request, db_session: AsyncSession = Depends(get
     statement = select(User).where(User.username == username)
     result = await db_session.execute(statement)
     if result.scalar():
-        return get_templates().TemplateResponse("register.html", context={"request": request, "Error": True})
+        return get_templates().TemplateResponse("register.html",
+                                                context={"request": request, "Error": "Имя пользователя занято"})
+    elif 4 > len(username) > 64:
+        return get_templates().TemplateResponse("register.html",
+                                                context={"request": request,
+                                                         "Error": "Логин должен быть от 8 до 256 символов"})
+    elif 8 > len(password) > 256:
+        return get_templates().TemplateResponse("register.html",
+                                                context={"request": request,
+                                                         "Error": "Пароль должен быть от 8 до 256 символов"})
     else:
         new_user = User(username=username, password=password)
         db_session.add(new_user)

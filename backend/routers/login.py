@@ -16,9 +16,11 @@ def get_login(request: Request):
 async def post_login(request: Request, data: OAuth2PasswordRequestForm = Depends()):
     username = data.username
     password = data.password
+
     user = await load_user(username)
     if not user or password != user.password:
-        return get_templates().TemplateResponse("login.html", context={"request": request, "Error": True})
+        return get_templates().TemplateResponse("login.html",
+                                                context={"request": request, "Error": "Неверный логин или пароль"})
     else:
         manager = get_manager()
 
