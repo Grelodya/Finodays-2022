@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="balance__middle">
                                     <div class="balance__cache curr-GGC">
-                                        <span class="int">{{ user.balance_rub }}</span>
+                                        <span class="int">{{ user.balance_rub | round(5) }}</span>
                                         <small><span class="pr">GGC</span></small>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="balance__middle">
                                     <div class="balance__cache curr-Gold">
-                                        <span class="int">{{ user.balance_gold }}</span>
+                                        <span class="int">{{ user.balance_gold | round(5) }}</span>
                                         <small><span class="pr">шт</span></small>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="balance__middle">
                                     <div class="balance__cache curr-Silver">
-                                        <span class="int">{{ user.balance_silver }}</span>
+                                        <span class="int">{{ user.balance_silver | round(5) }}</span>
                                         <small><span class="pr">кг</span></small>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="balance__middle">
                                     <div class="balance__cache curr-Palladium">
-                                        <span class="int">{{ user.balance_palladium }}</span>
+                                        <span class="int">{{ user.balance_palladium | round(5) }}</span>
                                         <small><span class="pr">кг</span></small>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="balance__middle">
                                     <div class="balance__cache curr-Platinum">
-                                        <span class="int">{{ user.balance_platinum }}</span>
+                                        <span class="int">{{ user.balance_platinum | round(5) }}</span>
                                         <small><span class="pr">кг</span></small>
                                     </div>
                                 </div>
