@@ -12,7 +12,7 @@ services:
       database:
         condition: service_started
     links:
-      - db
+      - database
     build: .
     extra_hosts:
       - "host.docker.internal:host-gateway"
