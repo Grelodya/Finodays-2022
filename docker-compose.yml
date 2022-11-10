@@ -6,10 +6,13 @@ services:
       MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: homestead
+    restart: always
   backend:
     depends_on:
       database:
-        condition: service_healthy
+        condition: service_started
+    links:
+      - db
     build: .
     extra_hosts:
       - "host.docker.internal:host-gateway"
