@@ -1,0 +1,43 @@
+{% extends 'template.html' %}
+
+{% block content %}
+<div class="col col--content content wbody" id="pjax-container">
+    <div class="main_abalance">
+
+    <!-- Bootstrap core CSS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <form action="/user/exchange" method="post">
+       <h1 class="h3 mb-3 fw-normal">Обменять валюту</h1>
+        <div class="wrapper">
+            <input type="number" class="timeTextBox" required onchange='document.getElementById("count2").innerHTML = document.getElementById("count").value' name="count" id="count" min="0" maxlength="5" value="0"/>
+            <select class="editableBox" name="typeA" id="typeA" required>
+                <option value="Rub">Rub</option>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Palladium">Palladium</option>
+                <option value="Platinum">Platinum</option>
+            </select>
+        </div>
+        <div class="wrapper">
+            <select class="editableBox" name="typeB" id="typeB" required>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Palladium">Palladium</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Rub">Rub</option>
+            </select>
+            <label id="count2" for="typeB">0</label>
+        </div>
+        <div class="form-floating">
+          <input type="number" min="5" max="100" required class="form-control" id="commission" name="commission" value="5" placeholder="Проценты">
+          <label for="commission">Проценты</label>
+        </div>
+        {% if Error %}
+            <p style="color: red">Возникла ошибка</p>
+        {% endif %}
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Отправить</button>
+      </form>
+    </div>
+</div>
+{% endblock %}

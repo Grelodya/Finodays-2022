@@ -1,8 +1,8 @@
-from fastapi.responses import HTMLResponse, RedirectResponse
 from backend.database import AsyncSession, get_session
 from fastapi import APIRouter, Request, Depends, Form
 from backend.database.tables.users import User
 from backend.templates import get_templates
+from fastapi.responses import HTMLResponse
 from backend.auth import get_manager
 from sqlalchemy.future import select
 
@@ -35,7 +35,7 @@ async def post_send(request: Request, db_session: AsyncSession = Depends(get_ses
         elif type == "Palladium" and user.balance_palladium >= value:
             user.balance_palladium -= value
             other_user.balance_palladium += value
-        elif type == "" and user.balance_platinum >= value:
+        elif type == "Platinum" and user.balance_platinum >= value:
             user.balance_platinum -= value
             other_user.balance_platinum += value
         else:

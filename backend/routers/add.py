@@ -1,10 +1,8 @@
-from fastapi.responses import HTMLResponse, RedirectResponse
 from backend.database import AsyncSession, get_session
 from fastapi import APIRouter, Request, Depends, Form
-from backend.database.tables.users import User
 from backend.templates import get_templates
+from fastapi.responses import HTMLResponse
 from backend.auth import get_manager
-from sqlalchemy.future import select
 
 router = APIRouter()
 
