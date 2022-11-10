@@ -14,7 +14,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String(64), index=True)
     password = Column(String(256))
-    token = Column(String(16))
+    token = Column(String(16), index=True)
     created_date = Column(DateTime, default=datetime.now())
 
     balance_rub = Column(Float, default=0)

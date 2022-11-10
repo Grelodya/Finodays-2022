@@ -1,0 +1,38 @@
+{% extends 'template.html' %}
+
+{% block content %}
+<div class="col col--content content wbody" id="pjax-container">
+    <div class="main_abalance">
+
+    <!-- Bootstrap core CSS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <form action="/user/send" method="post">
+       <h1 class="h3 mb-3 fw-normal">Отправить валюту</h1>
+
+        <div class="form-floating">
+          <input type="text" class="form-control" id="token" required name="token" placeholder="ХХХХХХХХХХ">
+          <label for="token">Счёт пользователя</label>
+        </div>
+        <div class="wrapper">
+            <input type="number" class="timeTextBox" required name="count" id="count" min="0" maxlength="5" value="0"/>
+            <select class="editableBox" name="type" id="type" required>
+                <option value="Rub">Rub</option>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Palladium">Palladium</option>
+                <option value="Platinum">Platinum</option>
+            </select>
+        </div>
+        <div class="form-floating">
+          <input type="number" min="0" max="100" required class="form-control" id="commission" name="commission" value="0" placeholder="Проценты">
+          <label for="commission">Проценты</label>
+        </div>
+        {% if Error %}
+            <p style="color: red">Возникла ошибка</p>
+        {% endif %}
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Отправить</button>
+      </form>
+    </div>
+</div>
+{% endblock %}

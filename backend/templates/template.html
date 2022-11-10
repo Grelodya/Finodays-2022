@@ -2,10 +2,11 @@
 
 <html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/1fe858aabf.js" crossorigin="anonymous"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>PAYEER | Баланс</title>
+    <title>{{ Title }}</title>
 
     <script type="text/javascript">if (!window.BX) window.BX = {
         message: function (mess) {
@@ -621,18 +622,18 @@
                 <script type="text/javascript" src="../static/PAYEER_balance_files/script.new.js"></script>
                 <div class="menu">
                     <ul>
-                        <li class="dashboard"><a href="/user" class="pjax current"><i class="fa-solid fa-coins"
+                        <li class="dashboard"><a href="/user" class="pjax {{ 'current' if page == 0 else '' }}"><i class="fa-solid fa-coins"
                                                                                       title="Баланс"></i><span>Баланс</span></a>
                         </li>
-                        <li class="add"><a href="/user/add" class="pjax "><i class="fa-solid fa-circle-plus"
+                        <li class="add"><a href="/user/add" class="pjax {{ 'current' if page == 1 else '' }}"><i class="fa-solid fa-circle-plus"
                                                                              title="Пополнить"></i><span>Пополнить</span></a>
                         </li>
-                        <li class="transfer"><a href="/user/send/" class="pjax "><i
+                        <li class="transfer"><a href="/user/send/" class="pjax {{ 'current' if page == 2 else '' }}"><i
                                 class="fa-solid fa-paper-plane" title="Перевести"></i><span>Перевести</span></a></li>
-                        <li class="exchange"><a href="/user/exchange/" class="pjax "><i
+                        <li class="exchange"><a href="/user/exchange/" class="pjax {{ 'current' if page == 3 else '' }}"><i
                                 class="fa-solid fa-money-bill-transfer" title="Обменять"></i><span>Обменять</span></a>
                         </li>
-                        <li class="time"><a href="/user/history/" class="pjax "><i
+                        <li class="time"><a href="/user/history/" class="pjax {{ 'current' if page == 4 else '' }}"><i
                                 class="fa-solid fa-clock-rotate-left" title="История"></i><span>История</span></a></li>
                     </ul>
                 </div>
@@ -640,190 +641,7 @@
                     <button id="btn-sidebar"><i class="fa-solid fa-arrow-left-long"></i></button>
                 </div>
             </aside>
-            <div class="col col--content content wbody" id="pjax-container">
-                <div class="main_abalance">
-                    <script type="text/javascript" src="../static/PAYEER_balance_files/script.new(1).js"></script>
-                    <ul id="main_list_balance_block" class="account_balance account_balance_new">
-                        <li class="RUB curr-RUB fiat all" id="balanceidRUB" data-id="balanceidRUB" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">RUB</div>
-                                    <div class="balance__extra-currency">
-                                        <span class="info-balance-cur ibc-small"></span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--rub">
-                                       <i class="curr fa fa-rub"></i>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-RUB">
-                                        <span class="curr fa fa-rub"></span>
-                                        <span class="int">{{ user.balance_rub }}</span>
-                                        <small><span class="pr">руб</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/add">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/send">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="Gold curr-Gold fiat all" id="balanceidGold" data-id="balanceidGold" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">Gold</div>
-                                    <div class="balance__extra-currency">
-                                        <span class="info-balance-cur ibc-small"></span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--gold">
-                                       <i class="fa-solid fa-g"></i>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-Gold">
-                                        <span class="int">{{ user.balance_gold }}</span>
-                                        <small><span class="pr">кг</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/add">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/send">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="Silver curr-Silver fiat all" id="balanceidSilver" data-id="balanceidSilver" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">Silver</div>
-                                    <div class="balance__extra-currency">
-                                        <span class="info-balance-cur ibc-small"></span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--silver">
-                                        <i class="fa-solid fa-s"></i>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-Silver">
-                                        <span class="int">{{ user.balance_silver }}</span>
-                                        <small><span class="pr">кг</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/add">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/send">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="Palladium curr-Palladium fiat all" id="balanceidPalladium" data-id="balanceidPalladium" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">Palladium</div>
-                                    <div class="balance__extra-currency">
-                                        <span class="info-balance-cur ibc-small"></span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--palladium">
-                                       <i class="curr fa fa-p"></i>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-Palladium">
-                                        <span class="int">{{ user.balance_palladium }}</span>
-                                        <small><span class="pr">кг</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/add">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/send">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="Platinum curr-Platinum fiat all" id="balanceidPlatinum" data-id="balanceidPlatinum" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">Platinum</div>
-                                    <div class="balance__extra-currency">
-                                        <span class="info-balance-cur ibc-small"></span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--rub">
-                                       <i class="curr fa fa-p"></i>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-Platinum">
-                                        <span class="int">{{ user.balance_platinum }}</span>
-                                        <small><span class="pr">кг</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/add">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="/user/send">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="clear"></div>
-
-                    <script type="text/javascript">
-                        var defItogCurr = 'USD';
-
-                        $(document).ready(function () {
-                            balanceUpdate();
-
-                            $('.abn-h2 span').click(function () {
-                                let type = $(this).data('type');
-
-
-                                $('.account_balance_new > li').hide();
-                                $('.account_balance_new > li.' + type).not('.balance-0').show();
-
-                                $('.abn-h2 span.active').removeClass('active');
-                                $(this).addClass('active');
-                            });
-
-                            if (!isMobile(navigator.userAgent)) {
-                                new Sortable(main_list_balance_block, {
-                                    swap: true,
-                                    swapClass: 'highlight',
-                                    animation: 1000,
-                                    store: {
-                                        get: function (sortable) {
-                                            var order = localStorage.getItem("sortBalance");
-                                            $("#main_list_balance_block").removeClass('hide');
-                                            return order ? order.split(',') : [];
-                                        },
-                                        set: function (evt) {
-                                            localStorage.setItem("sortBalance", evt.toArray());
-                                        }
-                                    }
-                                });
-                                $("#main_list_balance_block").disableSelection();
-                            } else {
-                                $("#main_list_balance_block").removeClass('hide');
-                            }
-                        });
-
-
-                        function afterHideWallet(e, response) {
-                            $('.wtop .balance li.' + e.curr).hide();
-                        }
-
-
-                        function afterShowHiddenWallets(e, response) {
-                            $('.wtop .balance li').show();
-                        }
-                    </script>
-                </div>
-            </div>
+            {% block content %}{% endblock %}
         </div>
     </main>
 </div>

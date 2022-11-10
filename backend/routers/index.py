@@ -8,4 +8,4 @@ router = APIRouter()
 
 @router.get("/user", response_class=HTMLResponse)
 def index(request: Request, user=Depends(get_manager())):
-    return get_templates().TemplateResponse("PAYEER_balance.html", context={"request": request, 'user': user})
+    return get_templates().TemplateResponse("balance.html", context={"request": request, 'user': user, "Title": "Баланс", "page": 0})
