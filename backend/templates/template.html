@@ -220,9 +220,10 @@
                                                 <span>Счет</span>
                                                 <b>{{ user.token }}</b>
                                                 <a id="MyAccount" class="actions-golink pjax"
-                                                   href="/user" data-alt-text="Copied"
+                                                   href="#"
+                                                   data-alt-text="Copied"
                                                    data-clipboard-text="{{ user.token }}"
-                                                   onclick="return false;">Копир.</a>
+                                                   onclick='navigator.clipboard.writeText("{{ user.token }}")'>Копир.</a>
                                             </li>
                                             <li>
                                                 <i class="ggg fa-solid fa-passport"></i>

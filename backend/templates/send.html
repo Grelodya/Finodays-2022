@@ -15,7 +15,7 @@
           <label for="token">Счёт пользователя</label>
         </div>
         <div class="wrapper">
-            <input type="number" class="timeTextBox" required name="count" id="count" min="0" maxlength="5" value="0"/>
+            <input type="number" class="form-control" onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" required name="count" id="count" min="1" value="1"/>
             <select class="editableBox" name="type" id="type" required>
                 <option value="GGC">GGC</option>
                 <option value="Gold">Золото</option>
@@ -24,14 +24,16 @@
                 <option value="Platinum">Платина</option>
             </select>
         </div>
+        <label for="count">Введите валюту для перевода</label>
         <div class="form-floating">
-          <input type="number" min="0" max="100" required class="form-control" id="commission" name="commission" value="0" placeholder="Проценты">
-          <label for="commission">Проценты</label>
+            <input type="number" class="form-control" required onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" name="commission" id="commission" min="5" max="100" value="5"/>
+            <label for="count">Проценты</label>
         </div>
+        <p>Итого к списанию: <b id="total_price">1.05</b></p>
         {% if Error %}
             <p style="color: red">Возникла ошибка</p>
         {% endif %}
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Отправить</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Перевести</button>
       </form>
     </div>
 </div>
