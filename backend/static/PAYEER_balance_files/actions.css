@@ -350,12 +350,16 @@ a.actions-golink:visited
   text-transform: capitalize;
 }
 .actions-opt a.selected::after {
-  content: '\e906';
   position: absolute;
   top: calc(50% - 2px);
   right: 20px;
   color: #3c0;
-  font-family: 'icomoon';
+   font-family: "Font Awesome 5 Free";
+   content: "\f00c";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
   font-size: 16px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

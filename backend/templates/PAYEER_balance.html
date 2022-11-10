@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0030)https://payeer.com/ru/account/ -->
+
 <html>
 <head>
+    <script src="https://kit.fontawesome.com/1fe858aabf.js" crossorigin="anonymous"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>PAYEER | Баланс</title>
@@ -27,11 +28,6 @@
     });</script>
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://payeer.com/static/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://payeer.com/static/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://payeer.com/static/icons/favicon-16x16.png">
-    <link rel="manifest" href="https://payeer.com/static/icons/site.json">
-    <link rel="mask-icon" href="https://payeer.com/static/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link href="../static/PAYEER_balance_files/jquery-ui.css" rel="stylesheet" type="text/css">
@@ -58,8 +54,6 @@
     <link href="../static/PAYEER_balance_files/payeermodals.css" rel="stylesheet" type="text/css">
     <link href="../static/PAYEER_balance_files/additional.css" rel="stylesheet" type="text/css">
 
-    <link rel="icon" href="https://payeer.com/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://payeer.com/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="../static/PAYEER_balance_files/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../static/PAYEER_balance_files/jquery.formstyler.js"></script>
     <script type="text/javascript" src="../static/PAYEER_balance_files/jquery-ui-1.12.1.min.js"></script>
@@ -153,11 +147,7 @@
         <div class="row row--page">
             <div class="col col--sidebar">
                 <div class="header-logo logo">
-                    <a href="https://payeer.com/ru/">
-                        <img class="logo-img logo-img--day" src="../static/PAYEER_balance_files/logo.svg" alt="">
-                        <img class="logo-img logo-img--night" src="../static/PAYEER_balance_files/logo-img--night.svg"
-                             alt="">
-                        <i class="icon-payeer" style="color: #fff;"></i>
+                    <a href="/user">
                     </a>
                 </div>
             </div>
@@ -187,6 +177,13 @@
                         text-transform: uppercase;
                         position: relative;
                         top: 19px;
+                    }
+
+                    .ggg {
+                        font-size: 16px;
+                        top: 0;
+                        left: 0;
+                        position: absolute;
                     }
 
                     .night .balance-title {
@@ -227,7 +224,7 @@
                                 <button id="btn-notification" onclick="$('#btn-notification-href').click();">
                                     <span class="">1</span>
                                 </button>
-                                <a id="btn-notification-href" href="https://payeer.com/ru/account/messages/?_pjax=Y"
+                                <a id="btn-notification-href" href="/user"
                                    class="pjax hide"></a>
 
                                 <div class="actions-container actions-container--right" style="display: none;">
@@ -257,72 +254,42 @@
                             </li>
                             <li class="actions-account">
                                 <button id="btn-account">
-                                    <i class="icon-user"></i>
-                                    <span>No. счета</span>
-                                    <b>P15672834 <i class="icon-dropdown"></i></b>
+                                    <i class="fa-regular fa-user"
+                                       style="font-size: 22px; top:23px; left:33px;position:absolute;"></i>
+                                    <span>Номер счета</span>
+                                    <b>{{ user.token }} <i class="icon-dropdown"></i></b>
                                 </button>
                                 <div class="actions-container actions-container--right" style="display: none;">
                                     <div class="actions-info">
                                         <ul>
                                             <li>
-                                                <i class="icon-user"></i>
-                                                <span>No. счета</span>
-                                                <b>P15672834</b>
-                                                <a id="PayeerAccount" class="actions-golink pjax"
-                                                   href="https://payeer.com/ru/account/#" data-alt-text="Copied"
-                                                   data-clipboard-text="P15672834" onclick="return false;">Копир.</a>
+                                                <i class="ggg fa-regular fa-user"></i>
+                                                <span>Счет</span>
+                                                <b>{{ user.token }}</b>
+                                                <a id="MyAccount" class="actions-golink pjax"
+                                                   href="/user" data-alt-text="Copied"
+                                                   data-clipboard-text="{{ user.token }}"
+                                                   onclick="return false;">Копир.</a>
                                             </li>
                                             <li>
-                                                <i class="icon-book"></i>
+                                                <i class="ggg fa-solid fa-passport"></i>
                                                 <span>Идентификация</span>
                                                 <b>Нет</b>
                                                 <a class="actions-golink pjax"
-                                                   href="https://payeer.com/ru/account/settings/?verification">Перейти</a>
+                                                   href="/user">Пройти</a>
                                             </li>
                                             <li>
-                                                <i class="icon-star"></i>
+                                                <i class="ggg fa-regular fa-star"></i>
                                                 <span>Тип аккаунта</span>
                                                 <b>Registered</b>
                                             </li>
                                             <li>
-                                                <i class="icon-calendar"></i>
+                                                <i class="ggg fa-regular fa-calendar"></i>
                                                 <span>Зарегистрирован</span>
-                                                <b>21.03.2015</b>
+                                                <b>{{ user.created_date.strftime('%m.%d.%Y')}}</b>
                                             </li>
                                         </ul>
                                         <div class="row">
-                                            <div class="col col--6">
-                                                <div class="switcher">
-                                                    <label>
-                                                        <span class="switcher-label">IP безопасность</span>
-                                                        <span class="switcher-container">
-                                                                                        <a href="https://payeer.com/ru/account/settings/?tab=security"
-                                                                                           class="pjax">
-                                            <span class="switcher-box on">
-                                                <span class="switcher-off">Выкл</span>
-                                                <span class="switcher-on">Вкл</span>
-                                            </span>
-                                            </a>
-                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col col--6">
-                                                <div class="switcher">
-                                                    <label>
-                                                        <span class="switcher-label">SMS безопасность</span>
-                                                        <span class="switcher-container">
-                                                                                        <a href="https://payeer.com/ru/account/settings/?tab=security"
-                                                                                           class="pjax">
-                                            <span class="switcher-box off">
-                                                <span class="switcher-off">Выкл</span>
-                                                <span class="switcher-on">Вкл</span>
-                                            </span>
-                                            </a>
-                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div><!--/actions-container -->
@@ -334,13 +301,13 @@
                                     <div class="actions-opt">
                                         <ul>
                                             <li>
-                                                <a class="" href="https://payeer.com/en/account/"
+                                                <a class="" href="/user"
                                                    onclick="setLang('en'); return false;">
                                                     <img src="../static/PAYEER_balance_files/lang-english.svg"
                                                          alt="english"> english </a>
                                             </li>
                                             <li>
-                                                <a class="selected" href="https://payeer.com/ru/account/"
+                                                <a class="selected" href="/user"
                                                    onclick="setLang('ru'); return false;">
                                                     <img src="../static/PAYEER_balance_files/lang-russian.svg"
                                                          alt="russian"> russian </a>
@@ -350,16 +317,16 @@
                                 </div><!--/actions-container -->
                             </li>
                             <li class="actions-theme">
-                                <button id="btn-theme"><i class="icon-day"></i></button>
+                                <button id="btn-theme"><i class="fa-solid fa-sun"></i></button>
                                 <div class="actions-container actions-container--right" style="display: none;">
                                     <div class="actions-opt">
                                         <ul>
-                                            <li><a class="light selected" href="https://payeer.com/ru/account/#day"
+                                            <li><a class="light selected" href="/user"
                                                    onclick="setTypeLight('light'); return false;"><i
-                                                    class="icon-day"></i> Светлая</a></li>
-                                            <li><a class="contrast" href="https://payeer.com/ru/account/#night"
+                                                    class="fa-solid fa-sun"></i> Светлая</a></li>
+                                            <li><a class="contrast" href="/user"
                                                    onclick="setTypeLight('contrast'); return false;"><i
-                                                    class="icon-night"></i> Тёмная</a></li>
+                                                    class="fa-solid fa-moon"></i> Тёмная</a></li>
                                         </ul>
                                     </div>
                                 </div><!--/actions-container -->
@@ -368,366 +335,35 @@
                             <li class="actions-theme actions-notification actions-support">
                                 <button id="btn-support" onclick="$('#btn-support-href').click();"
                                         style="padding-left: 18px; padding-right: 18px;">
-                                    <i class="icon-support2"
-                                       style="background: url('/style/images/icon_support.svg'); background-size: cover; width: 24px; height: 24px; display: block; position: relative; top: -1px;"></i>
+                                    <i class="fa-solid fa-headset"></i>
                                     <span class="empty">0</span>
                                 </button>
                                 <div class="actions-hint" style="display: none;">Поддержка</div>
-                                <a id="btn-support-href" href="https://payeer.com/ru/account/support/"
+                                <a id="btn-support-href" href="/support"
                                    class="pjax hide"></a>
                             </li>
 
                             <li class="actions-settings">
-                                <button id="btn-settings"><i class="icon-settings"></i></button>
+                                <button id="btn-settings"><i class="fa-solid fa-gear"></i></button>
                                 <div class="actions-container actions-container--right">
                                     <div class="actions-opt">
                                         <ul>
-                                            <li><a href="https://payeer.com/ru/account/settings/" class="pjax"><i
-                                                    class="icon-settings"></i> Профиль</a></li>
-                                            <li><a href="https://payeer.com/ru/account/log/" class="pjax"><i
-                                                    class="icon-security"></i> Логи</a></li>
-                                            <li><a href="https://payeer.com/ru/account/referrals/" class="pjax"><i
-                                                    class="icon-referals"></i> Рефералы</a></li>
-                                            <li><a href="https://payeer.com/ru/account/cards/" class="pjax"><i
-                                                    class="icon-card"></i> Мои карты</a></li>
+                                            <li><a href="/user" class="pjax"><i class="fa-solid fa-gear"></i>
+                                                Профиль</a></li>
                                         </ul>
                                     </div>
                                 </div><!--/actions-container -->
                             </li>
                             <li class="actions-logout">
                                 <button id="btn-logout"
-                                        onclick="document.location='/ru/account/?logout=yes&amp;sessid=49401580a83062d6fbe3bedb214f37fd';return false;">
-                                    <i class="icon-logout"></i></button>
+                                        onclick="document.location='/logout';return false;">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
                                 <div class="actions-hint">Выйти</div>
                             </li>
                         </ul>
                     </div><!--/header-actions -->
                 </div><!--/header-panel -->
-                <div class="header-overlay">
-                    <div class="wallet">
-                        <div class="wallet-title">Мой Баланс <span class="fa fa-info-circle"
-                                                                   data-title="Примерная сумма всех валют на вашем балансе сконвертированная по рыночному курсу, не является итоговой суммой"></span>
-                        </div>
-                        <div class="trade-management__tool-tip js-tool-tip js-tool-tip-ordertype"></div>
-                        <div class="wallet-total"><span class="icon-padding-top icon-usd"></span><s>0<sup>.04</sup></s>
-                        </div>
-                        <div class="balance">
-                            <div class="balance-title">Фиатные Счета</div>
-                            <div class="balance-item balance-item--green  balance-item--usd balance-curr--usd"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=USD'}); $('body').click(); return false;">
-                                <i class="icon-usd"></i>
-                                <s>0<sup>.00</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--rub balance-curr--rub"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=RUB'}); $('body').click(); return false;">
-                                <i class="icon-rub"></i>
-                                <s>2<sup>.23</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--eur balance-curr--eur"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=EUR'}); $('body').click(); return false;">
-                                <i class="icon-eur"></i>
-                                <s>0<sup>.00</sup></s>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="balance-title">Криптовалютные Счета</div>
-                            <div class="balance-item balance-item--green  balance-item--btc balance-curr--btc"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=BTC'}); $('body').click(); return false;">
-                                <i class="icon-btc"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--eth balance-curr--eth"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=ETH'}); $('body').click(); return false;">
-                                <i class="icon-eth"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--bch balance-curr--bch"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=BCH'}); $('body').click(); return false;">
-                                <i class="icon-bch"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--ltc balance-curr--ltc"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=LTC'}); $('body').click(); return false;">
-                                <i class="icon-ltc"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--daa balance-curr--daa"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=DAA'}); $('body').click(); return false;">
-                                <i class="icon-daa"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--ust balance-curr--ust"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=UST'}); $('body').click(); return false;">
-                                <i class="icon-ust"></i>
-                                <s>0<sup>.00</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--xrp balance-curr--xrp"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=XRP'}); $('body').click(); return false;">
-                                <i class="icon-xrp"></i>
-                                <s>0<sup>.000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--dog balance-curr--dog"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=DOG'}); $('body').click(); return false;">
-                                <i class="icon-dog"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--trx balance-curr--trx"
-                                 onclick="ajaxLoad({id: '#pjax-container', url:'/ru/account/add/?_pjax=Y&amp;curr=TRX'}); $('body').click(); return false;">
-                                <i class="icon-trx"></i>
-                                <s>0<sup>.000000</sup></s>
-                            </div>
-
-                            <div class="clear"></div>
-                            <div class="balance-title balance-title-active-orders" style="display: none;">Активные
-                                ордера
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--usd balance-trade-curr--usd hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=USD'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-usd"></i>
-                                <s>0<sup>.00</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--rub balance-trade-curr--rub hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=RUB'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-rub"></i>
-                                <s>0<sup>.00</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--eur balance-trade-curr--eur hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=EUR'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-eur"></i>
-                                <s>0<sup>.00</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--btc balance-trade-curr--btc hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=BTC'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-btc"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--eth balance-trade-curr--eth hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=ETH'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-eth"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--bch balance-trade-curr--bch hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=BCH'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-bch"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--ltc balance-trade-curr--ltc hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=LTC'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-ltc"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--daa balance-trade-curr--daa hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=DAA'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-daa"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--ust balance-trade-curr--ust hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=UST'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-ust"></i>
-                                <s>0<sup>.00</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--xrp balance-trade-curr--xrp hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=XRP'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-xrp"></i>
-                                <s>0<sup>.000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--dog balance-trade-curr--dog hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=DOG'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-dog"></i>
-                                <s>0<sup>.00000000</sup></s>
-                            </div>
-                            <div class="balance-item balance-item--green  balance-item--trx balance-trade-curr--trx hide"
-                                 onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=TRX'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;"
-                                 style="display: none;">
-                                <i class="icon-trx"></i>
-                                <s>0<sup>.000000</sup></s>
-                            </div>
-                        </div>
-                    </div><!--/wallet -->
-
-                    <div class="statusinfo">
-                        <div class="statusinfo-icon">
-            <span class="icon-approved">
-                <span class="path1"></span>
-                <span class="path2"></span>
-            </span>
-                        </div>
-                        <div class="statusinfo-title"></div>
-                        <div class="statusinfo-direction"></div>
-                        <div class="statusinfo-descr"></div>
-
-                        <div class="statusinfo-options">
-                            <a href="https://payeer.com/ru/account/#" style="display: none;">Подробнее</a>
-                            <button class="statusinfo-close">
-                                <i class="icon-close"></i>
-                                Закрыть
-                            </button>
-                        </div>
-                    </div><!--/statusinfo -->
-
-                </div><!--/header-overlay -->
                 <script type="text/javascript">
-                    var itogCurr = 'USD';
-                    var arInternalExchangeRate = {
-                        "USD\/USD": "1.00000000",
-                        "USD\/RUB": "61.06110000",
-                        "USD\/EUR": "0.99700545",
-                        "USD\/BTC": "0.00005953",
-                        "USD\/ETH": "0.00086192",
-                        "USD\/BCH": "0.01041291",
-                        "USD\/LTC": "0.01881443",
-                        "USD\/DAA": "0.02879236",
-                        "USD\/UST": "1.00001802",
-                        "USD\/XRP": "2.85465638",
-                        "USD\/DOG": "12.33557576",
-                        "USD\/TRX": "17.69886957",
-                        "RUB\/USD": "0.01637704",
-                        "RUB\/RUB": "1.00000000",
-                        "RUB\/EUR": "0.01632800",
-                        "RUB\/BTC": "0.00000097",
-                        "RUB\/ETH": "0.00001412",
-                        "RUB\/BCH": "0.00017053",
-                        "RUB\/LTC": "0.00030812",
-                        "RUB\/DAA": "0.00047153",
-                        "RUB\/UST": "0.01637733",
-                        "RUB\/XRP": "0.04675082",
-                        "RUB\/DOG": "0.20202020",
-                        "RUB\/TRX": "0.28985507",
-                        "EUR\/USD": "1.00300355",
-                        "EUR\/RUB": "61.24450000",
-                        "EUR\/EUR": "1.00000000",
-                        "EUR\/BTC": "0.00005971",
-                        "EUR\/ETH": "0.00086451",
-                        "EUR\/BCH": "0.01044419",
-                        "EUR\/LTC": "0.01887094",
-                        "EUR\/DAA": "0.02887883",
-                        "EUR\/UST": "1.00302162",
-                        "EUR\/XRP": "2.86323048",
-                        "EUR\/DOG": "12.37262626",
-                        "EUR\/TRX": "17.75202899",
-                        "BTC\/USD": "16797.29827992",
-                        "BTC\/RUB": "1025661.51000000",
-                        "BTC\/EUR": "16746.99785287",
-                        "BTC\/BTC": "1.00000000",
-                        "BTC\/ETH": "14.47800248",
-                        "BTC\/BCH": "174.90876674",
-                        "BTC\/LTC": "316.03157353",
-                        "BTC\/DAA": "483.63378349",
-                        "BTC\/UST": "16797.60088438",
-                        "BTC\/XRP": "47950.51472651",
-                        "BTC\/DOG": "207204.34545455",
-                        "BTC\/TRX": "297293.19130435",
-                        "ETH\/USD": "1160.19446096",
-                        "ETH\/RUB": "70842.75000000",
-                        "ETH\/EUR": "1156.72019528",
-                        "ETH\/BTC": "0.06907030",
-                        "ETH\/ETH": "1.00000000",
-                        "ETH\/BCH": "12.08100130",
-                        "ETH\/LTC": "21.82839615",
-                        "ETH\/DAA": "33.40473137",
-                        "ETH\/UST": "1160.21536194",
-                        "ETH\/XRP": "3311.95652174",
-                        "ETH\/DOG": "14311.66666667",
-                        "ETH\/TRX": "20534.13043478",
-                        "BTE\/BTE": "1.00000000",
-                        "BTA\/BTA": "1.00000000",
-                        "BTB\/BTB": "1.00000000",
-                        "BCH\/USD": "96.03462761",
-                        "BCH\/RUB": "5863.98000000",
-                        "BCH\/EUR": "95.74704667",
-                        "BCH\/BTC": "0.00571727",
-                        "BCH\/ETH": "0.08277460",
-                        "BCH\/BCH": "1.00000000",
-                        "BCH\/LTC": "1.80683667",
-                        "BCH\/DAA": "2.76506314",
-                        "BCH\/UST": "96.03635768",
-                        "BCH\/XRP": "274.14586255",
-                        "BCH\/DOG": "1184.64242424",
-                        "BCH\/TRX": "1699.70434783",
-                        "LTC\/USD": "53.15069660",
-                        "LTC\/RUB": "3245.44000000",
-                        "LTC\/EUR": "52.99153393",
-                        "LTC\/BTC": "0.00316424",
-                        "LTC\/ETH": "0.04581189",
-                        "LTC\/BCH": "0.55345346",
-                        "LTC\/LTC": "1.00000000",
-                        "LTC\/DAA": "1.53033375",
-                        "LTC\/UST": "53.15165411",
-                        "LTC\/XRP": "151.72697522",
-                        "LTC\/DOG": "655.64444444",
-                        "LTC\/TRX": "940.70724638",
-                        "DAA\/USD": "34.73144113",
-                        "DAA\/RUB": "2120.74000000",
-                        "DAA\/EUR": "34.62743593",
-                        "DAA\/BTC": "0.00206768",
-                        "DAA\/ETH": "0.02993588",
-                        "DAA\/BCH": "0.36165539",
-                        "DAA\/LTC": "0.65345223",
-                        "DAA\/DAA": "1.00000000",
-                        "DAA\/UST": "34.73206682",
-                        "DAA\/XRP": "99.14633006",
-                        "DAA\/DOG": "428.43232323",
-                        "DAA\/TRX": "614.70724638",
-                        "UST\/USD": "0.99998199",
-                        "UST\/RUB": "61.06000000",
-                        "UST\/EUR": "0.99698748",
-                        "UST\/BTC": "0.00005953",
-                        "UST\/ETH": "0.00086191",
-                        "UST\/BCH": "0.01041272",
-                        "UST\/LTC": "0.01881409",
-                        "UST\/DAA": "0.02879184",
-                        "UST\/UST": "1.00000000",
-                        "UST\/XRP": "2.85460496",
-                        "UST\/DOG": "12.33535354",
-                        "UST\/TRX": "17.69855072",
-                        "XRP\/USD": "0.35030486",
-                        "XRP\/RUB": "21.39000000",
-                        "XRP\/EUR": "0.34925585",
-                        "XRP\/BTC": "0.00002085",
-                        "XRP\/ETH": "0.00030194",
-                        "XRP\/BCH": "0.00364769",
-                        "XRP\/LTC": "0.00659079",
-                        "XRP\/DAA": "0.01008610",
-                        "XRP\/UST": "0.35031117",
-                        "XRP\/XRP": "1.00000000",
-                        "XRP\/DOG": "4.32121212",
-                        "XRP\/TRX": "6.20000000",
-                        "DOG\/USD": "0.08106634",
-                        "DOG\/RUB": "4.95000000",
-                        "DOG\/EUR": "0.08082358",
-                        "DOG\/BTC": "0.00000483",
-                        "DOG\/ETH": "0.00006987",
-                        "DOG\/BCH": "0.00084414",
-                        "DOG\/LTC": "0.00152522",
-                        "DOG\/DAA": "0.00233409",
-                        "DOG\/UST": "0.08106780",
-                        "DOG\/XRP": "0.23141655",
-                        "DOG\/DOG": "1.00000000",
-                        "DOG\/TRX": "1.43478261",
-                        "TRX\/USD": "0.05650078",
-                        "TRX\/RUB": "3.45000000",
-                        "TRX\/EUR": "0.05633159",
-                        "TRX\/BTC": "0.00000336",
-                        "TRX\/ETH": "0.00004870",
-                        "TRX\/BCH": "0.00058834",
-                        "TRX\/LTC": "0.00106303",
-                        "TRX\/DAA": "0.00162679",
-                        "TRX\/UST": "0.05650180",
-                        "TRX\/XRP": "0.16129032",
-                        "TRX\/DOG": "0.69696970",
-                        "TRX\/TRX": "1.00000000"
-                    };
-                    var itogBalance;
 
                     $(document).ready(function () {
                         var clipboard = new Clipboard('#PayeerAccount');
@@ -974,741 +610,163 @@
 
                         winErrorAutoClose();
                     }
-
-
                 </script>
-
-
             </div><!--/col -->
         </div><!--/row -->
     </header>
+
     <main class="main">
         <div class="row row--page">
             <aside class="col col--sidebar sidebar">
                 <script type="text/javascript" src="../static/PAYEER_balance_files/script.new.js"></script>
                 <div class="menu">
                     <ul>
-                        <li class="dashboard"><a href="https://payeer.com/ru/account/" class="pjax current"><i
-                                class="icon-dashboard" title="Баланс"></i><span>Баланс</span></a></li>
-                        <li class="add"><a href="https://payeer.com/ru/account/add/" class="pjax "><i class="icon-add"
-                                                                                                      title="Пополнить"></i><span>Пополнить</span></a>
+                        <li class="dashboard"><a href="/user" class="pjax current"><i class="fa-solid fa-coins"
+                                                                                      title="Баланс"></i><span>Баланс</span></a>
                         </li>
-                        <li class="transfer"><a href="https://payeer.com/ru/account/send/" class="pjax "><i
-                                class="icon-transfer" title="Перевести"></i><span>Перевести</span></a></li>
-                        <li class="exchange"><a href="https://payeer.com/ru/account/exchange/" class="pjax "><i
-                                class="icon-exchange" title="Обменять"></i><span>Обменять</span></a></li>
-                        <li class="time"><a href="https://payeer.com/ru/account/history/" class="pjax "><i
-                                class="icon-time" title="История"></i><span>История</span></a></li>
+                        <li class="add"><a href="/user/add" class="pjax "><i class="fa-solid fa-circle-plus"
+                                                                             title="Пополнить"></i><span>Пополнить</span></a>
+                        </li>
+                        <li class="transfer"><a href="/user/send/" class="pjax "><i
+                                class="fa-solid fa-paper-plane" title="Перевести"></i><span>Перевести</span></a></li>
+                        <li class="exchange"><a href="/user/exchange/" class="pjax "><i
+                                class="fa-solid fa-money-bill-transfer" title="Обменять"></i><span>Обменять</span></a>
+                        </li>
+                        <li class="time"><a href="/user/history/" class="pjax "><i
+                                class="fa-solid fa-clock-rotate-left" title="История"></i><span>История</span></a></li>
                     </ul>
                 </div>
                 <div class="sidebar-btn">
-                    <button id="btn-sidebar"><i class="icon-arrow-left"></i></button>
+                    <button id="btn-sidebar"><i class="fa-solid fa-arrow-left-long"></i></button>
                 </div>
             </aside>
             <div class="col col--content content wbody" id="pjax-container">
                 <div class="main_abalance">
                     <script type="text/javascript" src="../static/PAYEER_balance_files/script.new(1).js"></script>
                     <ul id="main_list_balance_block" class="account_balance account_balance_new">
-                        <li class="USD curr-USD fiat all" id="balanceidUSD" data-id="balanceidUSD" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">USD</div>
-                                    <div class="balance__extra-currency">
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--usd">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="USD"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=USD&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-usd"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-USD">
-                                        <span class="curr fa fa-usd"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=USD">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=USD">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
                         <li class="RUB curr-RUB fiat all" id="balanceidRUB" data-id="balanceidRUB" style="">
                             <div class="balance__body">
                                 <div class="balance__top">
                                     <div class="balance__name-currency">RUB</div>
                                     <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.04</span>							</span>
+                                        <span class="info-balance-cur ibc-small"></span>
                                     </div>
                                     <div class="balance__icon-currency balance-item--rub">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="RUB"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=RUB&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-rub"></i></a>
+                                       <i class="curr fa fa-rub"></i>
                                     </div>
                                 </div>
                                 <div class="balance__middle">
                                     <div class="balance__cache curr-RUB">
                                         <span class="curr fa fa-rub"></span>
-                                        <span class="int">2</span>
-                                        <small><span class="pr">.23</span></small>
+                                        <span class="int">{{ user.balance_rub }}</span>
+                                        <small><span class="pr">руб</span></small>
                                     </div>
                                 </div>
                                 <div class="balance__bottom">
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=RUB">Пополнить</a>
+                                       href="/user/add">Пополнить</a>
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=RUB">Вывести</a>
+                                       href="/user/send">Вывести</a>
                                 </div>
                             </div>
                         </li>
-                        <li class="EUR curr-EUR fiat all" id="balanceidEUR" data-id="balanceidEUR" style="">
+                        <li class="Gold curr-Gold fiat all" id="balanceidGold" data-id="balanceidGold" style="">
                             <div class="balance__body">
                                 <div class="balance__top">
-                                    <div class="balance__name-currency">EUR</div>
+                                    <div class="balance__name-currency">Gold</div>
                                     <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
+                                        <span class="info-balance-cur ibc-small"></span>
                                     </div>
-                                    <div class="balance__icon-currency balance-item--eur">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="EUR"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=EUR&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-eur"></i></a>
+                                    <div class="balance__icon-currency balance-item--gold">
+                                       <i class="fa-solid fa-g"></i>
                                     </div>
                                 </div>
                                 <div class="balance__middle">
-                                    <div class="balance__cache curr-EUR">
-                                        <span class="curr fa fa-eur"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00</span></small>
+                                    <div class="balance__cache curr-Gold">
+                                        <span class="int">{{ user.balance_gold }}</span>
+                                        <small><span class="pr">кг</span></small>
                                     </div>
                                 </div>
                                 <div class="balance__bottom">
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=EUR">Пополнить</a>
+                                       href="/user/add">Пополнить</a>
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=EUR">Вывести</a>
+                                       href="/user/send">Вывести</a>
                                 </div>
                             </div>
                         </li>
-                        <li class="BTC curr-BTC crypt all" id="balanceidBTC" data-id="balanceidBTC" style="">
+                        <li class="Silver curr-Silver fiat all" id="balanceidSilver" data-id="balanceidSilver" style="">
                             <div class="balance__body">
                                 <div class="balance__top">
-                                    <div class="balance__name-currency">BTC</div>
+                                    <div class="balance__name-currency">Silver</div>
                                     <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
+                                        <span class="info-balance-cur ibc-small"></span>
                                     </div>
-                                    <div class="balance__icon-currency balance-item--btc">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="BTC"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=BTC&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-btc"></i></a>
+                                    <div class="balance__icon-currency balance-item--silver">
+                                        <i class="fa-solid fa-s"></i>
                                     </div>
                                 </div>
                                 <div class="balance__middle">
-                                    <div class="balance__cache curr-BTC">
-                                        <span class="curr fa fa-btc"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
+                                    <div class="balance__cache curr-Silver">
+                                        <span class="int">{{ user.balance_silver }}</span>
+                                        <small><span class="pr">кг</span></small>
                                     </div>
                                 </div>
                                 <div class="balance__bottom">
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=BTC">Пополнить</a>
+                                       href="/user/add">Пополнить</a>
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=BTC">Вывести</a>
+                                       href="/user/send">Вывести</a>
                                 </div>
                             </div>
                         </li>
-                        <li class="UST curr-UST crypt all" id="balanceidUST" data-id="balanceidUST" style="">
+                        <li class="Palladium curr-Palladium fiat all" id="balanceidPalladium" data-id="balanceidPalladium" style="">
                             <div class="balance__body">
                                 <div class="balance__top">
-                                    <div class="balance__name-currency">USDT</div>
+                                    <div class="balance__name-currency">Palladium</div>
                                     <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
+                                        <span class="info-balance-cur ibc-small"></span>
                                     </div>
-                                    <div class="balance__icon-currency balance-item--ust">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="UST"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=UST&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-ust"></i></a>
+                                    <div class="balance__icon-currency balance-item--palladium">
+                                       <i class="curr fa fa-p"></i>
                                     </div>
                                 </div>
                                 <div class="balance__middle">
-                                    <div class="balance__cache curr-UST">
-                                        <span class="curr fa fa-ust"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00</span></small>
+                                    <div class="balance__cache curr-Palladium">
+                                        <span class="int">{{ user.balance_palladium }}</span>
+                                        <small><span class="pr">кг</span></small>
                                     </div>
                                 </div>
                                 <div class="balance__bottom">
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=UST">Пополнить</a>
+                                       href="/user/add">Пополнить</a>
                                     <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=UST">Вывести</a>
+                                       href="/user/send">Вывести</a>
                                 </div>
                             </div>
                         </li>
-                        <li class="ETH curr-ETH crypt all" id="balanceidETH" data-id="balanceidETH" style="">
+                        <li class="Platinum curr-Platinum fiat all" id="balanceidPlatinum" data-id="balanceidPlatinum" style="">
                             <div class="balance__body">
                                 <div class="balance__top">
-                                    <div class="balance__name-currency">ETH</div>
+                                    <div class="balance__name-currency">Platinum</div>
                                     <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--eth">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="ETH"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=ETH&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-eth"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-ETH">
-                                        <span class="curr fa fa-eth"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=ETH">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=ETH">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="BCH curr-BCH crypt all" id="balanceidBCH" data-id="balanceidBCH" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">BCH</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--bch">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="BCH"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=BCH&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-bch"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-BCH">
-                                        <span class="curr fa fa-bch"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=BCH">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=BCH">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="LTC curr-LTC crypt all" id="balanceidLTC" data-id="balanceidLTC" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">LTC</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--ltc">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="LTC"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=LTC&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-ltc"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-LTC">
-                                        <span class="curr fa fa-ltc"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=LTC">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=LTC">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="DAA curr-DAA crypt all" id="balanceidDAA" data-id="balanceidDAA" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">DASH</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--daa">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="DAA"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=DAA&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-daa"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-DAA">
-                                        <span class="curr fa fa-daa"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=DAA">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=DAA">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="XRP curr-XRP crypt all" id="balanceidXRP" data-id="balanceidXRP" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">XRP</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--xrp">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="XRP"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=XRP&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-xrp"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-XRP">
-                                        <span class="curr fa fa-xrp"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=XRP">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=XRP">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="DOG curr-DOG crypt all" id="balanceidDOG" data-id="balanceidDOG" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">DOGE</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--dog">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="DOG"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=DOG&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-dog"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-DOG">
-                                        <span class="curr fa fa-dog"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=DOG">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=DOG">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="TRX curr-TRX crypt all" id="balanceidTRX" data-id="balanceidTRX" style="">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">TRX</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--trx">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="TRX"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=TRX&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-trx"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache curr-TRX">
-                                        <span class="curr fa fa-trx"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/add/?_pjax=Y&amp;curr=TRX">Пополнить</a>
-                                    <a class="pjax balance__btn-deposit"
-                                       href="https://payeer.com/ru/account/send/?_pjax=Y&amp;currPS=TRX">Вывести</a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="active-orders USD trade-curr-USD balance-0" id="balancetradeidUSD"
-                            data-id="balancetradeidUSD" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">USD</div>
-                                    <div class="balance__extra-currency">
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--usd">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="USD"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=USD&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-usd"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-usd"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=USD'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders RUB trade-curr-RUB balance-0" id="balancetradeidRUB"
-                            data-id="balancetradeidRUB" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">RUB</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
+                                        <span class="info-balance-cur ibc-small"></span>
                                     </div>
                                     <div class="balance__icon-currency balance-item--rub">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="RUB"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=RUB&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-rub"></i></a>
+                                       <i class="curr fa fa-p"></i>
                                     </div>
                                 </div>
                                 <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-rub"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00</span></small>
+                                    <div class="balance__cache curr-Platinum">
+                                        <span class="int">{{ user.balance_platinum }}</span>
+                                        <small><span class="pr">кг</span></small>
                                     </div>
                                 </div>
                                 <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=RUB'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders EUR trade-curr-EUR balance-0" id="balancetradeidEUR"
-                            data-id="balancetradeidEUR" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">EUR</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--eur">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="EUR"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=EUR&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-eur"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-eur"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=EUR'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders BTC trade-curr-BTC balance-0" id="balancetradeidBTC"
-                            data-id="balancetradeidBTC" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">BTC</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--btc">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="BTC"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=BTC&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-btc"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-btc"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=BTC'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders ETH trade-curr-ETH balance-0" id="balancetradeidETH"
-                            data-id="balancetradeidETH" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">ETH</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--eth">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="ETH"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=ETH&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-eth"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-eth"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=ETH'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders BCH trade-curr-BCH balance-0" id="balancetradeidBCH"
-                            data-id="balancetradeidBCH" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">BCH</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--bch">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="BCH"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=BCH&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-bch"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-bch"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=BCH'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders LTC trade-curr-LTC balance-0" id="balancetradeidLTC"
-                            data-id="balancetradeidLTC" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">LTC</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--ltc">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="LTC"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=LTC&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-ltc"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-ltc"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=LTC'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders DAA trade-curr-DAA balance-0" id="balancetradeidDAA"
-                            data-id="balancetradeidDAA" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">DASH</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--daa">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="DAA"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=DAA&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-daa"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-daa"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=DAA'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders UST trade-curr-UST balance-0" id="balancetradeidUST"
-                            data-id="balancetradeidUST" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">USDT</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--ust">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="UST"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=UST&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-ust"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-ust"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=UST'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders XRP trade-curr-XRP balance-0" id="balancetradeidXRP"
-                            data-id="balancetradeidXRP" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">XRP</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--xrp">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="XRP"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=XRP&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-xrp"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-xrp"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=XRP'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders DOG trade-curr-DOG balance-0" id="balancetradeidDOG"
-                            data-id="balancetradeidDOG" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">DOGE</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--dog">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="DOG"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=DOG&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-dog"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-dog"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.00000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=DOG'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="active-orders TRX trade-curr-TRX balance-0" id="balancetradeidTRX"
-                            data-id="balancetradeidTRX" style="display: none;">
-                            <div class="balance__body">
-                                <div class="balance__top">
-                                    <div class="balance__name-currency">TRX</div>
-                                    <div class="balance__extra-currency">
-													<span class="info-balance-cur ibc-small">
-								<span class="curr fa fa-usd"></span>
-								<span class="curr ibc-curr">0.00</span>							</span>
-                                    </div>
-                                    <div class="balance__icon-currency balance-item--trx">
-                                        <a href="https://payeer.com/ru/account/#" data-curr="TRX"
-                                           onclick="ajaxLoad({id: '#', url: '/bitrix/components/payeer/account.info/templates/balance2/ajax.php?action=param&amp;param=itog_defcurr&amp;val=TRX&amp;sessid=49401580a83062d6fbe3bedb214f37fd'}, {nprogress: 'N', type: 'null'}); return false;"
-                                           title="Выбрать основную валюту"><i class="icon-trx"></i></a>
-                                    </div>
-                                </div>
-                                <div class="balance__middle">
-                                    <div class="balance__cache ">
-                                        <span class="curr fa fa-trx"></span>
-                                        <span class="int">0</span>
-                                        <small><span class="pr">.000000</span></small>
-                                    </div>
-                                </div>
-                                <div class="balance__bottom">
-                                    <a class="balance__btn-deposit" href="https://payeer.com/ru/account/#"
-                                       onclick="ajaxLoad({url: '/bitrix/components/trade/my.active.orders/templates/2020/ajax.php?action=refund_by_currency&amp;curr=TRX'}, {type: 'dialog', modal: true, dialogClass: 'dialog-trade-request-detail'}); return false;">Отменить</a>
+                                    <a class="pjax balance__btn-deposit"
+                                       href="/user/add">Пополнить</a>
+                                    <a class="pjax balance__btn-deposit"
+                                       href="/user/send">Вывести</a>
                                 </div>
                             </div>
                         </li>
@@ -1770,156 +828,5 @@
     </main>
 </div>
 <div class="clear"></div>
-
-
-<span id="payeer-modal"><div data-v-21826910="" data-v-1c232196="" class="modal-mask verification-mask"
-                             style="display: none;"><div data-v-21826910="" class="modal-container"
-                                                         style="width: 551px; height: 627px;"><span
-        data-v-21826910=""></span><div data-v-21826910="" class="modal-container__header"><div data-v-21826910=""></div><svg
-        data-v-64786f8a="" data-v-21826910="" width="40" height="41" viewBox="0 0 40 41" fill="none"
-        xmlns="http://www.w3.org/2000/svg" class="payeer-popup-header__icon"><path data-v-64786f8a=""
-                                                                                   d="M1 20.4974C1 10.0005 9.50999 1.44501 20 1.44501C30.49 1.44501 39 10.0005 39 20.4974C39 30.9942 30.49 39.5497 20 39.5497C9.50999 39.5497 1 30.9942 1 20.4974Z"
-                                                                                   stroke="#CED4DB" stroke-width="2"
-                                                                                   class="payeer-popup-header__icon_bg"></path><path
-        data-v-64786f8a="" d="M16.3214 16.6983L24.9076 25.307" stroke="#BFC8D2" stroke-width="3" stroke-linecap="round"
-        class="payeer-popup-header__icon_symbol"></path><path data-v-64786f8a="" d="M24.6786 16.6983L16.0924 25.307"
-                                                              stroke="#BFC8D2" stroke-width="3" stroke-linecap="round"
-                                                              class="payeer-popup-header__icon_symbol"></path></svg>
-    <!----></div><div data-v-1c232196="" class="verification-mask__upload" data-v-21826910=""><svg data-v-1c232196=""
-                                                                                                   width="101"
-                                                                                                   height="100"
-                                                                                                   viewBox="0 0 101 100"
-                                                                                                   fill="none"
-                                                                                                   xmlns="http://www.w3.org/2000/svg"><path
-        data-v-1c232196=""
-        d="M51.8449 97.2073C78.5763 97.2073 100.246 75.5372 100.246 48.8058C100.246 22.0744 78.5763 0.404297 51.8449 0.404297C25.1135 0.404297 3.44336 22.0744 3.44336 48.8058C3.44336 75.5372 25.1135 97.2073 51.8449 97.2073Z"
-        fill="#FFBF0B"></path><path data-v-1c232196=""
-                                    d="M77.6117 47.538C83.828 45.0847 86.8785 38.0567 84.4253 31.8404C81.9721 25.6241 74.944 22.5736 68.7278 25.0268C62.5115 27.48 59.4609 34.508 61.9141 40.7243C64.3673 46.9406 71.3954 49.9912 77.6117 47.538Z"
-                                    fill="white"></path><path data-v-1c232196=""
-                                                              d="M72.4233 43.7206C76.0753 42.2794 77.8675 38.1504 76.4263 34.4983C74.985 30.8463 70.856 29.0541 67.204 30.4953C63.5519 31.9366 61.7597 36.0656 63.201 39.7176C64.6422 43.3697 68.7712 45.1619 72.4233 43.7206Z"
-                                                              fill="#1A1A54"></path><path data-v-1c232196=""
-                                                                                          d="M45.8446 53.5702C52.0609 51.117 55.1114 44.0889 52.6582 37.8727C50.205 31.6564 43.177 28.6058 36.9607 31.059C30.7444 33.5122 27.6938 40.5403 30.147 46.7566C32.6003 52.9729 39.6283 56.0234 45.8446 53.5702Z"
-                                                                                          fill="white"></path><path
-        data-v-1c232196=""
-        d="M40.1449 50.9306C43.797 49.4893 45.5892 45.3604 44.148 41.7083C42.7067 38.0562 38.5777 36.264 34.9256 37.7053C31.2736 39.1466 29.4814 43.2755 30.9226 46.9276C32.3639 50.5797 36.4929 52.3719 40.1449 50.9306Z"
-        fill="#1A1A54"></path><path data-v-1c232196=""
-                                    d="M82.9755 53.7135C85.3922 65.6057 77.6422 77.2824 65.75 79.6991C53.8577 82.1158 42.181 74.3658 39.7643 62.4736L82.9755 53.7135Z"
-                                    fill="#1A1A54"></path><path data-v-1c232196=""
-                                                                d="M63.3336 67.8071C56.8396 69.0691 51.656 72.4157 48.9418 76.2511C53.6732 79.5873 59.7339 80.9355 65.7504 79.6994C71.7668 78.4633 76.8394 74.8353 79.9794 70.0188C76.0032 67.3602 69.7722 66.4045 63.3336 67.8071Z"
-                                                                fill="#DC2863"></path><path data-v-1c232196=""
-                                                                                            d="M75.3888 60.448L49.5236 65.7774C48.4832 66.0253 47.4466 65.4588 47.0579 64.4739L45.6401 61.2935L77.0998 54.8946L77.1402 58.2933C77.2475 59.3893 76.4847 60.3407 75.3888 60.448Z"
-                                                                                            fill="white"></path><path
-        data-v-1c232196=""
-        d="M6.52481 79.429C6.70417 82.4639 8.57054 84.9618 11.2356 86.4326C13.7433 88.0484 16.8986 88.6308 19.9397 88.3003C22.8296 87.9637 25.4639 90.1901 25.6494 93.0739C25.986 95.9638 23.7596 98.5981 20.8758 98.7836C20.4224 98.7652 20.1202 98.7529 19.8179 98.7406L19.5157 98.7283C14.5468 98.0721 9.77824 96.213 6.13518 92.7346C4.23809 90.9922 2.80667 88.9661 1.84708 86.505C0.881349 84.1951 0.538569 81.4563 0.939149 79.0505C1.15173 77.5453 2.56106 76.3916 4.06621 76.6042C5.41409 76.9617 6.27785 78.0565 6.52481 79.429Z"
-        fill="#E8E8EE"></path><path data-v-1c232196=""
-                                    d="M34.8744 48.6406L27.2781 90.2639C26.9083 91.914 25.3478 93.0616 23.6977 92.6918L2.95852 88.9723C1.30838 88.6024 0.311921 87.0481 0.530645 85.3918L7.97574 43.7624C8.34559 42.1122 9.90605 40.9646 11.5562 41.3345L32.4465 45.0601C34.0966 45.43 35.0931 46.9843 34.8744 48.6406Z"
-                                    fill="#0B85FF"></path><path data-v-1c232196=""
-                                                                d="M35.4805 82.1205C35.8708 72.5219 29.4209 64.4655 21.0742 64.1261C12.7275 63.7867 5.64481 71.2929 5.25452 80.8915C4.86424 90.4902 11.3142 98.5466 19.6608 98.886C28.0075 99.2254 35.0902 91.7192 35.4805 82.1205Z"
-                                                                fill="#E8E8EE"></path><path data-v-1c232196=""
-                                                                                            d="M31.764 80.4555L31.4999 68.3344"
-                                                                                            stroke="#E8E8EE"
-                                                                                            stroke-width="7.56274"
-                                                                                            stroke-miterlimit="10"
-                                                                                            stroke-linecap="round"
-                                                                                            stroke-linejoin="round"></path><path
-        data-v-1c232196=""
-        d="M26.5971 77.2182L27.8136 65.9142C27.8321 65.4608 28.1466 65.1708 28.5938 65.3404C28.8961 65.3527 29.1861 65.6672 29.1738 65.9695L29.6197 77.3411C29.589 78.0967 28.9537 78.8278 28.1981 78.7971C27.4424 78.7664 26.7114 78.1311 26.7421 77.3755C26.5909 77.3693 26.5971 77.2182 26.5971 77.2182Z"
-        fill="#D1D1DC"></path><path data-v-1c232196="" d="M24.146 81.6597L24.8219 65.0354" stroke="#E8E8EE"
-                                    stroke-width="7.56274" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round"></path><path data-v-1c232196=""
-                                                                         d="M19.0405 76.9106L20.3 64.5486C20.3184 64.0953 20.633 63.8053 21.0802 63.9749C21.3825 63.9871 21.6724 64.3017 21.6602 64.604L22.0631 77.0335C22.0323 77.7891 21.3971 78.5202 20.6414 78.4895C19.8858 78.4587 19.1547 77.8235 19.1854 77.0679C19.0343 77.0617 19.0405 76.9106 19.0405 76.9106Z"
-                                                                         fill="#D1D1DC"></path><path data-v-1c232196=""
-                                                                                                     d="M16.5894 81.3525L17.2653 64.7283"
-                                                                                                     stroke="#E8E8EE"
-                                                                                                     stroke-width="7.56274"
-                                                                                                     stroke-miterlimit="10"
-                                                                                                     stroke-linecap="round"
-                                                                                                     stroke-linejoin="round"></path><path
-        data-v-1c232196=""
-        d="M11.4535 77.3593L12.7008 65.2996C12.7192 64.8463 13.0338 64.5563 13.481 64.7258C13.7833 64.7381 14.0732 65.0527 14.061 65.3549L14.4761 77.4822C14.4454 78.2379 13.8102 78.9689 13.0545 78.9382C12.2989 78.9075 11.5678 78.2722 11.5985 77.5166C11.4474 77.5104 11.4535 77.3593 11.4535 77.3593Z"
-        fill="#D1D1DC"></path><path data-v-1c232196="" d="M9.03271 81.0454L9.70866 64.4211" stroke="#E8E8EE"
-                                    stroke-width="7.56274" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round"></path><path data-v-1c232196="" opacity="0.2"
-                                                                         d="M32.09 49.8003C32.1578 48.131 30.8596 46.7227 29.1903 46.6549C27.5209 46.587 26.1127 47.8852 26.0448 49.5546C25.9769 51.2239 27.2751 52.6322 28.9445 52.7C30.6138 52.7679 32.0221 51.4697 32.09 49.8003Z"
-                                                                         fill="#1A1A54"></path><path data-v-1c232196=""
-                                                                                                     d="M30.881 49.7514C30.9218 48.7498 30.1428 47.9048 29.1412 47.8641C28.1396 47.8234 27.2946 48.6023 27.2539 49.6039C27.2132 50.6055 27.9921 51.4505 28.9937 51.4912C29.9953 51.5319 30.8403 50.753 30.881 49.7514Z"
-                                                                                                     fill="#1A1A54"></path></svg><div
-        data-v-1c232196="" class="popup-heading"> #locale.uploadTitle# </div><div data-v-1c232196=""
-                                                                                  class="popup-subheading"> #locale.uploadSubtitle# </div><div
-        data-v-1c232196="" class="verification-mask__upload-script"> #locale.uploadScript# </div><button
-        data-v-1c232196="" class="payeer_button"
-        style="width: 350px; margin-top: 30px;"> #locale.uploadButton# </button><button data-v-1c232196=""
-                                                                                        class="payeer_button blue"
-                                                                                        style="width: 350px; margin-top: 20px;"><svg
-        data-v-1c232196="" width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg"
-        class="payeer_button__play" style="margin-right: 15px;"><path data-v-1c232196=""
-                                                                      d="M13.3833 7.80215L1.78333 0.897982C1.64167 0.814648 1.49583 0.764648 1.32917 0.764648C0.875 0.764648 0.504167 1.13965 0.504167 1.59798H0.5V15.9313H0.504167C0.504167 16.3896 0.875 16.7646 1.32917 16.7646C1.5 16.7646 1.64167 16.7063 1.79583 16.623L13.3833 9.72715C13.6583 9.49798 13.8333 9.15215 13.8333 8.76465C13.8333 8.37715 13.6583 8.03548 13.3833 7.80215Z"
-                                                                      fill="#03A9F4"></path></svg> #locale.uploadExample# </button></div><input
-        data-v-1c232196="" data-v-21826910="" accept=".mp4,.mp4v,.mpg4,.3gp,.mov" type="file"
-        style="transform: scale(0); position: absolute; width: 0px; height: 0px;"></div><div data-v-94f7e54a=""
-                                                                                             data-v-1c232196=""
-                                                                                             class="verification-sidebar"
-                                                                                             data-v-21826910=""><div
-        data-v-94f7e54a="" class="verification-sidebar__content"><svg data-v-94f7e54a="" width="128" height="129"
-                                                                      viewBox="0 0 128 129" fill="none"
-                                                                      xmlns="http://www.w3.org/2000/svg"><g
-        data-v-94f7e54a="" clip-path="url(#clip0_626:4)"><path data-v-94f7e54a=""
-                                                               d="M103.84 38.7646L87.8402 47.5446C86.6378 48.1442 85.2499 48.255 83.9675 47.8539C82.6851 47.4528 81.6078 46.5709 80.9613 45.393C80.3148 44.2151 80.1494 42.8326 80.4996 41.5354C80.8499 40.2383 81.6887 39.127 82.8402 38.4346C83.0581 38.313 83.2855 38.2093 83.5202 38.1246L100.6 31.7146C101.52 31.3713 102.536 31.3888 103.444 31.7635C104.352 32.1382 105.084 32.8425 105.495 33.7348C105.905 34.6272 105.962 35.6417 105.655 36.5746C105.348 37.5075 104.7 38.2899 103.84 38.7646Z"
-                                                               fill="#FFC298"></path><path data-v-94f7e54a=""
-                                                                                           d="M103 53.7646L87.6999 58.0546C86.3988 58.3924 85.0171 58.2061 83.8521 57.5356C82.687 56.8651 81.8316 55.7641 81.4699 54.4695C81.1083 53.1748 81.2692 51.79 81.9181 50.6127C82.5671 49.4355 83.6521 48.5601 84.9399 48.1746C85.1958 48.1054 85.4566 48.0553 85.7199 48.0246L101.49 46.1446C102.458 46.0424 103.429 46.3058 104.213 46.8832C104.997 47.4605 105.536 48.3101 105.725 49.265C105.914 50.2198 105.74 51.2109 105.236 52.0435C104.731 52.8761 103.934 53.49 103 53.7646Z"
-                                                                                           fill="#FFC298"></path><path
-        data-v-94f7e54a=""
-        d="M26.73 99.4547L30.44 92.2747C30.44 92.2747 35.17 90.9847 48.11 98.1147C61.05 105.245 62.26 109.225 62.26 109.225C62.26 109.225 59.26 115.225 57.72 115.225C53.64 115.515 33.59 103.765 26.73 99.4547Z"
-        fill="#892E1D"></path><path data-v-94f7e54a=""
-                                    d="M101.31 64.8145L91.3099 63.1545L94.9999 62.4845L88.8599 65.7645C88.0098 66.2244 87.0193 66.3523 86.0803 66.1234C85.1412 65.8945 84.3207 65.325 83.7777 64.5255C83.2347 63.7259 83.0079 62.7532 83.1414 61.796C83.2748 60.8387 83.7589 59.9651 84.4999 59.3445L89.7899 54.8945C90.2664 54.4913 90.837 54.2148 91.4488 54.0907C92.0607 53.9666 92.6939 53.9988 93.2899 54.1845H93.4399L103.12 57.2445C104.048 57.5491 104.828 58.1917 105.304 59.0448C105.78 59.8978 105.918 60.8987 105.69 61.8486C105.462 62.7986 104.885 63.6279 104.073 64.1718C103.262 64.7158 102.275 64.9345 101.31 64.7845V64.8145Z"
-                                    fill="#FFC298"></path><path data-v-94f7e54a=""
-                                                                d="M101 75.9647L85.5401 78.1647C84.3374 78.3357 83.1159 78.022 82.1445 77.2925C81.173 76.563 80.5312 75.4774 80.3601 74.2747C80.189 73.0719 80.5028 71.8505 81.2323 70.879C81.9618 69.9076 83.0474 69.2657 84.2501 69.0947H84.6601L100.26 68.2847C101.217 68.2952 102.137 68.6592 102.842 69.3067C103.547 69.9542 103.988 70.8395 104.08 71.7923C104.171 72.7451 103.908 73.6983 103.339 74.4685C102.771 75.2387 101.938 75.7716 101 75.9647Z"
-                                                                fill="#FFC298"></path><path data-v-94f7e54a=""
-                                                                                            d="M49.2998 45.2944C49.2998 45.2944 40.5698 52.5244 37.5698 58.6844C34.5698 64.8444 31.5698 105.944 31.5698 105.944L54.0998 119.224C55.5959 115.061 57.6118 111.103 60.0998 107.444C63.8698 102.184 75.0998 98.5644 77.8998 92.1044C80.6998 85.6444 74.3798 52.4944 74.5098 51.5244C74.6398 50.5544 49.2998 45.2944 49.2998 45.2944Z"
-                                                                                            fill="#FFC298"></path><path
-        data-v-94f7e54a=""
-        d="M50.4298 51.5244C50.4298 51.5244 42.8298 60.8344 43.3298 67.1044C43.6169 70.8298 44.558 74.4755 46.1098 77.8744L53.5998 63.5944L50.4298 51.5244Z"
-        fill="#E1927A"></path><path data-v-94f7e54a=""
-                                    d="M59.0001 80.7645C59.0001 80.7645 58.5001 93.6245 53.6501 98.4745C49.5642 102.835 45.7153 107.411 42.1201 112.185L54.1201 119.275C55.6162 115.111 57.6321 111.153 60.1201 107.495C63.8901 102.235 75.1201 98.6145 77.9201 92.1545C78.8601 89.9545 78.7501 84.6745 78.2001 78.6245L69.2001 79.4245L59.0001 80.7645Z"
-                                    fill="#E1927A"></path><path data-v-94f7e54a=""
-                                                                d="M103 85.9046V7.62465C103 3.83598 99.9287 0.764648 96.14 0.764648L54.86 0.764648C51.0713 0.764648 48 3.83598 48 7.62465L48 85.9046C48 89.6933 51.0713 92.7646 54.86 92.7646H96.14C99.9287 92.7646 103 89.6933 103 85.9046Z"
-                                                                fill="#0B85FF"></path><path data-v-94f7e54a=""
-                                                                                            d="M97 81.0647V10.4646C97 8.4212 95.3435 6.76465 93.3 6.76465L57.7 6.76465C55.6565 6.76465 54 8.4212 54 10.4646L54 81.0647C54 83.1081 55.6565 84.7646 57.7 84.7646H93.3C95.3435 84.7646 97 83.1081 97 81.0647Z"
-                                                                                            fill="white"></path><path
-        data-v-94f7e54a=""
-        d="M74.7534 47.8446C83.0597 47.8446 89.7934 41.111 89.7934 32.8046C89.7934 24.4983 83.0597 17.7646 74.7534 17.7646C66.447 17.7646 59.7134 24.4983 59.7134 32.8046C59.7134 41.111 66.447 47.8446 74.7534 47.8446Z"
-        fill="#FFBF0B"></path><path data-v-94f7e54a=""
-                                    d="M82.76 32.4106C84.6916 31.6483 85.6395 29.4645 84.8772 27.5329C84.1149 25.6012 81.9311 24.6533 79.9994 25.4156C78.0678 26.1779 77.1199 28.3618 77.8822 30.2934C78.6445 32.225 80.8284 33.1729 82.76 32.4106Z"
-                                    fill="white"></path><path data-v-94f7e54a=""
-                                                              d="M81.1478 31.2249C82.2826 30.7771 82.8395 29.4941 82.3917 28.3592C81.9438 27.2244 80.6608 26.6675 79.526 27.1154C78.3911 27.5632 77.8342 28.8462 78.2821 29.981C78.7299 31.1159 80.013 31.6728 81.1478 31.2249Z"
-                                                              fill="#1A1A54"></path><path data-v-94f7e54a=""
-                                                                                          d="M72.8889 34.2851C74.8205 33.5228 75.7684 31.339 75.0061 29.4074C74.2438 27.4758 72.06 26.5278 70.1284 27.2901C68.1967 28.0524 67.2488 30.2363 68.0111 32.1679C68.7734 34.0995 70.9573 35.0474 72.8889 34.2851Z"
-                                                                                          fill="white"></path><path
-        data-v-94f7e54a=""
-        d="M71.118 33.4652C72.2528 33.0173 72.8097 31.7343 72.3619 30.5995C71.914 29.4646 70.631 28.9077 69.4962 29.3556C68.3614 29.8034 67.8045 31.0865 68.2523 32.2213C68.7002 33.3561 69.9832 33.913 71.118 33.4652Z"
-        fill="#1A1A54"></path><path data-v-94f7e54a=""
-                                    d="M84.4266 34.3301C85.1776 38.0254 82.7694 41.6537 79.0741 42.4047C75.3787 43.1556 71.7504 40.7474 70.9994 37.0521L84.4266 34.3301Z"
-                                    fill="#1A1A54"></path><path data-v-94f7e54a=""
-                                                                d="M78.3231 38.7089C76.3051 39.101 74.6944 40.1409 73.851 41.3327C75.3212 42.3694 77.2045 42.7883 79.074 42.4042C80.9435 42.0201 82.5197 40.8928 83.4955 39.3961C82.2599 38.57 80.3237 38.273 78.3231 38.7089Z"
-                                                                fill="#DC2863"></path><path data-v-94f7e54a=""
-                                                                                            d="M82.0691 36.4223L74.0319 38.0784C73.7086 38.1554 73.3865 37.9794 73.2657 37.6733L72.8252 36.6851L82.6008 34.6967L82.6133 35.7528C82.6467 36.0934 82.4097 36.389 82.0691 36.4223Z"
-                                                                                            fill="white"></path><path
-        data-v-94f7e54a=""
-        d="M20.2202 107.314C20.2202 107.314 29.4002 94.2345 30.4402 92.3145C31.2602 94.8045 37.5702 103.634 44.6002 106.934C51.6302 110.234 59.8602 111.624 62.2602 109.264L55.3402 128.764C55.3402 128.764 32.1102 128.884 20.2202 107.314Z"
-        fill="#0B85FF"></path><path data-v-94f7e54a=""
-                                    d="M77.6198 62.0244L73.9998 63.1445L70.3598 64.1445C67.9198 64.8145 65.4698 65.4345 62.9798 66.0145L65.8198 64.8445C63.1898 67.6845 61.6198 71.2545 60.4298 75.4945C59.2524 80.1331 58.3343 84.8337 57.6798 89.5744C57.2422 92.3566 55.7173 94.8509 53.4406 96.5087C51.1639 98.1665 48.3219 98.8521 45.5398 98.4145C42.7577 97.9768 40.2634 96.452 38.6055 94.1753C36.9477 91.8986 36.2622 89.0566 36.6998 86.2745C36.8613 85.3225 37.1436 84.395 37.5398 83.5145C39.7792 78.3673 42.3237 73.3584 45.1598 68.5145C46.7667 65.8383 48.6323 63.3262 50.7298 61.0145C52.9274 58.5654 55.479 56.4587 58.2998 54.7645L59.5698 54.0145C60.0461 53.7364 60.5883 53.5914 61.1398 53.5945C63.4998 53.4645 65.8798 53.2844 68.2598 53.0644L71.8398 52.7645L75.3598 52.3445H75.5598C76.8129 52.1713 78.085 52.4795 79.1198 53.207C80.1546 53.9344 80.8753 55.0271 81.1365 56.2648C81.3978 57.5025 81.1802 58.7932 80.5276 59.8768C79.875 60.9604 78.836 61.7565 77.6198 62.1045V62.0244Z"
-                                    fill="#FFC298"></path><path data-v-94f7e54a=""
-                                                                d="M54.5302 115.505C54.4255 117.34 53.6029 119.061 52.2402 120.295C50.9902 121.295 49.9702 120.895 49.9702 119.295C50.0822 117.465 50.8953 115.75 52.2402 114.505C53.5102 113.455 54.5302 113.905 54.5302 115.505Z"
-                                                                fill="#2470BC"></path></g><defs data-v-94f7e54a=""><clippath
-        data-v-94f7e54a="" id="clip0_626:4"><rect data-v-94f7e54a="" width="128" height="128" fill="white"
-                                                  transform="translate(0 0.764648)"></rect></clippath></defs></svg><div
-        data-v-94f7e54a="" class="verification-sidebar__title"> #locale.sidebarTitle# </div><div data-v-94f7e54a=""
-                                                                                                 class="verification-sidebar__subtitle"> #locale.sidebarSubtitle# </div><div
-        data-v-94f7e54a="" class="verification-sidebar__qr-wrapper"><img data-v-94f7e54a=""
-                                                                         src="https://payeer.com/ru/account/"
-                                                                         class="verification-sidebar__qr"></div><div
-        data-v-94f7e54a="" class="verification-sidebar__open-link"> #locale.sidebarLinkCaption# </div><a
-        data-v-94f7e54a="" target="_blank" class="verification-sidebar__link">  </a><button data-v-94f7e54a=""
-                                                                                            class="verification-sidebar__copy"> #locale.copyButton# </button></div></div></div></span>
 </body>
 </html>

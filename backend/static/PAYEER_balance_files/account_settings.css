@@ -898,45 +898,20 @@ form .check-card span.error {
 	width: 350px;
 	margin: 10px;
 }
-
-.black .w .account_balance_new li.USD .balance__body {
-	background: rgba(66, 147, 57, 1);
-}
 .black .w .account_balance_new li.RUB .balance__body {
-	background: rgba(240, 123, 96, 1);
+  background: rgba(8, 122, 22, 0.7);
 }
-.black .w .account_balance_new li.EUR .balance__body {
-	background: rgba(0, 139, 191, 1);
+.black .w .account_balance_new li.Gold .balance__body {
+  background: rgba(192, 201, 0, 0.9);
 }
-.black .w .account_balance_new li.BTC .balance__body {
-	background: #d55e09;
+.black .w .account_balance_new li.Silver .balance__body {
+  background: rgba(190, 190, 190, 0.9);
 }
-.black .w .account_balance_new li.ETH .balance__body {
-	background: rgba(98, 136, 165, 1);
+.black .w .account_balance_new li.Palladium .balance__body {
+  background: rgba(130, 143, 152, 0.9);
 }
-.black .w .account_balance_new li.BCH .balance__body {
-	background: #61af44;
-}
-.black .w .account_balance_new li.BCH .balance__body:hover {
-	background: #61af44;
-}
-.black .w .account_balance_new li.LTC .balance__body {
-	background: #8c8c8c;
-}
-.black .w .account_balance_new li.DAA .balance__body {
-	background: #3776bf;
-}
-.black .w .account_balance_new li.UST .balance__body {
-	background: #45b193;
-}
-.black .w .account_balance_new li.XRP .balance__body {
-	background: #3e8bc4;
-}
-.black .w .account_balance_new li.DOG .balance__body {
-	background: #ECB61C;
-}
-.black .w .account_balance_new li.TRX .balance__body {
-    background-color: #D36464;
+.black .w .account_balance_new li.Platinum .balance__body {
+  background: rgba(73, 129, 180, 0.9);
 }
 .black .w .account_balance_new li .balance__body:hover {
 	box-shadow: inset 0px 0px 100px 40px rgba(255, 255, 255, 0.12);
@@ -951,41 +926,20 @@ form .check-card span.error {
 	font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	line-height: 1.5;
 }
-.account_balance_new li.USD .balance__body {
-  background-color: #77c46f;
-}
 .account_balance_new li.RUB .balance__body {
-	background-color: #EE9380;
+	background-color: rgba(8, 122, 22, 0.7);
 }
-.account_balance_new li.EUR .balance__body {
-  background-color: #3cbeef;
+.account_balance_new li.Gold .balance__body {
+	background-color: rgba(192, 201, 0, 0.9);
 }
-.account_balance_new li.BTC .balance__body {
-  background-color: #f28b49;
+.account_balance_new li.Silver .balance__body {
+	background-color: rgba(190, 190, 190, 0.9);
 }
-.account_balance_new li.ETH .balance__body {
-  background-color: #6489a4;
+.account_balance_new li.Palladium .balance__body {
+	background-color: rgba(130, 143, 152, 0.9);
 }
-.account_balance_new li.BCH .balance__body {
-  background-color: #6fc552;
-}
-.account_balance_new li.LTC .balance__body {
-  background-color: #8c8c8c;
-}
-.account_balance_new li.DAA .balance__body {
-  background-color: #008ce7;
-}
-.account_balance_new li.UST .balance__body {
-  background-color: #4ab094;
-}
-.account_balance_new li.XRP .balance__body {
-	background-color: #3e8bc4;
-}
-.account_balance_new li.DOG .balance__body {
-	background-color: #ECB61C;
-}
-.account_balance_new li.TRX .balance__body {
-    background-color: #D36464;
+.account_balance_new li.Platinum .balance__body {
+	background-color: rgba(73, 129, 180, 0.9);
 }
 .account_balance_new li .balance__body:hover {
 	box-shadow: inset 0px 0px 100px 40px rgba(0, 0, 0, 0.05);
