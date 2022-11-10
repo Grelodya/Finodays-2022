@@ -1,0 +1,29 @@
+{% extends 'template.html' %}
+
+{% block content %}
+<div class="col col--content content wbody" id="pjax-container">
+    <div class="main_abalance">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <form action="/user/add" method="post">
+       <h1 class="h3 mb-3 fw-normal">Пополнить кошелёк</h1>
+
+        <div class="wrapper">
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" required name="count" id="count" min="100" maxlength="5" value="100"/>
+          <label for="count">Введите сумму для пополнения</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" required name="commission" id="commission" min="5" max="100" value="5"/>
+          <label for="count">Введите коммисию</label>
+        </div>
+        {% if Error %}
+            <p style="color: red">Возникла ошибка</p>
+        {% endif %}
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Пополнить</button>
+      </form>
+    </div>
+</div>
+{% endblock %}
