@@ -11,4 +11,4 @@ RUN apt full-upgrade -y && \
     pip install -r requirements.txt && \
     rm -rf /var/lib/apt/lists
 
-ENTRYPOINT ["uvicorn", "server:app", "--port", "9000", "--host", "0.0.0.0"]
+ENTRYPOINT ["uvicorn", "backend:app", "--port", "9000", "--host", "0.0.0.0"]
