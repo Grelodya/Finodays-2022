@@ -1,7 +1,7 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<div class="col col--content content wbody" id="pjax-container">
+<div class="col col--content content wbody" id="pjax-container" style="display: flex">
     <div class="main_abalance">
 
     <!-- Bootstrap core CSS -->
@@ -9,34 +9,40 @@
 
     <form action="/user/exchange" method="post">
        <h1 class="h3 mb-3 fw-normal">Обменять валюту</h1>
-        <div class="wrapper">
-            <input type="number" class="timeTextBox" required onchange='document.getElementById("count2").innerHTML = document.getElementById("count").value' name="count" id="count" min="0.001" step='any' value="0"/>
-            <select class="editableBox" name="typeA" id="typeA" required>
-                <option value="GGC">GGC</option>
-                <option value="Gold">Золото</option>
-                <option value="Silver">Серебро</option>
-                <option value="Palladium">Палладий</option>
-                <option value="Platinum">Платина</option>
-            </select>
-        </div>
-        <div class="wrapper">
-            <select class="editableBox" name="typeB" id="typeB" required>
-                <option value="Gold">Золото</option>
-                <option value="Silver">Серебро</option>
-                <option value="Palladium">Палладий</option>
-                <option value="Platinum">Платина</option>
-                 <option value="GGC">GGC</option>
-           </select>
-            <label id="count2" for="typeB">0</label>
-        </div>
-        <div class="form-floating">
-          <input type="number" min="5" max="100" required class="form-control" id="commission" name="commission" value="5" placeholder="Проценты" step='any'>
-          <label for="commission">Проценты</label>
-        </div>
+        <label for="count">Введите валюту для перевода
+            <div class="input-group">
+                <input type="number" class="gora input-group-field" onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 - parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" required name="count" id="count" min="1" value="0.001" step='any' />
+                <select class="gora_label input-group-label" name="typeA" id="typeA" required>
+                    <option value="GGC">GGC</option>
+                    <option value="Gold">Золото</option>
+                    <option value="Silver">Серебро</option>
+                    <option value="Palladium">Палладий</option>
+                    <option value="Platinum">Платина</option>
+                </select>
+            </div>
+        </label>
+            <label for="count">Введите валюту для получения
+            <div class="input-group">
+                <label class="gora input-group-field" id="total_price" for="typeB">0</label>
+                <select class="gora_label input-group-label" name="typeB" id="typeB" required>
+                    <option value="Gold">Золото</option>
+                    <option value="Silver">Серебро</option>
+                    <option value="Palladium">Палладий</option>
+                    <option value="Platinum">Платина</option>
+                    <option value="GGC">GGC</option>
+                </select>
+            </div>
+        </label>
+        <label for="count">Введите коммисию
+            <div class="input-group">
+                <input type="number" class="gora input-group-field" required onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 - parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" name="commission" id="commission" step='any' min="5" max="100" value="5"/>
+                <span class="gora_label input-group-label">%</span>
+            </div>
+        </label>
         {% if Error %}
             <p style="color: red">Возникла ошибка</p>
         {% endif %}
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Отправить</button>
+        <button class="porka" type="submit">Обменять</button>
       </form>
     </div>
 </div>

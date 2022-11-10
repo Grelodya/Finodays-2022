@@ -18,30 +18,30 @@ async def post_send(request: Request, db_session: AsyncSession = Depends(get_ses
     if typeA not in list_metal or typeB not in list_metal:
         return get_templates().TemplateResponse("exchange.html", context={"request": request, "user": user, "Error": True, "Title": "Обмен", "page": 3})
     else:
-        value = count * (1 + commission / 100)
-        if typeA == "GGC" and user.balance_rub >= value:
-            user.balance_rub -= value
-        elif typeA == "Gold" and user.balance_gold >= value:
-            user.balance_gold -= value
-        elif typeA == "Silver" and user.balance_silver >= value:
-            user.balance_silver -= value
-        elif typeA == "Palladium" and user.balance_palladium >= value:
-            user.balance_palladium -= value
-        elif typeA == "Platinum" and user.balance_platinum >= value:
-            user.balance_platinum -= value
+        if typeA == "GGC" and user.balance_rub >= count:
+            user.balance_rub -= count
+        elif typeA == "Gold" and user.balance_gold >= count:
+            user.balance_gold -= count
+        elif typeA == "Silver" and user.balance_silver >= count:
+            user.balance_silver -= count
+        elif typeA == "Palladium" and user.balance_palladium >= count:
+            user.balance_palladium -= count
+        elif typeA == "Platinum" and user.balance_platinum >= count:
+            user.balance_platinum -= count
         else:
             return get_templates().TemplateResponse("exchange.html", context={"request": request, "user": user, "Error": True, "Title": "Обмен", "page": 3})
 
+        value = count * (1 - commission / 100)
         if typeB == "GGC":
-            user.balance_rub += count
+            user.balance_rub += value
         elif typeB == "Gold":
-            user.balance_gold += count
+            user.balance_gold += value
         elif typeB == "Silver":
-            user.balance_silver += count
+            user.balance_silver += value
         elif typeB == "Palladium":
-            user.balance_palladium += count
+            user.balance_palladium += value
         elif typeB == "Platinum":
-            user.balance_platinum += count
+            user.balance_platinum += value
 
         db_session.add(user)
         await db_session.commit()
