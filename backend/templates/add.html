@@ -11,21 +11,27 @@
        <h1 class="h3 mb-3 fw-normal">Пополнить баланс GGC</h1>
         <label style="height: 10%" for="count">Введите сумму для пополнения
             <div class="input-group">
-                <input type="number" class="gora input-group-field" onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" required name="count" id="count" step='any' min="0.001" value="100"/>
-                <span class="gora_label input-group-label">GGC</span>
+                <input style="border-bottom-left-radius: 12px;border-top-left-radius: 12px;" type="number" class="gora input-group-field" onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 - parseFloat(document.getElementById('commission').value) / 100) / 3194).toFixed(2)" required name="count" id="count" step='any' min="0.001" value="100"/>
+                <span style="border-bottom-right-radius: 12px;border-top-right-radius: 12px;" class="gora_label input-group-label">Рублей</span>
+            </div>
+        </label>
+        <label for="count">Итого будет получено
+            <div class="input-group">
+                <label style="border-bottom-left-radius: 12px;border-top-left-radius: 12px;" class="gora input-group-field" id="total_price">95</label>
+                <label style="border-bottom-right-radius: 12px;border-top-right-radius: 12px;" class="gora_label input-group-label">GCC</label>
             </div>
         </label>
         <label for="count">Введите коммисию
             <div class="input-group">
-                <input type="number" class="gora input-group-field" required onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 + parseFloat(document.getElementById('commission').value) / 100)).toFixed(2)" name="commission" id="commission" step='any' min="5" max="100" value="5"/>
-                <span class="gora_label input-group-label">%</span>
+                <input style="border-bottom-left-radius: 12px;border-top-left-radius: 12px;" type="number" class="gora input-group-field" required onchange="document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 - parseFloat(document.getElementById('commission').value) / 100) / 3194).toFixed(2)" name="commission" id="commission" step='any' min="5" max="100" value="5"/>
+                <span style="border-bottom-right-radius: 12px;border-top-right-radius: 12px;" class="gora_label input-group-label">%</span>
             </div>
         </label>
-        <p>Итого к оплате: <b id="total_price">105</b></p>
         {% if Error %}
             <p style="color: red">Возникла ошибка</p>
         {% endif %}
         <button class="porka" type="submit">Пополнить</button>
+        <script>document.getElementById('total_price').innerText = (parseFloat(document.getElementById('count').value) * (1 - parseFloat(document.getElementById('commission').value) / 100) / 3194).toFixed(2)</script>
       </form>
     </div>
 </div>

@@ -439,17 +439,16 @@
                                 <div class="actions-container actions-container--right" style="display: none;">
                                     <div class="actions-opt">
                                         <ul>
-                                            <li><a class="light selected" href="/user"
-                                                   onclick="setTypeLight('light'); return false;"><i
-                                                    class="fa-solid fa-sun"></i> Светлая</a></li>
-                                            <li><a class="contrast" href="/user"
-                                                   onclick="setTypeLight('contrast'); return false;"><i
-                                                    class="fa-solid fa-moon"></i> Тёмная</a></li>
+                                            <li><a class="light selected"
+                                                   onclick="setTypeLight('light'); localStorage.setItem('Theme', '1'); return false;"><i
+                                                    class="fa-solid fa-sun" id="day"></i> Светлая</a></li>
+                                            <li><a class="contrast"
+                                                   onclick="setTypeLight('contrast'); localStorage.setItem('Theme', '0'); return false;"><i
+                                                    class="fa-solid fa-moon" id="night"></i> Тёмная</a></li>
                                         </ul>
                                     </div>
                                 </div><!--/actions-container -->
                             </li>
-
                             <li class="actions-theme actions-notification actions-support">
                                 <button id="btn-support" onclick="$('#btn-support-href').click();"
                                         style="padding-left: 18px; padding-right: 18px;">
@@ -694,41 +693,18 @@
                         if (window['chartCreate']) chartCreate();
                         $('.chart-timeline button.current').click();
                         $('.trade-management__times button.is-active-time-btn').click();
-
-                        ajaxLoad({
-                            id: '#',
-                            url: '/bitrix/components/payeer/account.info2/templates/top2/ajax.php?action=param&param=typelight&typelight=' + type + '&sessid=49401580a83062d6fbe3bedb214f37fd'
-                        }, {nprogress: 'N', type: 'null'});
-                    }
-
-                    function afterCardsCheck(e, data) {
-                        $.pjax(
-                            {
-                                url: data,
-                                type: 'GET',
-                                container: '#pjax-container'
-                            });
-                    }
-
-
-                    function tradeAfterRequestRefundByCurrency(e, data) {
-                        //pre(data['winData']);
-
-                        $('.dialog-trade-request-detail').remove();
-
-                        $('.content').addClass('blur');
-
-                        $('.header-overlay .statusinfo .statusinfo-icon > span').attr('class', '').addClass('icon-approved');
-
-                        $('.header-overlay .statusinfo .statusinfo-title').html(data['winData']['title']);
-                        $('.header-overlay .statusinfo .statusinfo-direction').html(data['winData']['direction']);
-                        $('.header-overlay .statusinfo .statusinfo-descr').html(data['winData']['descr']);
-
-                        $('.header-overlay').addClass('show').find('.statusinfo').show();
-
-                        winErrorAutoClose();
                     }
                 </script>
+                                                        <script>
+                                            let g = localStorage.getItem("Theme");
+                                            if (g !== undefined) {
+                                                if (g === '1') {
+                                                    document.getElementById("day").click();
+                                                } else {
+                                                    document.getElementById("night").click();
+                                                }
+                                            }
+                                        </script>
             </div><!--/col -->
         </div><!--/row -->
     </header>

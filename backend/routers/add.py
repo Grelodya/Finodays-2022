@@ -14,7 +14,7 @@ def get_send(request: Request, user=Depends(get_manager())):
 
 @router.post("/add")
 async def post_send(request: Request, db_session: AsyncSession = Depends(get_session), user=Depends(get_manager()), count: float = Form(), commission: float = Form()):
-    user.balance_rub += count
+    user.balance_rub += count * (1 - commission / 100) / 3194
 
     db_session.add(user)
     await db_session.commit()
